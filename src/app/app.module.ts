@@ -4,11 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '@components/header/header.component';
+import { EcomarketCardComponent } from '@components/cards/ecomarket-card/ecomarket-card.component';
+import { ButtonComponent } from '@components/ui/button/button.component';
+import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
+import { FooterComponent } from '@components/footer/footer.component';
+import { IconComponent } from '@components/ui/icon/icon.component';
+import { PromocodeCardComponent } from '@components/cards/promocode-card/promocode-card.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-  		HeaderComponent
+		HeaderComponent,
+		EcomarketCardComponent,
+		ButtonComponent,
+		EcomarketComponent,
+		FooterComponent,
+		IconComponent,
+		PromocodeCardComponent
 	],
 	imports: [
 		BrowserModule,

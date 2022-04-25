@@ -1,0 +1,7 @@
+<app-header></app-header>
+
+<div *ngIf='(products$|async)!.length>0'>
+	<app-ecomarket-card></app-ecomarket-card>
+</div>
+
+<app-footer></app-footer>
