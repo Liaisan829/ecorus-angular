@@ -1,5 +1,4 @@
-<div class='section'
-     *ngFor='let item of product$ | async'>
+<div class='section' *ngFor='let item of product$ | async'>
 	<div class='section--brand'>
 		<p>{{item.brand}}</p>
 	</div>
@@ -7,9 +6,7 @@
 	<app-button
 		theme='DEFAULT'
 	>
-		<img class='section--img'
-		     src='{{item.img}}'
-		     alt='product' />
+		<img class='section--img' src='{{item.img}}' alt='product'/>
 	</app-button>
 
 	<div class='section--text'>

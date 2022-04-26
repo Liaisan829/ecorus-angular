@@ -10,8 +10,12 @@ import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 import { FooterComponent } from '@components/footer/footer.component';
 import { IconComponent } from '@components/ui/icon/icon.component';
 import { PromocodeCardComponent } from '@components/cards/promocode-card/promocode-card.component';
+import { SliderCardComponent } from '@components/cards/slider-card/slider-card.component';
+import { BottomCardComponent } from '@components/cards/bottom-card/bottom-card.component';
+import { SwiperComponent } from '@components/swiper/swiper.component';
+import { SwiperModule } from 'swiper/angular';
 import { MainComponent } from '@pages/main/main.component';
-import { SortingButtonsComponent } from './components/containers/sorting-buttons/sorting-buttons.component';
+import { SortingButtonsComponent } from '@components/containers/sorting-buttons/sorting-buttons.component';
 
 @NgModule({
 	declarations: [
@@ -24,11 +28,16 @@ import { SortingButtonsComponent } from './components/containers/sorting-buttons
 		IconComponent,
 		PromocodeCardComponent,
 		MainComponent,
-  SortingButtonsComponent
+		SliderCardComponent,
+		BottomCardComponent,
+		SwiperComponent,
+		MainComponent,
+		SortingButtonsComponent
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		SwiperModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
