@@ -10,6 +10,7 @@ import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 import { FooterComponent } from '@components/footer/footer.component';
 import { IconComponent } from '@components/ui/icon/icon.component';
 import { PromocodeCardComponent } from '@components/cards/promocode-card/promocode-card.component';
+import { MainComponent } from './pages/main/main.component';
 
 @NgModule({
 	declarations: [
@@ -20,7 +21,8 @@ import { PromocodeCardComponent } from '@components/cards/promocode-card/promoco
 		EcomarketComponent,
 		FooterComponent,
 		IconComponent,
-		PromocodeCardComponent
+		PromocodeCardComponent,
+		MainComponent
 	],
 	imports: [
 		BrowserModule,
