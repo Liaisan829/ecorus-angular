@@ -10,7 +10,8 @@ import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 import { FooterComponent } from '@components/footer/footer.component';
 import { IconComponent } from '@components/ui/icon/icon.component';
 import { PromocodeCardComponent } from '@components/cards/promocode-card/promocode-card.component';
-import { MainComponent } from './pages/main/main.component';
+import { MainComponent } from '@pages/main/main.component';
+import { SortingButtonsComponent } from './components/containers/sorting-buttons/sorting-buttons.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import { MainComponent } from './pages/main/main.component';
 		FooterComponent,
 		IconComponent,
 		PromocodeCardComponent,
-		MainComponent
+		MainComponent,
+  SortingButtonsComponent
 	],
 	imports: [
 		BrowserModule,

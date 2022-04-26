@@ -9,9 +9,9 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 export class IconComponent implements OnInit {
 
   constructor() {
-	  this.name="";
-	  this.width="";
-	  this.height="";
+		  this.name="";
+		  this.width="";
+		  this.height="";
   }
 
   ngOnInit(): void {
