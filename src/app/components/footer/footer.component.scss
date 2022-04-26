@@ -1,0 +1,69 @@
+@import "../../styles/mixins";
+
+.footer {
+	border-top: 1px solid $c-light-grey;
+	padding: 30px;
+	margin-top: auto;
+
+	&--container {
+		max-width: 1200px;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	&--contact {
+		display: flex;
+		align-items: center;
+
+		a {
+			text-decoration: none;
+			@include secondary-text
+		}
+	}
+
+	&--contact:last-child {
+		margin-left: 31px;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.footer {
+		margin-top: auto;
+
+		&--container {
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.footer {
+
+		&--container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		&--contact {
+			a {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.footer {
+		&--container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			max-width: 375px;
+			flex-direction: column;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+@import "colors";
+
+@mixin regular-style{
+	font-family: Inter, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+@mixin regular-text{
+	@include regular-style;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: -0.15px;
+	color: $c-grey;
+}
+
+@mixin primary-text{
+	@include regular-style;
+	font-size: 14px;
+	line-height: 22px;
+	color: $c-grey;
+}
+
+@mixin secondary-text{
+	@include regular-style;
+	font-size: 16px;
+	line-height: 24px;
+	color: $c-grey;
+}
+
+@mixin infoBlockText{
+	font-family: Inter, sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 40px;
+	color: $c-dark;
+}
+
+@mixin modalText{
+	font-family: Inter, sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 28px;
+}
+
+@mixin adaptiveText {
+	@include regular-style;
+	font-size: 24px;
+	font-weight: 600;
+}

@@ -1,0 +1,11 @@
+<button
+	[type] = "type"
+	class="btn"
+	[class.btn--green] = "theme === 'GREEN'"
+	[class.btn--grey] = "theme === 'GREY'"
+	[class.btn--default] = "theme === 'DEFAULT'"
+	[class.btn--eco] = "theme === 'ECO'"
+	[class.btn--filter] = "theme === 'FILTER'"
+>
+	<ng-content></ng-content>
+</button>
