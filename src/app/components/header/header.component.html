@@ -1,1 +1,45 @@
-<p>header works!</p>
+<header class='header'>
+	<div class='header--container'>
+		<div class='header--navigation'>
+			<img src='./assets/logo.svg'
+			     alt='logo'>
+			<nav>
+				<a routerLink='/'
+				   class='link'
+				   [routerLinkActiveOptions]='{exact:true}'
+				   routerLinkActive='link--active'
+				>Главная</a>
+				<a routerLink='/collpoints'
+				   class='link'
+				   routerLinkActive='link--active'
+				>Пункты сбора</a>
+				<a routerLink='/ecomarket'
+				   class='link'
+				   routerLinkActive='link--active'
+				>ЭкоМаркет</a>
+				<a routerLink='/aboutservice'
+				   class='link'
+				   routerLinkActive='link--active'
+				>О сервисе</a>
+			</nav>
+		</div>
+		<div class='header--info'>
+			<app-button
+				type='button'
+				theme='DEFAULT'
+			>
+				<img src='./assets/location.svg'
+				     alt='location'>
+				<p>Казань</p>
+			</app-button>
+			<app-button
+				type='button'
+				theme='DEFAULT'
+			>
+				<img src='./assets/goIn.svg'
+				     alt='login'>
+				<p>Войти</p>
+			</app-button>
+		</div>
+	</div>
+</header>

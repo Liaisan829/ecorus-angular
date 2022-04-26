@@ -1,0 +1,33 @@
+.container {
+	margin-top: 40px;
+}
+
+.ecomarket {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 40px;
+
+	&--content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+.sortingButtons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.productCards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-left: 70px;
+	max-width: 870px;
+}
