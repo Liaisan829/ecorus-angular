@@ -16,6 +16,7 @@ import { SwiperComponent } from '@components/swiper/swiper.component';
 import { SwiperModule } from 'swiper/angular';
 import { MainComponent } from '@pages/main/main.component';
 import { SortingButtonsComponent } from '@components/containers/sorting-buttons/sorting-buttons.component';
+import { MapPageComponent } from '@pages/map-page/map-page.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SortingButtonsComponent } from '@components/containers/sorting-buttons/
 		BottomCardComponent,
 		SwiperComponent,
 		MainComponent,
-		SortingButtonsComponent
+		SortingButtonsComponent,
+		MapPageComponent
 	],
 	imports: [
 		BrowserModule,
