@@ -17,6 +17,7 @@ import { SwiperModule } from 'swiper/angular';
 import { MainComponent } from '@pages/main/main.component';
 import { SortingButtonsComponent } from '@components/containers/sorting-buttons/sorting-buttons.component';
 
+
 @NgModule({
 	declarations: [
 		AppComponent,

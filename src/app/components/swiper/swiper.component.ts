@@ -1,27 +1,34 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit } from '@angular/core';
 import SwiperCore, { SwiperOptions, Navigation, Autoplay } from 'swiper';
-import 'swiper/scss';
-import 'swiper/scss/navigation';
 
 SwiperCore.use([Navigation, Autoplay]);
 
 @Component({
-  selector: 'app-swiper',
-  templateUrl: './swiper.component.html',
-  styleUrls: ['./swiper.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+	selector: 'app-swiper',
+	templateUrl: './swiper.component.html',
+	styleUrls: ['./swiper.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush,
+	encapsulation: ViewEncapsulation.None
 })
-export class SwiperComponent {
+export class SwiperComponent implements OnInit{
 	config: SwiperOptions = {
 		slidesPerView: 1,
+		spaceBetween: 50,
 		navigation: true,
 		loop: true,
 		autoplay: true,
 	}
-	onSwiper([swiper]: any){
+
+	onSwiper([swiper]: any) {
 		console.log(swiper);
 	}
-	onSlideChange(){
+
+	onSlideChange() {
 		console.log('slide change')
+	}
+
+	constructor() { }
+
+	ngOnInit(): void {
 	}
 }
