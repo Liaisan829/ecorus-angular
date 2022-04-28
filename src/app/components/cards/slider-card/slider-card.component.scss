@@ -1,0 +1,133 @@
+@import "../../../styles/mixins";
+
+.section {
+	display: flex;
+	align-content: center;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-left: 64px;
+	border-radius: 20px;
+
+	h1 {
+		font-family: Inter, sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 48px;
+		line-height: 56px;
+		color: #000B26;
+		margin-bottom: 16px;
+	}
+
+	p {
+		@include secondary-text;
+		margin-bottom: 40px;
+	}
+
+	img {
+		width: 560px;
+		padding-left: 90px;
+		border-radius: 20px;
+	}
+
+	&--info {
+		margin-top: 56px;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.section {
+		max-width: 1000px;
+		height: 300px;
+
+		&--info {
+			margin-top: 30px;
+		}
+
+		h1 {
+			font-size: 40px;
+		}
+
+		img {
+			width: 450px;
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.section {
+		max-width: 800px;
+		height: 280px;
+
+		&--info {
+			margin-top: 25px;
+		}
+
+		h1 {
+			font-size: 33px;
+			line-height: 40px;
+		}
+
+		img {
+			width: 350px;
+		}
+
+		p {
+			margin-bottom: 20px;
+			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.section {
+		max-width: 650px;
+		height: 280px;
+		padding-left: 40px;
+
+		&--info {
+			max-width: 450px;
+			min-width: 200px;
+		}
+
+		img {
+			width: 320px;
+		}
+
+		h1 {
+			font-size: 21px;
+		}
+
+	}
+}
+
+
+@media screen and (max-width: 420px) {
+	.section {
+		max-width: 420px;
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 0;
+		padding: 0 16px;
+		position: relative;
+
+		img {
+			padding: 0;
+		}
+
+		&--info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			h1 {
+				@include adaptiveText;
+			}
+
+			p {
+				letter-spacing: 1px;
+			}
+		}
+	}
+}

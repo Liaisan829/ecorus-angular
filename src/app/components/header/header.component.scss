@@ -37,7 +37,7 @@ nav {
 }
 
 .link {
-	@include primary-text;
+	@include regular-text;
 	color: $c-dark;
 	opacity: 0.8;
 
@@ -47,6 +47,3 @@ nav {
 		opacity: 1;
 	}
 }
-
-
-
