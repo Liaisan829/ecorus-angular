@@ -15,7 +15,7 @@ import { BottomCardComponent } from '@components/cards/bottom-card/bottom-card.c
 import { SwiperComponent } from '@components/swiper/swiper.component';
 import { SwiperModule } from 'swiper/angular';
 import { MainComponent } from '@pages/main/main.component';
-import { SortingButtonsComponent } from '@components/containers/sorting-buttons/sorting-buttons.component';
+import { SortingButtonsComponent } from '@containers/sorting-buttons/sorting-buttons.component';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
 
 

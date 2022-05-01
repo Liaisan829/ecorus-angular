@@ -25,6 +25,7 @@
 		"strictFunctionTypes": true,
 		"paths": {
 			"@components/*": ["./src/app/components/*"],
+			"@containers/*": ["./src/app/containers/*"],
 			"@directives/*": ["./src/app/directives/*"],
 			"@guards/*": ["./src/app/guards/*"],
 			"@models/*": ["./src/app/models/*"],
