@@ -49,3 +49,15 @@
 	font-size: 24px;
 	font-weight: 600;
 }
+
+@mixin averageDesktop{
+	@media(max-width: 1250px){
+		@content
+	}
+}
+
+@mixin smallDesktop{
+	@media(max-width: 1050px){
+		@content
+	}
+}

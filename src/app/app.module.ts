@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,13 @@ import { SwiperModule } from 'swiper/angular';
 import { MainComponent } from '@pages/main/main.component';
 import { SortingButtonsComponent } from '@containers/sorting-buttons/sorting-buttons.component';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
-
+import { CheckboxGroupComponent } from '@containers/checkbox-group/checkbox-group.component';
+import { CheckboxItemComponent } from '@components/ui/checkbox-item/checkbox-item.component';
+import { DialogModule } from '@angular/cdk-experimental/dialog';
+import { ModalContainerComponent } from '@components/modals/modal-container/modal-container.component';
+import { SomeComponent } from '@components/modals/some/some.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginFormComponent } from '@components/forms/login-form/login-form.component';
 
 @NgModule({
 	declarations: [
@@ -35,12 +42,20 @@ import { MapPageComponent } from '@pages/map-page/map-page.component';
 		SwiperComponent,
 		MainComponent,
 		SortingButtonsComponent,
-		MapPageComponent
+		MapPageComponent,
+		CheckboxGroupComponent,
+		CheckboxItemComponent,
+		ModalContainerComponent,
+		SomeComponent,
+  LoginFormComponent,
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		SwiperModule
+		SwiperModule,
+		ReactiveFormsModule,
+		DialogModule,
+		BrowserAnimationsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { DialogService } from '@services/dialog.service';
+import { SomeComponent } from '@components/modals/some/some.component';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +10,13 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: DialogService) { }
 
   ngOnInit(): void {
   }
+
+	openLoginModal(){
+	  this.dialog.openDialog(SomeComponent);
+	}
 
 }

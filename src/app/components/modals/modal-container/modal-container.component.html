@@ -1,0 +1,18 @@
+<div class='modal'>
+	<div class='modal--wrapper'>
+		<div class='modal--content'>
+			<div class='modal_header'>
+				<h2 class='title'>{{dialogTitle}}</h2>
+				<app-button
+					theme='DEFAULT'
+					class='modal_closeButton'
+				>
+					<img src='/assets/close.svg'
+					     alt='X'>
+				</app-button>
+			</div>
+			<ng-template [cdkPortalOutlet]='portal'>
+			</ng-template>
+		</div>
+	</div>
+</div>

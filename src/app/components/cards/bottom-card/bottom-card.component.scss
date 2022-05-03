@@ -10,18 +10,47 @@
 	margin-top: 48px;
 	width: 540px;
 
+	@include averageDesktop {
+		width: 450px;
+	}
+	@include smallDesktop {
+		width: 350px;
+		padding-left: 25px;
+		padding-top: 25px;
+	}
+
 	h1 {
 		@include infoBlockText;
+		@include averageDesktop {
+			font-size: 28px;
+		}
+		@include smallDesktop {
+			@include adaptiveText;
+		}
 	}
 
 	p {
 		@include secondary-text;
+		@include averageDesktop {
+			font-size: 14px;
+		}
+		@include smallDesktop {
+			font-size: 13px;
+		}
 		margin-top: 5px;
 	}
 
 	&--img {
 		width: 280px;
 		height: 250px;
+		@include averageDesktop {
+			width: 240px;
+			height: 240px;
+		}
+		@include smallDesktop {
+			width: 150px;
+			height: 150px;
+		}
 	}
 
 	&--info {
@@ -35,65 +64,14 @@
 			align-items: center;
 			margin-top: 40px;
 
+			@include smallDesktop {
+				margin-top: 15px;
+				padding: 5px 10px;
+			}
+
 			img {
 				width: 24px;
 				height: 24px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 1250px) {
-	.skeletonBlock {
-		margin-left: -40px;
-	}
-
-	.informBlock {
-		width: 450px;
-
-		&--img {
-			width: 240px;
-			height: 240px;
-		}
-
-		h1 {
-			font-size: 28px;
-		}
-
-		p {
-			font-size: 14px;
-		}
-
-		.skeletonImg {
-			margin-right: 20px;
-			width: 150px;
-		}
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	.informBlock {
-		width: 350px;
-		padding-left: 25px;
-		padding-top: 25px;
-
-		&--img {
-			width: 150px;
-			height: 150px;
-		}
-
-		h1 {
-			@include adaptiveText;
-		}
-
-		p {
-			font-size: 13px;
-		}
-
-		&--info {
-			&--cardButton {
-				margin-top: 15px;
-				padding: 5px 10px;
 			}
 		}
 	}

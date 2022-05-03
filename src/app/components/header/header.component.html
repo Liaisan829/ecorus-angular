@@ -1,7 +1,7 @@
 <header class='header'>
 	<div class='header--container'>
 		<div class='header--navigation'>
-			<img src='./assets/logo.svg'
+			<img src='/assets/logo.svg'
 			     alt='logo'>
 			<nav>
 				<a routerLink='/'
@@ -28,15 +28,16 @@
 				type='button'
 				theme='DEFAULT'
 			>
-				<img src='./assets/location.svg'
+				<img src='/assets/location.svg'
 				     alt='location'>
 				<p>Казань</p>
 			</app-button>
 			<app-button
 				type='button'
 				theme='DEFAULT'
+				(click)='openLoginModal()'
 			>
-				<img src='./assets/goIn.svg'
+				<img src='/assets/goIn.svg'
 				     alt='login'>
 				<p>Войти</p>
 			</app-button>
