@@ -1,1 +1,30 @@
-<p>login-form works!</p>
+<form
+	class='form'
+	[formGroup]='form'
+>
+	<input
+		type='text'
+		placeholder='Телефон'
+		formControlName='phone'
+	>
+	<ng-container
+		*ngIf='control("phone")?.touched && control("phone")?.dirty && control("phone")?.errors'
+	>
+		<span class='error'>{{ control("phone")?.errors | json }}</span>
+	</ng-container>
+
+	<input
+		type='password'
+		placeholder='Пароль'
+		formControlName='password'
+	>
+	<ng-container
+		*ngIf='control("password")?.touched && control("password")?.dirty && control("password")?.errors'
+	>
+		<span class='error'>{{ control("password")?.errors | json }}</span>
+	</ng-container>
+
+	<app-button theme='GREEN'
+	            type='submit'>Войти
+	</app-button>
+</form>

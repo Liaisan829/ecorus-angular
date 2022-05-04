@@ -20,6 +20,10 @@
 
 	&--content {
 		margin: 48px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		//padding: 16px 0 32px;
 
 		.modal_header {
 			display: flex;
@@ -34,8 +38,14 @@
 			}
 		}
 
-		.modal_closeButton{
+		.modal_closeButton {
 
+		}
+
+		&--row {
+			display: flex;
+			justify-content: space-between;
+			padding: 16px 0 32px;
 		}
 	}
 }

@@ -22,7 +22,7 @@ import { CheckboxGroupComponent } from '@containers/checkbox-group/checkbox-grou
 import { CheckboxItemComponent } from '@components/ui/checkbox-item/checkbox-item.component';
 import { DialogModule } from '@angular/cdk-experimental/dialog';
 import { ModalContainerComponent } from '@components/modals/modal-container/modal-container.component';
-import { SomeComponent } from '@components/modals/some/some.component';
+import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginFormComponent } from '@components/forms/login-form/login-form.component';
 
@@ -46,7 +46,7 @@ import { LoginFormComponent } from '@components/forms/login-form/login-form.comp
 		CheckboxGroupComponent,
 		CheckboxItemComponent,
 		ModalContainerComponent,
-		SomeComponent,
+		LoginModalComponent,
   LoginFormComponent,
 	],
 	imports: [
