@@ -1,0 +1,9 @@
+<select class='dropDownList'>
+	<option disabled
+	        selected>
+		<ng-content></ng-content>
+	</option>
+	<ng-container *ngFor='let item of items'>
+		<option>{{item}}</option>
+	</ng-container>
+</select>

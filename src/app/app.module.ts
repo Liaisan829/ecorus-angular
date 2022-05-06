@@ -17,6 +17,11 @@ import { SwiperModule } from 'swiper/angular';
 import { MainComponent } from '@pages/main/main.component';
 import { SortingButtonsComponent } from '@containers/sorting-buttons/sorting-buttons.component';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
+import { MapComponent } from '@components/map/map.component';
+import { CommonMapCardComponent } from '@components/cards/collectionPointsCards/common-map-card/common-map-card.component';
+import { SearchInputComponent } from './components/ui/search-input/search-input.component';
+import { DropDownListComponent } from './components/ui/drop-down-list/drop-down-list.component';
+import { FullMapCardComponent } from './components/cards/collectionPointsCards/full-map-card/full-map-card.component';
 
 
 @NgModule({
@@ -35,7 +40,12 @@ import { MapPageComponent } from '@pages/map-page/map-page.component';
 		SwiperComponent,
 		MainComponent,
 		SortingButtonsComponent,
-		MapPageComponent
+		MapPageComponent,
+  MapComponent,
+  CommonMapCardComponent,
+  SearchInputComponent,
+  DropDownListComponent,
+  FullMapCardComponent
 	],
 	imports: [
 		BrowserModule,
