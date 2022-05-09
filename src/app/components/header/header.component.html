@@ -1,42 +1,43 @@
 <header class='header'>
-	<div class='header--container'>
-		<div class='header--navigation'>
-			<img src='./assets/logo.svg'
+	<div class='header__container'>
+		<div class='header__navigation'>
+			<img src='/assets/logo.svg'
 			     alt='logo'>
 			<nav>
 				<a routerLink='/'
-				   class='link'
+				   class='header__link'
 				   [routerLinkActiveOptions]='{exact:true}'
-				   routerLinkActive='link--active'
+				   routerLinkActive='header__link__active'
 				>Главная</a>
 				<a routerLink='/collpoints'
-				   class='link'
-				   routerLinkActive='link--active'
+				   class='header__link'
+				   routerLinkActive='header__link__active'
 				>Пункты сбора</a>
 				<a routerLink='/ecomarket'
-				   class='link'
-				   routerLinkActive='link--active'
+				   class='header__link'
+				   routerLinkActive='header__link__active'
 				>ЭкоМаркет</a>
 				<a routerLink='/aboutservice'
-				   class='link'
-				   routerLinkActive='link--active'
+				   class='header__link'
+				   routerLinkActive='header__link__active'
 				>О сервисе</a>
 			</nav>
 		</div>
-		<div class='header--info'>
+		<div class='header__info'>
 			<app-button
 				type='button'
 				theme='DEFAULT'
 			>
-				<img src='./assets/location.svg'
+				<img src='/assets/location.svg'
 				     alt='location'>
 				<p>Казань</p>
 			</app-button>
 			<app-button
 				type='button'
 				theme='DEFAULT'
+				(click)='openLoginModal()'
 			>
-				<img src='./assets/goIn.svg'
+				<img src='/assets/goIn.svg'
 				     alt='login'>
 				<p>Войти</p>
 			</app-button>

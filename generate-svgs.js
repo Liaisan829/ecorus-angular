@@ -12,7 +12,7 @@ const getFilesFromFolder = folder => {
 			.readdirSync(folder, { withFileTypes: true })
 			.filter(item => !item.isDirectory())
 			.map(item => {
-				return { name: item.name, folder };
+				return { title: item.name, folder };
 			})
 		: [];
 };

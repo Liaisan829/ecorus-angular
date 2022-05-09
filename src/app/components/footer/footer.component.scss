@@ -1,12 +1,11 @@
-@import "../../styles/mixins";
+@import "mixins.scss";
 
 .footer {
 	border-top: 1px solid $c-light-grey;
 	padding: 30px;
 	margin-top: auto;
-	//flex: 0 0 auto;
 
-	&--container {
+	&__container {
 		max-width: 1200px;
 		width: 100%;
 		display: flex;
@@ -15,7 +14,7 @@
 		margin: 0 auto;
 	}
 
-	&--contact {
+	&__contact {
 		display: flex;
 		align-items: center;
 
@@ -25,7 +24,7 @@
 		}
 	}
 
-	&--contact:last-child {
+	&__contact:last-child {
 		margin-left: 31px;
 	}
 }
@@ -34,7 +33,7 @@
 	.footer {
 		margin-top: auto;
 
-		&--container {
+		&__container {
 			max-width: 1000px;
 			margin: 0 auto;
 		}
@@ -44,12 +43,12 @@
 @media screen and (max-width: 1050px) {
 	.footer {
 
-		&--container {
+		&__container {
 			max-width: 800px;
 			margin: 0 auto;
 		}
 
-		&--contact {
+		&__contact {
 			a {
 				font-size: 14px;
 			}
@@ -59,7 +58,7 @@
 
 @media screen and (max-width: 375px) {
 	.footer {
-		&--container {
+		&__container {
 			display: flex;
 			justify-content: center;
 			align-items: center;

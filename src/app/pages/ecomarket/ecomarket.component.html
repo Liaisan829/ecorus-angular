@@ -4,7 +4,8 @@
 		<app-sorting-buttons></app-sorting-buttons>
 	</div>
 
-	<div class='ecomarket--content'>
+	<div class='ecomarket__content'>
+		<app-checkbox-group></app-checkbox-group>
 		<section class='productCards'>
 			<div *ngIf='(products$|async)!.length>0'>
 				<app-promocode-card></app-promocode-card>

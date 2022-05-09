@@ -1,5 +1,4 @@
-@import "../../../styles/mixins";
-
+@import "mixins.scss";
 
 .btn {
 	display: flex;
@@ -12,42 +11,42 @@
 	cursor: pointer;
 	background: none;
 
-	&--green {
+	&__green {
 		@extend .btn;
 		background: $c-green;
 		color: $c-white;
 	}
 
-	&--grey {
+	&__grey {
 		@extend .btn;
 		background: $c-light-grey;
-		color: $c-dark;
+		color: $c-text-100;
 	}
 
-	&--default {
+	&__default {
 		@extend .btn;
 		color: black;
 		padding: 0;
 	}
 
-	&--eco {
+	&__eco {
 		@extend .btn;
 		background: $c-light-grey;
 		border-radius: 61px;
-		color: $c-dark-grey;
+		color: $c-text-88;
 		margin-left: 12px;
 
 		&:focus, &:hover {
-			background: $c-dark-grey;
+			background: $c-text-88;
 			color: $c-white;
 		}
 
-		&:first-child{
+		&:first-child {
 			margin-left: 0;
 		}
 	}
 
-	&--filter {
+	&__filter {
 		@extend .btn;
 		background: $c-white;
 		border-radius: 8px;
