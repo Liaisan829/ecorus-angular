@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Portal } from '@angular/cdk/portal';
 import { CdkDialogContainer } from '@angular/cdk-experimental/dialog';
+import { DialogService } from '@services/dialog.service';
 
 @Component({
 	selector: 'app-modal-container',
@@ -8,7 +9,8 @@ import { CdkDialogContainer } from '@angular/cdk-experimental/dialog';
 	styleUrls: ['./modal-container.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ModalContainerComponent extends CdkDialogContainer{
+export class ModalContainerComponent extends CdkDialogContainer {
 	portal?: Portal<any>;
-	dialogTitle: string = "hello for now"
+	// TODO как то нормально получать название
+	modalTitle: any = 'hello for now'
 }

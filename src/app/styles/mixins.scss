@@ -1,44 +1,41 @@
 @import "colors";
 
-@mixin regular-style{
-	font-family: Inter, sans-serif;
+@mixin regular-style {
 	font-style: normal;
 	font-weight: normal;
 }
 
-@mixin regular-text{
+@mixin regular-text {
 	@include regular-style;
 	font-size: 16px;
 	line-height: 18px;
 	letter-spacing: -0.15px;
-	color: $c-grey;
+	color: $c-text-64;
 }
 
-@mixin primary-text{
+@mixin primary-text {
 	@include regular-style;
 	font-size: 14px;
 	line-height: 22px;
-	color: $c-grey;
+	color: $c-text-64;
 }
 
-@mixin secondary-text{
+@mixin secondary-text {
 	@include regular-style;
 	font-size: 16px;
 	line-height: 24px;
-	color: $c-grey;
+	color: $c-text-64;
 }
 
-@mixin infoBlockText{
-	font-family: Inter, sans-serif;
+@mixin infoBlockText {
 	font-style: normal;
 	font-weight: 600;
 	font-size: 32px;
 	line-height: 40px;
-	color: $c-dark;
+	color: $c-text-100;
 }
 
-@mixin modalText{
-	font-family: Inter, sans-serif;
+@mixin modalText {
 	font-style: normal;
 	font-weight: 600;
 	font-size: 28px;
@@ -50,14 +47,14 @@
 	font-weight: 600;
 }
 
-@mixin averageDesktop{
-	@media(max-width: 1250px){
+@mixin averageDesktop {
+	@media(max-width: 1250px) {
 		@content
 	}
 }
 
-@mixin smallDesktop{
-	@media(max-width: 1050px){
+@mixin smallDesktop {
+	@media(max-width: 1050px) {
 		@content
 	}
 }

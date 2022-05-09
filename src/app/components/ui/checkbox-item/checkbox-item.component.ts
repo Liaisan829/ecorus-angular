@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-checkbox-item',
@@ -6,7 +6,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 	styleUrls: ['./checkbox-item.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CheckboxItemComponent implements OnInit {
+export class CheckboxItemComponent {
 
 	@Input() title: string;
 	@Input() isClicked: boolean;
@@ -18,8 +18,4 @@ export class CheckboxItemComponent implements OnInit {
 		this.isClicked = false;
 		this.clickHandler = '';
 	}
-
-	ngOnInit(): void {
-	}
-
 }

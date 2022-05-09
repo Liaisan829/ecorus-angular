@@ -1,21 +1,21 @@
-@import "../../../styles/mixins";
+@import "mixins.scss";
 
 .promocodeCard {
 	border-radius: 24px;
 	width: 275px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px rgba(black, 0.1);
 	margin-bottom: 30px;
 
-	&--info {
+	&__info {
 		display: flex;
 		flex-direction: column;
 		padding: 140px 24px 24px;
 
-		&--button {
+		&__button {
 			margin: 0 auto;
 		}
 
-		&--text {
+		&__text {
 			margin-bottom: 60px;
 		}
 
@@ -24,7 +24,7 @@
 			text-align: center;
 		}
 
-		&--coins {
+		&__coins {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -32,7 +32,7 @@
 
 			h6 {
 				@include primary-text;
-				color: $c-dark-grey;
+				color: $c-text-88;
 				font-weight: bold;
 			}
 
@@ -43,7 +43,7 @@
 			}
 		}
 
-		&--balance {
+		&__balance {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -52,7 +52,7 @@
 
 			p {
 				@include secondary-text;
-				color: $c-dark;
+				color: $c-text-100;
 				margin-right: 12px;
 			}
 		}

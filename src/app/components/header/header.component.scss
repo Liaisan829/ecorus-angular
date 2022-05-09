@@ -1,9 +1,9 @@
-@import "../../styles/mixins.scss";
+@import "mixins.scss";
 
 .header {
 	border-bottom: 1px solid $c-light-grey;
 
-	&--container {
+	&__container {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -12,7 +12,7 @@
 		padding-top: 31px;
 	}
 
-	&--navigation {
+	&__navigation {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -20,13 +20,25 @@
 		column-gap: 48px;
 	}
 
-	&--info {
+	&__info {
 		display: flex;
 		flex-direction: row;
 		column-gap: 48px;
 
 		p {
-			color: $c-dark-grey;
+			color: $c-text-88;
+		}
+	}
+
+	&__link {
+		@include regular-text;
+		color: $c-text-100;
+		opacity: 0.8;
+
+		&__active {
+			border-bottom: 3px solid $c-green;
+			padding-bottom: 30px;
+			opacity: 1;
 		}
 	}
 }
@@ -34,16 +46,4 @@
 nav {
 	display: flex;
 	column-gap: 24px;
-}
-
-.link {
-	@include regular-text;
-	color: $c-dark;
-	opacity: 0.8;
-
-	&--active {
-		border-bottom: 3px solid $c-green;
-		padding-bottom: 30px;
-		opacity: 1;
-	}
 }

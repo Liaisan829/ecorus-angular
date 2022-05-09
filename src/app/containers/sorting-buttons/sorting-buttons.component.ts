@@ -1,16 +1,10 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-sorting-buttons',
-  templateUrl: './sorting-buttons.component.html',
-  styleUrls: ['./sorting-buttons.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+	selector: 'app-sorting-buttons',
+	templateUrl: './sorting-buttons.component.html',
+	styleUrls: ['./sorting-buttons.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SortingButtonsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class SortingButtonsComponent {
 }

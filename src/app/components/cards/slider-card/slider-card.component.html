@@ -1,7 +1,13 @@
-<div class='section' [style.background-color]='bgColor'>
-	<div class='section--info'>
+<div
+	class='section'
+	[class.section__yellow]='theme === "yellow"'
+	[class.section__light-green]='theme === "light-green"'
+>
+	<div class='section__info'>
 		<h1>{{cardHeadline}}</h1>
-		<p>{{cardText}}</p>
+		<p>
+			<ng-content select='[cardText]'></ng-content>
+		</p>
 		<app-button>{{buttonText}}</app-button>
 	</div>
 	<img src='{{img}}'

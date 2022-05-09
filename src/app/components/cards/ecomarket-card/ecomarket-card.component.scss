@@ -1,4 +1,4 @@
-@import "../../../styles/mixins";
+@import "mixins.scss";
 
 .section {
 	display: flex;
@@ -8,7 +8,7 @@
 
 	h6 {
 		@include secondary-text;
-		color: $c-dark-grey;
+		color: $c-text-88;
 		font-weight: bold;
 	}
 
@@ -18,7 +18,7 @@
 		letter-spacing: 0.5px;
 	}
 
-	&--brand {
+	&__brand {
 		background: $c-white;
 		border-radius: 20px;
 		@include primary-text;
@@ -33,19 +33,19 @@
 		}
 	}
 
-	&--text {
+	&__text {
 		margin-top: 16px;
 		margin-bottom: 16px;
 	}
 
-	&--price {
+	&__price {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 
 		p {
 			@include secondary-text;
-			color: $c-dark;
+			color: $c-text-100;
 			font-weight: bold;
 		}
 
@@ -61,7 +61,7 @@
 	.section {
 		width: 240px;
 
-		&--img {
+		&__img {
 			width: 240px;
 		}
 	}
@@ -71,7 +71,7 @@
 	.section {
 		width: 220px;
 
-		&--img {
+		&__img {
 			width: 220px;
 		}
 	}
@@ -81,7 +81,7 @@
 	.section {
 		width: 300px;
 
-		&--img {
+		&__img {
 			width: 300px;
 		}
 	}
@@ -91,7 +91,7 @@
 	.section {
 		width: 200px;
 
-		&--img {
+		&__img {
 			width: 200px;
 		}
 	}
@@ -102,7 +102,7 @@
 		width: 350px;
 		margin: 0 auto 30px auto;
 
-		&--img {
+		&__img {
 			width: 350px;
 		}
 	}

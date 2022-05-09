@@ -1,7 +1,10 @@
-$c-green: #07C88E;
-$c-grey: rgba(0, 11, 38, 0.64);
-$c-light-grey: rgba(0, 0, 0, 0.12);
-$c-dark-grey: rgba(0, 11, 38, 0.88);
-$c-light-green: #B3EDC8;
 $c-white: #FFFFFF;
-$c-dark: #000B26
+$c-text-100: #000B26;
+$c-text-64: rgba($c-text-100, 0.64);
+$c-text-88: rgba($c-text-100, 0.88);
+$c-text-12: rgba($c-text-100, 0.12);
+$c-green: #07C88E;
+$c-light-grey: rgba(black, 0.12);
+$c-light-green: #B3EDC8;
+$c-blue: #BFF0DE;
+$c-yellow: #FFE48F;

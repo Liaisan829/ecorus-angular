@@ -17,4 +17,8 @@ export class DialogService {
 			containerComponent: ModalContainerComponent,
 		});
 	}
+
+	closeDialog<T>(){
+	  return this.dialog.closeAll();
+	}
 }

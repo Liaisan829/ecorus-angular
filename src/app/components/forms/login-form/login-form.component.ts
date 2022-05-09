@@ -1,5 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastService } from '@services/toast.service';
+import { AuthService } from '@services/auth.service';
 
 @Component({
 	selector: 'app-login-form',
@@ -10,19 +12,35 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginFormComponent {
 	form: FormGroup;
 
-	constructor(private fd: FormBuilder) {
+	constructor(
+		private fd: FormBuilder,
+		private toast: ToastService,
+		private authService: AuthService
+	) {
 		this.form = this.fd.group({
-			phone: ['', [Validators.required, Validators.minLength(4)]],
-			password: ['', [Validators.required, Validators.minLength(10)]]
+			login: ['', [Validators.required, Validators.minLength(4)]],
+			password: ['', [Validators.required, Validators.minLength(4)]]
 		});
 
 		this.form.markAllAsTouched();
-
-		console.log(this.form);
 	}
 
 	control(name: string) {
 		return this.form.get(name);
+	}
+
+	login(): void {
+		if (!this.form.valid) {
+			this.toast.error('Заполните все поля!');
+			return;
+		}
+
+		this.authService.authorize(this.form.value).subscribe(res => {
+			this.toast.success('Добро пожаловать!');
+			this.authService.token = res.token;
+		}, err => {
+			console.log(err);
+		})
 	}
 
 }

@@ -1,20 +1,20 @@
 <div class='section' *ngFor='let item of product$ | async'>
-	<div class='section--brand'>
+	<div class='section__brand'>
 		<p>{{item.brand}}</p>
 	</div>
 
 	<app-button
 		theme='DEFAULT'
 	>
-		<img class='section--img' src='{{item.img}}' alt='product'>
+		<img class='section__img' src='{{item.img}}' alt='product'>
 	</app-button>
 
-	<div class='section--text'>
+	<div class='section__text'>
 		<h6>{{item.title}}</h6>
 		<p>{{item.gender}}</p>
 	</div>
 
-	<div class='section--price'>
+	<div class='section__price'>
 		<img src='./assets/currency.svg'
 		     alt='currency'>
 		<p>{{item.price}}</p>

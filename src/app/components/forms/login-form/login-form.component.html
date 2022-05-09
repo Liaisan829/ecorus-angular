@@ -5,12 +5,12 @@
 	<input
 		type='text'
 		placeholder='Телефон'
-		formControlName='phone'
+		formControlName='login'
 	>
 	<ng-container
-		*ngIf='control("phone")?.touched && control("phone")?.dirty && control("phone")?.errors'
+		*ngIf='control("login")?.touched && control("login")?.dirty && control("login")?.errors'
 	>
-		<span class='error'>{{ control("phone")?.errors | json }}</span>
+		<span class='form__error'>{{ control("login")?.errors | json }}</span>
 	</ng-container>
 
 	<input
@@ -21,10 +21,29 @@
 	<ng-container
 		*ngIf='control("password")?.touched && control("password")?.dirty && control("password")?.errors'
 	>
-		<span class='error'>{{ control("password")?.errors | json }}</span>
+		<span class='form__error'>{{ control("password")?.errors | json }}</span>
 	</ng-container>
 
 	<app-button theme='GREEN'
-	            type='submit'>Войти
+	            type='submit'
+	            (click)='login()'
+	>Войти
 	</app-button>
+
+	<div class='form__row'>
+		<app-button theme='DEFAULT'
+		            type='submit'
+		            color='#07C88E'
+		>Войти с помощью смс
+		</app-button>
+		<app-button theme='DEFAULT'
+		            type='submit'
+		            color='#07C88E'
+		>Регистрация
+		</app-button>
+	</div>
+	<app-button theme='GREY'
+	            type='submit'>Вход для партнеров
+	</app-button>
+
 </form>

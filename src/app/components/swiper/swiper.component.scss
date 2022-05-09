@@ -1,23 +1,23 @@
-@import "../../styles/mixins";
+@import "mixins.scss";
 
-.sliderWrapper {
+.slider {
 	position: relative;
 	margin: 0 auto;
 	width: 100%;
+
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		top: 180px;
+		z-index: 2;
+		cursor: pointer;
+	}
 }
 
 .swiper-button-prev::after, .swiper-button-next::after {
 	display: none;
-}
-
-.navigation {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
-	top: 180px;
-	z-index: 2;
-	cursor: pointer;
 }
 
 .swiper-button-prev-custom,
@@ -27,7 +27,7 @@
 	background: $c-white no-repeat center;
 	border: none;
 	border-radius: 50px;
-	box-shadow: 0 4px 24px rgba(0, 11, 38, 0.12);
+	box-shadow: 0 4px 24px $c-text-12;
 }
 
 .swiper-button-prev-custom {
@@ -54,7 +54,7 @@
 		max-width: 1000px;
 		margin: 0 auto;
 
-		.navigation {
+		&__navigation {
 			max-width: 1060px;
 		}
 	}
@@ -65,7 +65,7 @@
 		max-width: 800px;
 		margin: 0 auto;
 
-		.navigation {
+		&__navigation {
 			max-width: 860px;
 		}
 	}
@@ -76,7 +76,7 @@
 		max-width: 650px;
 		margin: 60px auto 0 auto;
 
-		.navigation {
+		&__navigation {
 			display: none;
 		}
 	}
@@ -87,7 +87,7 @@
 		max-width: 420px;
 		margin: 0 auto;
 
-		.navigation {
+		&__navigation {
 			display: none;
 		}
 	}

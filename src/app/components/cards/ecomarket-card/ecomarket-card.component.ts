@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 
 @Component({
@@ -7,15 +7,10 @@ import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 	styleUrls: ['./ecomarket-card.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EcomarketCardComponent implements OnInit {
+export class EcomarketCardComponent {
+	@Input() product$ = this.ecomarket.products$;
 
 	constructor(private ecomarket: EcomarketComponent) {
 	}
-
-	ngOnInit(): void {
-	}
-
-	@Input() product$ = this.ecomarket.products$;
-
 
 }

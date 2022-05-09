@@ -1,5 +1,5 @@
-<div class='sliderWrapper'>
-	<div class='navigation'>
+<div class='slider'>
+	<div class='slider__navigation'>
 		<div class='swiper-button-prev-custom'>
 			<img src='/assets/prev-arrow.svg'
 			     alt='prev-arrow'>
@@ -17,31 +17,34 @@
 		<ng-template swiperSlide>
 			<app-slider-card
 				cardHeadline='Сделаем мир чище'
-				cardText='Сдай макулатуру или старую одежду и получи скидку на покупку товаров из переработанных материалов'
 				img='/assets/serviceCondition.svg'
 				buttonText='Условия сервиса'
-				bgColor='#B3EDC8'
-			></app-slider-card>
+				theme='light-green'
+			>
+				<span cardText [innerHtml]='greenCard'>{{greenCard}}</span>
+			</app-slider-card>
 		</ng-template>
 
 		<ng-template swiperSlide>
 			<app-slider-card
 				cardHeadline='А вы знали...'
-				cardText='что среднее время разложения пластмассовых изделий колеблется  от 400 до 700 лет,  а полиэтиленовых пакетов — от 100 до 200 лет? '
 				img='/assets/plastic.svg'
 				buttonText='Узнать больше'
-				bgColor='#FFE48F'
-			></app-slider-card>
+				theme='yellow'
+			>
+				<span cardText [innerHtml]='yellowCard'>{{yellowCard}}</span>
+			</app-slider-card>
 		</ng-template>
 
 		<ng-template swiperSlide>
 			<app-slider-card
 				cardHeadline='Что с масками?'
-				cardText='Медицинские маски не обязательно должны становиться отходами. Их тоже можно сдать на переработку.'
 				img='/assets/masks.svg'
 				buttonText='Пункты сбора масок'
-				bgColor='#BFF0DE'
-			></app-slider-card>
+				theme='default'
+			>
+				<span cardText [innerHtml]='blueCard'>{{blueCard}}</span>
+			</app-slider-card>
 		</ng-template>
 	</swiper>
 </div>

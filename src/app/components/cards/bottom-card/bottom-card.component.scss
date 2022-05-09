@@ -1,4 +1,4 @@
-@import "../../../styles/mixins";
+@import "mixins.scss";
 
 .informBlock {
 	border: 2px solid $c-light-grey;
@@ -40,7 +40,7 @@
 		margin-top: 5px;
 	}
 
-	&--img {
+	&__img {
 		width: 280px;
 		height: 250px;
 		@include averageDesktop {
@@ -53,9 +53,9 @@
 		}
 	}
 
-	&--info {
+	&__info {
 
-		&--cardButton {
+		&__cardButton {
 			width: 48px;
 			height: 48px;
 			border: none;
@@ -81,11 +81,11 @@
 	.informBlock {
 		width: 290px;
 
-		&--info {
+		&__info {
 			margin-top: -10px;
 		}
 
-		&--img {
+		&__img {
 			width: 100px;
 			height: 100px;
 			margin-top: 90px;
@@ -97,11 +97,11 @@
 	.informBlock {
 		max-width: 200px;
 
-		&--info {
+		&__info {
 			margin-top: -10px;
 		}
 
-		&--img {
+		&__img {
 			display: none;
 		}
 	}
@@ -112,20 +112,20 @@
 		max-width: 420px;
 		background: $c-white;
 
-		&--info {
-			&--text {
+		&__info {
+			&__text {
 				margin-bottom: 50px;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
 			}
 
-			&--cardButton {
+			&__cardButton {
 				margin-bottom: 10px;
 			}
 		}
 
-		&--img {
+		&__img {
 			display: initial;
 			width: 250px;
 			height: 150px;

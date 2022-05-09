@@ -25,6 +25,11 @@ import { ModalContainerComponent } from '@components/modals/modal-container/moda
 import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginFormComponent } from '@components/forms/login-form/login-form.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptorService } from '@services/auth-interceptor.service';
+import { UrlInterceptorService } from '@services/url-interceptor.service';
+import { ErrorInterceptorService } from '@services/error-interceptor.service';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
 	declarations: [
@@ -47,7 +52,7 @@ import { LoginFormComponent } from '@components/forms/login-form/login-form.comp
 		CheckboxItemComponent,
 		ModalContainerComponent,
 		LoginModalComponent,
-  LoginFormComponent,
+		LoginFormComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -55,9 +60,31 @@ import { LoginFormComponent } from '@components/forms/login-form/login-form.comp
 		SwiperModule,
 		ReactiveFormsModule,
 		DialogModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		HttpClientModule,
+		ToastrModule.forRoot({
+			timeOut: 2500,
+			progressBar: true,
+			positionClass: 'toast-bottom-center'
+		}),
 	],
-	providers: [],
+	providers: [
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: UrlInterceptorService,
+			multi: true,
+		},
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: AuthInterceptorService,
+			multi: true,
+		},
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: ErrorInterceptorService,
+			multi: true
+		}
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule {
