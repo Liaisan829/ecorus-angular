@@ -1,2 +1,59 @@
-<app-login-form></app-login-form>
+<form
+	class='form'
+	[formGroup]='form'
+>
+	<input
+		type='text'
+		placeholder='Телефон'
+		formControlName='login'
+	>
+	<ng-container *ngIf='hasError("login", "required")'>
+		<span class='form__error'>Это поле обязательно</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("login", "pattern")'>
+		<span class='form__error'>Неверный формат номера</span>
+	</ng-container>
 
+	<input
+		type='password'
+		placeholder='Пароль'
+		formControlName='password'
+	>
+	<ng-container *ngIf='hasError("password", "required")'>
+		<span class='form__error'>Это поле обязательно</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("password", "minlength")'>
+		<span class='form__error'>Минимальная длина 4</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("password", "maxlength")'>
+		<span class='form__error'>Максимальная длина 10</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("password", "pattern")'>
+		<span class='form__error'>Пароль должен содержать цифры и английские буквы</span>
+	</ng-container>
+
+	<app-button theme='GREEN'
+	            type='submit'
+	            (click)='login()'
+	            [appDialogClose]
+	>Войти
+	</app-button>
+
+	<div class='form__row'>
+		<app-button theme='DEFAULT'
+		            type='submit'
+		            color='#07C88E'
+		>Войти с помощью смс
+		</app-button>
+		<app-button theme='DEFAULT'
+		            type='submit'
+		            color='#07C88E'
+		            (click)='openSignUpModal()'
+		>Регистрация
+		</app-button>
+	</div>
+	<app-button theme='GREY'
+	            type='submit'>Вход для партнеров
+	</app-button>
+
+</form>

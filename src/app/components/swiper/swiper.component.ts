@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation, SecurityContext } from '@angular/core';
 import SwiperCore, { SwiperOptions, Navigation, Autoplay } from 'swiper';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -15,7 +15,7 @@ export class SwiperComponent {
 	//TODO пока не работает
 	// constructor(private sanitizer: DomSanitizer) {
 	// 	this.sanitizer.bypassSecurityTrustHtml(this.greenCard)
-	// 	this.sanitizer.bypassSecurityTrustHtml(this.yellowCard)
+	// 	this.sanitizer.sanitize(SecurityContext.HTML, this.yellowCard)
 	// 	this.sanitizer.bypassSecurityTrustHtml(this.blueCard)
 	// }
 
