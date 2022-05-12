@@ -3,6 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 import { MainComponent } from '@pages/main/main.component';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
+import { ProfileComponent } from '@pages/profile/profile.component';
+import { PromoCardComponent } from '@components/cards/promo-card/promo-card.component';
+import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
+
+const profileRoutes: Routes = [
+	{ path: 'promocode', component: PromoCardComponent },
+	{ path: 'history', component: HistoryCardComponent }
+]
 
 const routes: Routes = [
 	{
@@ -16,6 +24,11 @@ const routes: Routes = [
 	{
 		path: 'collpoints',
 		component: MapPageComponent
+	},
+	{
+		path: 'profile',
+		component: ProfileComponent,
+		children: profileRoutes
 	}
 ];
 

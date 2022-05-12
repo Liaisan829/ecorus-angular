@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+
+.switcher {
+	width: 100%;
+
+	&--items {
+		display: flex;
+		align-items: center;
+		height: 40px;
+		margin-bottom: 24px;
+		border-bottom: 1px #eaeaea solid;
+		column-gap: 20px;
+		padding-top: 20px;
+	}
+
+	&--link {
+		@include primary-text;
+		font-size: 20px;
+		text-decoration: none;
+		padding-bottom: 20px;
+
+		&--active {
+			@include primary-text;
+			font-size: 20px;
+			color: $c-dark;
+			text-decoration: none;
+			border-bottom: 3px solid #07C88E;
+			padding-bottom: 20px;
+			opacity: 200%;
+		}
+	}
+}

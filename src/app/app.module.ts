@@ -19,9 +19,13 @@ import { SortingButtonsComponent } from '@containers/sorting-buttons/sorting-but
 import { MapPageComponent } from '@pages/map-page/map-page.component';
 import { MapComponent } from '@components/map/map.component';
 import { CommonMapCardComponent } from '@components/cards/collectionPointsCards/common-map-card/common-map-card.component';
-import { SearchInputComponent } from './components/ui/search-input/search-input.component';
-import { DropDownListComponent } from './components/ui/drop-down-list/drop-down-list.component';
-import { FullMapCardComponent } from './components/cards/collectionPointsCards/full-map-card/full-map-card.component';
+import { SearchInputComponent } from '@components/ui/search-input/search-input.component';
+import { DropDownListComponent } from '@components/ui/drop-down-list/drop-down-list.component';
+import { FullMapCardComponent } from '@components/cards/collectionPointsCards/full-map-card/full-map-card.component';
+import { ProfileComponent } from '@pages/profile/profile.component';
+import { ProfileCardsSwitcherComponent } from '@components/profile-cards-switcher/profile-cards-switcher.component';
+import { PromoCardComponent } from '@components/cards/promo-card/promo-card.component';
+import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
 
 
 @NgModule({
@@ -45,7 +49,11 @@ import { FullMapCardComponent } from './components/cards/collectionPointsCards/f
   CommonMapCardComponent,
   SearchInputComponent,
   DropDownListComponent,
-  FullMapCardComponent
+  FullMapCardComponent,
+  ProfileComponent,
+  ProfileCardsSwitcherComponent,
+  PromoCardComponent,
+  HistoryCardComponent
 	],
 	imports: [
 		BrowserModule,
