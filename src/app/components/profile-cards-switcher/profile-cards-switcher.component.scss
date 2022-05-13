@@ -1,4 +1,4 @@
-@import "../../styles/mixins";
+@import "mixins.scss";
 
 .switcher {
 	width: 100%;
@@ -22,7 +22,7 @@
 		&--active {
 			@include primary-text;
 			font-size: 20px;
-			color: $c-dark;
+			color: $c-text-100;
 			text-decoration: none;
 			border-bottom: 3px solid #07C88E;
 			padding-bottom: 20px;

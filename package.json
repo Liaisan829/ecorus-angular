@@ -27,7 +27,6 @@
 		"svgstore": "^3.0.1",
 		"swiper": "^8.1.4",
 		"tslib": "^2.3.0",
-		"leaflet": "^1.8.0",
 		"zone.js": "~0.11.4"
 	},
 	"devDependencies": {

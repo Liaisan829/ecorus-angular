@@ -17,16 +17,18 @@
 	</section>
 
 	<ng-container *ngIf='selected === 0; else other'>
-		<div *ngIf='(collPoints$|async)!.length>0'>
+		<div *ngIf='(collPoints$|async)!.length>=0'>
 			<app-common-map-card [selected]='selected'
-			                     (onChanged)='onChange($event)'></app-common-map-card>
+			                     (onChanged)='onChange($event)'
+			></app-common-map-card>
 		</div>
 	</ng-container>
 </div>
 
 <ng-template #other>
 	<app-full-map-card [selected]='selected'
-	                   (onChanged)='onChange($event)'></app-full-map-card>
+	                   (onChanged)='onChange($event)'
+	></app-full-map-card>
 </ng-template>
 
 
