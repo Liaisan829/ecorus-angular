@@ -1,0 +1,22 @@
+<div class='historyCard'
+     *ngFor='let item of history$ | async'>
+	<div class='historyCard--info'>
+		<div class='historyCard--info--item'>
+			<p>Адрес</p>
+			<h5>{{item.address}}</h5>
+		</div>
+		<div class='historyCard--info--item'>
+			<p>Материал</p>
+			<h5>{{item.material}}</h5>
+		</div>
+		<div class='historyCard--info--item'>
+			<p>Дата</p>
+			<h5>{{item.date}}</h5>
+		</div>
+	</div>
+	<div class='historyCard--price'>
+		<img src='/assets/currency.svg'
+		     alt='currency'>
+		<h4>{{item.price}}</h4>
+	</div>
+</div>

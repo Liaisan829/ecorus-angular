@@ -1,1 +1,35 @@
-<p>map-page works!</p>
+<div class='mapPage'>
+	<!--	<app-map></app-map>-->
+	<section class='mapPage--info'>
+		<div class='mapPage--info--top'>
+			<app-search-input></app-search-input>
+			<app-drop-down-list
+				[items]="['H&M', 'Adidas', 'NIKE']"
+			>
+				Выбрано 3 магазина
+			</app-drop-down-list>
+			<app-drop-down-list
+				[items]="['Стекло', 'Пластик', 'Дерево']"
+			>
+				Материалы
+			</app-drop-down-list>
+		</div>
+	</section>
+
+	<ng-container *ngIf='selected === 0; else other'>
+		<div *ngIf='(collPoints$|async)!.length>=0'>
+			<app-common-map-card [selected]='selected'
+			                     (onChanged)='onChange($event)'
+			></app-common-map-card>
+		</div>
+	</ng-container>
+</div>
+
+<ng-template #other>
+	<app-full-map-card [selected]='selected'
+	                   (onChanged)='onChange($event)'
+	></app-full-map-card>
+</ng-template>
+
+
+

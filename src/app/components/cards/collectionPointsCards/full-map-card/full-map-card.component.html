@@ -1,0 +1,26 @@
+<div class='fullCard'
+     *ngFor='let item of collPoint$ | async; let i = index'>
+
+	<div class='fullCard--back' (click)='handleChange(i)'>
+		<img src='assets/back.svg'
+		     alt='back'
+		>
+		<p>Вернуться назад</p>
+	</div>
+
+	<div class='fullCard--card'>
+		<img src='{{item.img}}'
+		     alt='card'>
+		<div class='fullCard--card--info'>
+			<h3>{{item.address}}</h3>
+			<p>{{item.phone}}</p>
+			<div class='fullCard--card--info--time'>
+				<p>{{item.timetable}}</p>
+			</div>
+			<h3>{{item.shop}}</h3>
+			<div class='fullCard--card--info--items'>
+				{{item.items}}
+			</div>
+		</div>
+	</div>
+</div>

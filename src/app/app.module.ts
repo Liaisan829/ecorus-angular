@@ -18,6 +18,16 @@ import { SwiperModule } from 'swiper/angular';
 import { MainComponent } from '@pages/main/main.component';
 import { SortingButtonsComponent } from '@containers/sorting-buttons/sorting-buttons.component';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
+import { MapComponent } from '@components/map/map.component';
+import { CommonMapCardComponent } from '@components/cards/collectionPointsCards/common-map-card/common-map-card.component';
+import { SearchInputComponent } from '@components/ui/search-input/search-input.component';
+import { DropDownListComponent } from '@components/ui/drop-down-list/drop-down-list.component';
+import { FullMapCardComponent } from '@components/cards/collectionPointsCards/full-map-card/full-map-card.component';
+import { ProfileComponent } from '@pages/profile/profile.component';
+import { ProfileCardsSwitcherComponent } from '@components/profile-cards-switcher/profile-cards-switcher.component';
+import { PromoCardComponent } from '@components/cards/promo-card/promo-card.component';
+import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
+
 import { CheckboxGroupComponent } from '@containers/checkbox-group/checkbox-group.component';
 import { CheckboxItemComponent } from '@components/ui/checkbox-item/checkbox-item.component';
 import { DialogModule } from '@angular/cdk-experimental/dialog';
@@ -31,7 +41,7 @@ import { ErrorInterceptorService } from '@services/error-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
 import { SignUpModalComponent } from '@components/modals/sign-up-modal/sign-up-modal.component';
 import { DialogCloseDirective } from '@directives/dialog-close.directive';
-import { ModalHeaderComponent } from './components/modals/modal-header/modal-header.component';
+import { ModalHeaderComponent } from '@components/modals/modal-header/modal-header.component';
 
 @NgModule({
 	declarations: [
@@ -54,6 +64,16 @@ import { ModalHeaderComponent } from './components/modals/modal-header/modal-hea
 		CheckboxItemComponent,
 		ModalContainerComponent,
 		LoginModalComponent,
+		MapPageComponent,
+		MapComponent,
+		CommonMapCardComponent,
+		SearchInputComponent,
+		DropDownListComponent,
+		FullMapCardComponent,
+		ProfileComponent,
+		ProfileCardsSwitcherComponent,
+		PromoCardComponent,
+		HistoryCardComponent,
 		SignUpModalComponent,
 		DialogCloseDirective,
   ModalHeaderComponent

@@ -1,0 +1,43 @@
+@import "mixins.scss";
+
+.historyCard {
+	width: 45vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 32px;
+	border: 1px solid $c-light-grey;
+	border-radius: 20px;
+	margin-bottom: 20px;
+
+	&--info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&--item {
+			margin-bottom: 15px;
+		}
+	}
+
+	&--price {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	p {
+		@include primary-text;
+	}
+
+	h5 {
+		@include secondary-text;
+		color: $c-text-88;
+	}
+
+	h4 {
+		font-size: 18px;
+		color: $c-text-88;
+	}
+}
