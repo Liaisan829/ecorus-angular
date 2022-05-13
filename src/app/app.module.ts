@@ -24,12 +24,14 @@ import { DialogModule } from '@angular/cdk-experimental/dialog';
 import { ModalContainerComponent } from '@components/modals/modal-container/modal-container.component';
 import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginFormComponent } from '@components/forms/login-form/login-form.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from '@services/auth-interceptor.service';
 import { UrlInterceptorService } from '@services/url-interceptor.service';
 import { ErrorInterceptorService } from '@services/error-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
+import { SignUpModalComponent } from '@components/modals/sign-up-modal/sign-up-modal.component';
+import { DialogCloseDirective } from '@directives/dialog-close.directive';
+import { ModalHeaderComponent } from './components/modals/modal-header/modal-header.component';
 
 @NgModule({
 	declarations: [
@@ -52,7 +54,9 @@ import { ToastrModule } from 'ngx-toastr';
 		CheckboxItemComponent,
 		ModalContainerComponent,
 		LoginModalComponent,
-		LoginFormComponent,
+		SignUpModalComponent,
+		DialogCloseDirective,
+  ModalHeaderComponent
 	],
 	imports: [
 		BrowserModule,
