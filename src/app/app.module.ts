@@ -41,7 +41,7 @@ import { ErrorInterceptorService } from '@services/error-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
 import { SignUpModalComponent } from '@components/modals/sign-up-modal/sign-up-modal.component';
 import { DialogCloseDirective } from '@directives/dialog-close.directive';
-import { ModalHeaderComponent } from './components/modals/modal-header/modal-header.component';
+import { ModalHeaderComponent } from '@components/modals/modal-header/modal-header.component';
 
 @NgModule({
 	declarations: [
@@ -64,7 +64,6 @@ import { ModalHeaderComponent } from './components/modals/modal-header/modal-hea
 		CheckboxItemComponent,
 		ModalContainerComponent,
 		LoginModalComponent,
-		LoginFormComponent,
 		MapPageComponent,
 		MapComponent,
 		CommonMapCardComponent,
@@ -74,7 +73,7 @@ import { ModalHeaderComponent } from './components/modals/modal-header/modal-hea
 		ProfileComponent,
 		ProfileCardsSwitcherComponent,
 		PromoCardComponent,
-		HistoryCardComponent
+		HistoryCardComponent,
 		SignUpModalComponent,
 		DialogCloseDirective,
   ModalHeaderComponent
