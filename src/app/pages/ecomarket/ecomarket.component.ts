@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ProductsService } from '@services/products.service';
 
 @Component({
@@ -7,13 +7,10 @@ import { ProductsService } from '@services/products.service';
 	styleUrls: ['./ecomarket.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EcomarketComponent implements OnInit {
+export class EcomarketComponent {
 
 	products$ = this.productsService.products$
 
 	constructor(private productsService: ProductsService) {
-	}
-
-	ngOnInit(): void {
 	}
 }

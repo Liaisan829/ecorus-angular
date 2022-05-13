@@ -1,0 +1,28 @@
+:host {
+	padding: 48px;
+	background: white;
+	outline: none;
+	max-height: 100vh;
+	overflow: auto;
+	border-radius: 26px;
+	max-width: 480px;
+
+	::ng-deep {
+		& > * {
+			display: block;
+		}
+	}
+}
+
+.modal_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 384px;
+	width: 100%;
+	margin: 0 auto;
+
+	h2 {
+		margin: 0;
+	}
+}
