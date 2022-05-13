@@ -14,6 +14,10 @@ export class HeaderComponent {
 	}
 
 	openLoginModal() {
-		this.dialog.openDialog(LoginModalComponent);
+		this.dialog.openDialog(LoginModalComponent, {
+			data: {
+				title: 'Вход'
+			}
+		});
 	}
 }
