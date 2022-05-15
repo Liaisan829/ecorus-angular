@@ -3,4 +3,73 @@
 	class='form'
 	[formGroup]='regForm'
 >
+	<input
+		type='text'
+		placeholder='Имя'
+		formControlName='firstname'
+	>
+	<ng-container *ngIf='hasError("firstname", "required")'>
+		<span class='form__error'>Это поле обязательно</span>
+	</ng-container>
+
+	<input
+		type='text'
+		placeholder='Телефон'
+		formControlName='phone_number'
+	>
+	<ng-container *ngIf='hasError("phone_number", "required")'>
+		<span class='form__error'>Это поле обязательно</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("phone_number", "pattern")'>
+		<span class='form__error'>Неверный формат номера</span>
+	</ng-container>
+
+	<input
+		type='text'
+		placeholder='Почта'
+		formControlName='email'
+	>
+	<ng-container *ngIf='hasError("email", "required")'>
+		<span class='form__error'>Это поле обязательно</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("email", "pattern")'>
+		<span class='form__error'>Неверный формат почты</span>
+	</ng-container>
+
+	<input
+		type='password'
+		placeholder='Пароль'
+		formControlName='password'
+	>
+	<ng-container *ngIf='hasError("password", "required")'>
+		<span class='form__error'>Это поле обязательно</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("password", "minlength")'>
+		<span class='form__error'>Минимальная длина 4</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("password", "maxlength")'>
+		<span class='form__error'>Максимальная длина 10</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("password", "pattern")'>
+		<span class='form__error'>Пароль должен содержать цифры и английские буквы</span>
+	</ng-container>
+
+	<app-button theme='GREEN'
+	            type='submit'
+	            (click)='signup()'
+	            [appDialogClose]
+	>Зарегистрироваться
+	</app-button>
+
+	<div class='form__row'>
+		<app-button theme='DEFAULT'
+		            type='submit'
+		            color='#07C88E'
+		            (click)='openLoginModal()'
+		>Я уже зарегистрировался(-ась)
+		</app-button>
+	</div>
+	<app-button theme='GREY'
+	            type='submit'>Вход для партнеров
+	</app-button>
 </form>

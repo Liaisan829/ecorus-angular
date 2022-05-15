@@ -6,6 +6,7 @@ import { MapPageComponent } from '@pages/map-page/map-page.component';
 import { ProfileComponent } from '@pages/profile/profile.component';
 import { PromoCardComponent } from '@components/cards/promo-card/promo-card.component';
 import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
+import { AuthenticationGuard } from '@guards/auth.guard';
 
 const profileRoutes: Routes = [
 	{ path: 'promocode', component: PromoCardComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
 	{
 		path: 'profile',
 		component: ProfileComponent,
+		canActivate: [AuthenticationGuard],
 		children: profileRoutes
 	}
 ];

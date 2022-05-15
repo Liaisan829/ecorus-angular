@@ -16,12 +16,12 @@ export class LoginModalComponent {
 	form: FormGroup;
 
 	constructor(
-		private fd: FormBuilder,
+		private fb: FormBuilder,
 		private toast: ToastService,
 		private authService: AuthService,
 		private dialog: DialogService
 	) {
-		this.form = this.fd.group({
+		this.form = this.fb.group({
 			login: ['', [...PhoneValidator]],
 			password: ['', [...PasswordValidators]]
 		});
@@ -45,6 +45,7 @@ export class LoginModalComponent {
 		}, err => {
 			console.log(err);
 		})
+
 	}
 
 	openSignUpModal() {
