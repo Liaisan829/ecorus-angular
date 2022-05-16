@@ -6,9 +6,8 @@
 
 	<div class='ecomarket__content'>
 		<app-checkbox-group></app-checkbox-group>
-		<section class='productCards'>
+		<section class='ecomarket__content__productCards'>
 			<div *ngIf='(products$|async)!.length>0'>
-				<app-promocode-card></app-promocode-card>
 				<app-ecomarket-card></app-ecomarket-card>
 			</div>
 		</section>

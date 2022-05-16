@@ -3,7 +3,7 @@
 .switcher {
 	width: 100%;
 
-	&--items {
+	&__items {
 		display: flex;
 		align-items: center;
 		height: 40px;
@@ -13,13 +13,13 @@
 		padding-top: 20px;
 	}
 
-	&--link {
+	&__link {
 		@include primary-text;
 		font-size: 20px;
 		text-decoration: none;
 		padding-bottom: 20px;
 
-		&--active {
+		&__active {
 			@include primary-text;
 			font-size: 20px;
 			color: $c-text-100;

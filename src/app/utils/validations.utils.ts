@@ -7,11 +7,13 @@ export const EmailRegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|
 
 export const PasswordSpecialSymbols = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 export const NumbersRegExp = /\d/;
-export const RussianLettersPattern = /^[а-яёА-ЯЁ][а-яёА-ЯЁ -]*$/;
+export const RussianLettersPattern = /^[a-zа-яё]+$/i;
 
 export const NameValidators = [
 	Validators.required,
-	Validators.maxLength(60)
+	Validators.minLength(2),
+	Validators.maxLength(10),
+	Validators.pattern(RussianLettersPattern)
 ];
 
 export const PhoneValidator = [

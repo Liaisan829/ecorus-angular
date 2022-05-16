@@ -11,6 +11,15 @@
 	<ng-container *ngIf='hasError("firstname", "required")'>
 		<span class='form__error'>Это поле обязательно</span>
 	</ng-container>
+	<ng-container *ngIf='hasError("firstname", "minlength")'>
+		<span class='form__error'>Имя слишком короткое</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("firstname", "maxlength")'>
+		<span class='form__error'>Имя слишком длинное</span>
+	</ng-container>
+	<ng-container *ngIf='hasError("firstname", "pattern")'>
+		<span class='form__error'>Имя может содержать только буквы</span>
+	</ng-container>
 
 	<input
 		type='text'

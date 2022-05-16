@@ -22,7 +22,7 @@ export class SignUpModalComponent {
 		private dialog: DialogService
 	) {
 		this.regForm = this.fb.group({
-			firstname: ['', Validators.required],
+			firstname: ['', [...NameValidators]],
 			phone_number: ['', [...PhoneValidator]],
 			email: ['', [...EmailValidator]],
 			password: ['', [...PasswordValidators]]
@@ -50,6 +50,7 @@ export class SignUpModalComponent {
 
 		this.authService.registration(this.regForm.value).subscribe(res => {
 			this.toast.success('Вы успешно зарегистрированы!');
+			window.location.reload();
 		}, err => {
 			console.log(err);
 			this.toast.success('Проблемы с сервером');
@@ -59,5 +60,4 @@ export class SignUpModalComponent {
 	hasError(formControlName: string, errorName: string) {
 		return this.control(formControlName)?.touched && this.control(formControlName)?.dirty && this.control(formControlName)?.hasError(errorName)
 	}
-
 }

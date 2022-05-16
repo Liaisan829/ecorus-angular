@@ -1,8 +1,8 @@
 @import "../../styles/mixins";
 
 .mapPage {
-	&--info {
-		&--top {
+	&__info {
+		&__top {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;

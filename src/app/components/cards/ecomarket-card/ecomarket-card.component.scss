@@ -1,5 +1,14 @@
 @import "mixins.scss";
 
+.list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-left: 70px;
+	min-width: 870px;
+}
+
 .section {
 	display: flex;
 	flex-direction: column;
