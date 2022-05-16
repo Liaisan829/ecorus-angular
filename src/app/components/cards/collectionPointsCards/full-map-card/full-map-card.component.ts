@@ -1,18 +1,15 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
 
 @Component({
-  selector: 'app-full-map-card',
-  templateUrl: './full-map-card.component.html',
-  styleUrls: ['./full-map-card.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+	selector: 'app-full-map-card',
+	templateUrl: './full-map-card.component.html',
+	styleUrls: ['./full-map-card.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FullMapCardComponent implements OnInit {
+export class FullMapCardComponent {
 
 	constructor(private map: MapPageComponent) {
-	}
-
-	ngOnInit(): void {
 	}
 
 	@Input() collPoint$ = this.map.collPoints$;

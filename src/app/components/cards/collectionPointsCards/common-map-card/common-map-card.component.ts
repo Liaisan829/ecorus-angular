@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
 
 @Component({
@@ -7,12 +7,9 @@ import { MapPageComponent } from '@pages/map-page/map-page.component';
 	styleUrls: ['./common-map-card.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CommonMapCardComponent implements OnInit {
+export class CommonMapCardComponent {
 
 	constructor(private map: MapPageComponent) {
-	}
-
-	ngOnInit(): void {
 	}
 
 	@Input() collPoint$ = this.map.collPoints$;
