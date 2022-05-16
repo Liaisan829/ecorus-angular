@@ -9,7 +9,7 @@
 	max-width: 390px;
 	border: 1px solid $c-light-grey;
 
-	&--card {
+	&__card {
 		max-width: 400px;
 		width: 100%;
 		display: flex;
@@ -18,22 +18,22 @@
 		align-items: baseline;
 		margin-top: 25px;
 
-		&--info {
+		&__info {
 			padding: 20px;
 
-			&--time {
+			&__time {
 				max-width: 175px;
 				margin-bottom: 30px;
 			}
 
-			&--items {
+			&__items {
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
 				max-width: 400px;
 			}
 
-			&--item {
+			&__item {
 				border: none;
 				background: rgba(62, 80, 114, 0.08);
 				padding: 4px 12px;
@@ -61,7 +61,7 @@
 		}
 	}
 
-	&--back {
+	&__back {
 		display: flex;
 		flex-direction: row;
 		align-items: center;

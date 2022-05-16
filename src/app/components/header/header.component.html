@@ -24,23 +24,53 @@
 			</nav>
 		</div>
 		<div class='header__info'>
-			<app-button
-				type='button'
-				theme='DEFAULT'
-			>
-				<img src='/assets/location.svg'
-				     alt='location'>
-				<p>Казань</p>
-			</app-button>
-			<app-button
-				type='button'
-				theme='DEFAULT'
-				(click)='openLoginModal()'
-			>
-				<img src='/assets/goIn.svg'
-				     alt='login'>
-				<p>Войти</p>
-			</app-button>
+			<ng-container *ngIf='!(userAuth); else other'>
+				<app-button
+					type='button'
+					theme='DEFAULT'
+				>
+					<img src='/assets/location.svg'
+					     alt='location'>
+					<p>Казань</p>
+				</app-button>
+				<app-button
+					type='button'
+					theme='DEFAULT'
+					(click)='openLoginModal()'
+				>
+					<img src='/assets/goIn.svg'
+					     alt='login'>
+					<p>Войти</p>
+				</app-button>
+			</ng-container>
 		</div>
 	</div>
 </header>
+
+<ng-template #other>
+	<app-button
+		type='button'
+		theme='DEFAULT'
+	>
+		<img src='/assets/location.svg'
+		     alt='location'>
+		<p>Казань</p>
+	</app-button>
+	<app-button
+		type='button'
+		theme='DEFAULT'
+	>
+		<img src='/assets/currency.svg'
+		     alt='location'>
+		<p>1000</p>
+	</app-button>
+	<app-button
+		type='button'
+		theme='DEFAULT'
+		routerLink='/profile/history'
+	>
+		<img src='/assets/profile.svg'
+		     alt='location'>
+		<p>Алексей</p>
+	</app-button>
+</ng-template>

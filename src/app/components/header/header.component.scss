@@ -34,11 +34,12 @@
 		@include regular-text;
 		color: $c-text-100;
 		opacity: 0.8;
+		padding-bottom: 30px;
 
 		&__active {
 			border-bottom: 3px solid $c-green;
-			padding-bottom: 30px;
 			opacity: 1;
+
 		}
 	}
 }

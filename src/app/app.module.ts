@@ -42,6 +42,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { SignUpModalComponent } from '@components/modals/sign-up-modal/sign-up-modal.component';
 import { DialogCloseDirective } from '@directives/dialog-close.directive';
 import { ModalHeaderComponent } from '@components/modals/modal-header/modal-header.component';
+import { QrModalComponent } from './components/modals/qr-modal/qr-modal.component';
 
 @NgModule({
 	declarations: [
@@ -76,7 +77,8 @@ import { ModalHeaderComponent } from '@components/modals/modal-header/modal-head
 		HistoryCardComponent,
 		SignUpModalComponent,
 		DialogCloseDirective,
-  ModalHeaderComponent
+  ModalHeaderComponent,
+  QrModalComponent
 	],
 	imports: [
 		BrowserModule,

@@ -1,20 +1,20 @@
 <div class='historyCard'
      *ngFor='let item of history$ | async'>
-	<div class='historyCard--info'>
-		<div class='historyCard--info--item'>
+	<div class='historyCard__info'>
+		<div class='historyCard__info__item'>
 			<p>Адрес</p>
 			<h5>{{item.address}}</h5>
 		</div>
-		<div class='historyCard--info--item'>
+		<div class='historyCard__info__item'>
 			<p>Материал</p>
 			<h5>{{item.material}}</h5>
 		</div>
-		<div class='historyCard--info--item'>
+		<div class='historyCard__info__item'>
 			<p>Дата</p>
 			<h5>{{item.date}}</h5>
 		</div>
 	</div>
-	<div class='historyCard--price'>
+	<div class='historyCard__price'>
 		<img src='/assets/currency.svg'
 		     alt='currency'>
 		<h4>{{item.price}}</h4>

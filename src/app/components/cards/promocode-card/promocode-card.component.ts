@@ -1,4 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { DialogService } from '@services/dialog.service';
+import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component';
 
 @Component({
 	selector: 'app-promocode-card',
@@ -7,5 +9,12 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PromocodeCardComponent {
+
+	constructor(private dialog: DialogService) {
+	}
+
+	openQrModal() {
+		this.dialog.openDialog(QrModalComponent)
+	}
 
 }

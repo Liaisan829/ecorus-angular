@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { DialogService } from '@services/dialog.service';
 import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
 
@@ -9,6 +9,8 @@ import { LoginModalComponent } from '@components/modals/login-modal/login-modal.
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
+
+	userAuth = window.localStorage.getItem('token');
 
 	constructor(private dialog: DialogService) {
 	}

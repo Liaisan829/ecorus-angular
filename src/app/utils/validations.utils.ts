@@ -2,11 +2,19 @@ import { AbstractControl, ValidationErrors, ValidatorFn, Validators } from '@ang
 
 export const PasswordRegExp = /^[A-Za-z][A-Za-z0-9]*$/;
 export const PhoneRegExp = /^((\+7|7|8)+([0-9]){10})$/;
+export const EmailRegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
 export const PasswordSpecialSymbols = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 export const NumbersRegExp = /\d/;
-export const RussianLettersPattern = /^[а-яёА-ЯЁ][а-яёА-ЯЁ -]*$/;
-export const NameValidators = [Validators.pattern(RussianLettersPattern), Validators.maxLength(60)];
+export const RussianLettersPattern = /^[a-zа-яё]+$/i;
+
+export const NameValidators = [
+	Validators.required,
+	Validators.minLength(2),
+	Validators.maxLength(10),
+	Validators.pattern(RussianLettersPattern)
+];
 
 export const PhoneValidator = [
 	Validators.required,
@@ -19,6 +27,12 @@ export const PasswordValidators = [
 	Validators.maxLength(10),
 	Validators.pattern(PasswordRegExp)
 ];
+
+export const EmailValidator = [
+	Validators.required,
+	Validators.pattern(EmailRegExp)
+]
+
 
 export const CheckIfErrorEmpty = (error: ValidationErrors | null) => {
 	return error && Object.keys(error).length ? error : null;

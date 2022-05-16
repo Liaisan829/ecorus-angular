@@ -11,17 +11,17 @@
 	border-radius: 20px;
 	margin-bottom: 20px;
 
-	&--info {
+	&__info {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 
-		&--item {
+		&__item {
 			margin-bottom: 15px;
 		}
 	}
 
-	&--price {
+	&__price {
 		display: flex;
 		flex-direction: row;
 		align-items: center;

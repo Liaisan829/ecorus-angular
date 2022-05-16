@@ -12,7 +12,9 @@
 			<p>Вы можете обменять их на скидку 200 руб.</p>
 		</div>
 		<div class='promocodeCard__info__button'>
-			<app-button>
+			<app-button
+				(click)='openQrModal()'
+			>
 				Получить промокод
 			</app-button>
 		</div>

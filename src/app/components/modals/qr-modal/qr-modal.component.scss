@@ -1,0 +1,26 @@
+@import "mixins";
+
+.qr {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 400px;
+
+	h2 {
+		@include modalText;
+		color: $c-text-64;
+	}
+
+	p {
+		@include primary-text;
+		color: $c-text-100;
+		margin-bottom: 15px;
+		margin-top: 10px;
+	}
+
+	&__image {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

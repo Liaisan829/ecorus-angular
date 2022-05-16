@@ -1,0 +1,21 @@
+<form
+	class='form'
+	[formGroup]='qrForm'
+>
+	<div class='qr'>
+		<h2>QR-код на покупку создан</h2>
+		<p>При оплате покажите его сотруднику на кассе</p>
+
+		<div class='qr__image'>
+			<img src='/assets/qr.svg'
+			     alt='qr'>
+			<h2>E25GHR0P</h2>
+		</div>
+
+		<p>Если не получается отсканировать QR-код, введите код вручную или продиктуйте сотруднику на кассе</p>
+		<app-button
+			theme='GREEN'
+			[appDialogClose]
+		>Закрыть</app-button>
+	</div>
+</form>

@@ -5,7 +5,7 @@
 	flex-direction: row;
 	margin-top: 40px;
 
-	&--info {
+	&__info {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -16,7 +16,7 @@
 		margin-right: 48px;
 		max-height: 400px;
 
-		&--avatar {
+		&__avatar {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -30,7 +30,7 @@
 			}
 		}
 
-		&--personalData {
+		&__personalData {
 			margin-top: 24px;
 			margin-bottom: 24px;
 		}
