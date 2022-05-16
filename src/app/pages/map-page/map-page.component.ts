@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CollPointsService } from '@services/collPoints.service';
 
 @Component({
@@ -7,15 +7,12 @@ import { CollPointsService } from '@services/collPoints.service';
 	styleUrls: ['./map-page.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MapPageComponent implements OnInit {
+export class MapPageComponent {
 	collPoints$ = this.collPointsService.collPoints$
 
 	selected = 0;
 
 	constructor(private collPointsService: CollPointsService) {
-	}
-
-	ngOnInit(): void {
 	}
 
 	onChange(n:number) {

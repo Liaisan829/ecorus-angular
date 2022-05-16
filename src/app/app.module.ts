@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
+import { ToastrModule } from 'ngx-toastr';
 import { BrowserModule } from '@angular/platform-browser';
+import { DialogModule } from '@angular/cdk-experimental/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SwiperModule } from 'swiper/angular';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '@components/header/header.component';
 import { EcomarketCardComponent } from '@components/cards/ecomarket-card/ecomarket-card.component';
@@ -14,7 +18,6 @@ import { PromocodeCardComponent } from '@components/cards/promocode-card/promoco
 import { SliderCardComponent } from '@components/cards/slider-card/slider-card.component';
 import { BottomCardComponent } from '@components/cards/bottom-card/bottom-card.component';
 import { SwiperComponent } from '@components/swiper/swiper.component';
-import { SwiperModule } from 'swiper/angular';
 import { MainComponent } from '@pages/main/main.component';
 import { SortingButtonsComponent } from '@containers/sorting-buttons/sorting-buttons.component';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
@@ -27,22 +30,18 @@ import { ProfileComponent } from '@pages/profile/profile.component';
 import { ProfileCardsSwitcherComponent } from '@components/profile-cards-switcher/profile-cards-switcher.component';
 import { PromoCardComponent } from '@components/cards/promo-card/promo-card.component';
 import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
-
 import { CheckboxGroupComponent } from '@containers/checkbox-group/checkbox-group.component';
 import { CheckboxItemComponent } from '@components/ui/checkbox-item/checkbox-item.component';
-import { DialogModule } from '@angular/cdk-experimental/dialog';
 import { ModalContainerComponent } from '@components/modals/modal-container/modal-container.component';
 import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorService } from '@services/auth-interceptor.service';
 import { UrlInterceptorService } from '@services/url-interceptor.service';
 import { ErrorInterceptorService } from '@services/error-interceptor.service';
-import { ToastrModule } from 'ngx-toastr';
 import { SignUpModalComponent } from '@components/modals/sign-up-modal/sign-up-modal.component';
 import { DialogCloseDirective } from '@directives/dialog-close.directive';
 import { ModalHeaderComponent } from '@components/modals/modal-header/modal-header.component';
-import { QrModalComponent } from './components/modals/qr-modal/qr-modal.component';
+import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component';
 
 @NgModule({
 	declarations: [
@@ -77,8 +76,8 @@ import { QrModalComponent } from './components/modals/qr-modal/qr-modal.componen
 		HistoryCardComponent,
 		SignUpModalComponent,
 		DialogCloseDirective,
-  ModalHeaderComponent,
-  QrModalComponent
+		ModalHeaderComponent,
+		QrModalComponent
 	],
 	imports: [
 		BrowserModule,

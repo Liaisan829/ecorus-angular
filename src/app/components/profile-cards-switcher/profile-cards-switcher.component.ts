@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-profile-cards-switcher',
@@ -6,11 +6,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./profile-cards-switcher.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProfileCardsSwitcherComponent implements OnInit {
+export class ProfileCardsSwitcherComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

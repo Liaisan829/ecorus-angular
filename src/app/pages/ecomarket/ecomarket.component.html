@@ -1,15 +1,13 @@
-<div class='container'>
-	<div class='ecomarket'>
-		<h1>ЭкоМаркет</h1>
-		<app-sorting-buttons></app-sorting-buttons>
-	</div>
+<div class='ecomarket'>
+	<h1>ЭкоМаркет</h1>
+	<app-sorting-buttons></app-sorting-buttons>
+</div>
 
-	<div class='ecomarket__content'>
-		<app-checkbox-group></app-checkbox-group>
-		<section class='ecomarket__content__productCards'>
-			<div *ngIf='(products$|async)!.length>0'>
-				<app-ecomarket-card></app-ecomarket-card>
-			</div>
-		</section>
+<div class='ecomarket__content'>
+	<app-checkbox-group></app-checkbox-group>
+
+	<div *ngIf='(products$|async)!.length>0'>
+		<app-ecomarket-card></app-ecomarket-card>
 	</div>
 </div>
+

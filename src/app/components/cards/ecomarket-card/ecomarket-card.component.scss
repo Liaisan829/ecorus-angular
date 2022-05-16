@@ -1,6 +1,6 @@
 @import "mixins.scss";
 
-.list {
+:host {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;

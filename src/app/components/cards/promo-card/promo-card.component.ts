@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { ProfileComponent } from '@pages/profile/profile.component';
 import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component';
 import { DialogService } from '@services/dialog.service';
@@ -9,18 +9,13 @@ import { DialogService } from '@services/dialog.service';
 	styleUrls: ['./promo-card.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PromoCardComponent implements OnInit {
+export class PromoCardComponent {
+	@Input() promo$ = this.profile.promo$;
 
 	constructor(
 		private profile: ProfileComponent,
 		private dialog: DialogService
-	) {
-	}
-
-	ngOnInit(): void {
-	}
-
-	@Input() promo$ = this.profile.promo$;
+	) {}
 
 	openQrModal() {
 		this.dialog.openDialog(QrModalComponent)

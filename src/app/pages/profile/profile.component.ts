@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { PromoService } from '@services/promo.service';
 import { HistoryService } from '@services/history.service';
 
@@ -8,7 +8,7 @@ import { HistoryService } from '@services/history.service';
 	styleUrls: ['./profile.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent{
 
 	promo$ = this.promoService.promo$
 	history$ = this.historyService.history$
@@ -16,10 +16,5 @@ export class ProfileComponent implements OnInit {
 	constructor(
 		private promoService: PromoService,
 		private historyService: HistoryService
-	) {
-	}
-
-	ngOnInit(): void {
-	}
-
+	) {}
 }
