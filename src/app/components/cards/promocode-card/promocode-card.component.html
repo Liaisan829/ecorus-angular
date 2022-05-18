@@ -1,22 +1,30 @@
 <div class='promocodeCard'>
-	<div class='promocodeCard__info'>
-		<div class='promocodeCard__info__text'>
-			<div class='promocodeCard__info__balance'>
-				<p>На вашем балансе</p>
-				<div class='promocodeCard__info__coins'>
-					<img src='/assets/currency.svg'
-					     alt='currency'>
-					<h6>200</h6>
+	<ng-container *ngIf='balance > 0; else zeroBalance'>
+		<div class='promocodeCard__info'>
+			<div class='promocodeCard__info__text'>
+				<div class='promocodeCard__info__balance'>
+					<p>На вашем балансе</p>
+					<div class='promocodeCard__info__coins'>
+						<img src='/assets/currency.svg'
+						     alt='currency'>
+						<h6>{{balance}}</h6>
+					</div>
 				</div>
+				<p>Вы можете обменять их на&nbsp;скидку {{balance}}&nbsp;руб.</p>
 			</div>
-			<p>Вы можете обменять их на скидку 200 руб.</p>
+			<div class='promocodeCard__info__button'>
+				<app-button
+					(click)='openQrModal()'
+				>
+					Получить промокод
+				</app-button>
+			</div>
 		</div>
-		<div class='promocodeCard__info__button'>
-			<app-button
-				(click)='openQrModal()'
-			>
-				Получить промокод
-			</app-button>
-		</div>
-	</div>
+	</ng-container>
 </div>
+
+<ng-template #zeroBalance>
+	<div class='zeroBalance'>
+		<p>На вашем балансе нет монет</p>
+	</div>
+</ng-template>

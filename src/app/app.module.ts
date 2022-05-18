@@ -42,6 +42,7 @@ import { SignUpModalComponent } from '@components/modals/sign-up-modal/sign-up-m
 import { DialogCloseDirective } from '@directives/dialog-close.directive';
 import { ModalHeaderComponent } from '@components/modals/modal-header/modal-header.component';
 import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component';
+import { PromoCardsComponent } from '@containers/promo-cards/promo-cards.component';
 
 @NgModule({
 	declarations: [
@@ -77,7 +78,8 @@ import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component
 		SignUpModalComponent,
 		DialogCloseDirective,
 		ModalHeaderComponent,
-		QrModalComponent
+		QrModalComponent,
+  PromoCardsComponent
 	],
 	imports: [
 		BrowserModule,

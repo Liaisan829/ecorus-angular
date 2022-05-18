@@ -21,6 +21,6 @@ export class ProfileService {
 	}
 	
 	getUserPromoCards(): Observable<PromoCard[]>{
-		return this.http.get<PromoCard[]>('promo-codes');
+		return this.http.get<PromoCard[]>('promo-codes/eco-rus/api/v1/promo-codes');
 	}
 }

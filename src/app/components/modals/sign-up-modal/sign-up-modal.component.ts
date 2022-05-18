@@ -26,7 +26,7 @@ export class SignUpModalComponent {
 			phone_number: ['', [...PhoneValidator]],
 			email: ['', [...EmailValidator]],
 			password: ['', [...PasswordValidators]],
-			balance: 0
+			balance: 1000
 		})
 		this.regForm.markAllAsTouched()
 	}

@@ -31,4 +31,8 @@ export class AuthService {
 	registration(signUpParams: SignUpParams): Observable<any> {
 		return this.http.post('account', signUpParams);
 	}
+
+	isAuthorized(): boolean{
+		return this.token !== null;
+	}
 }

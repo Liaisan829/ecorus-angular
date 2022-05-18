@@ -3,7 +3,6 @@ import { PromoService } from '@services/promo.service';
 import { HistoryService } from '@services/history.service';
 import { ProfileService } from '@services/profile.service';
 import { User } from '@models/user';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
 	selector: 'app-profile',
@@ -13,7 +12,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class ProfileComponent implements OnInit {
 
-	promo$ = this.promoService.promo$
 	history$ = this.historyService.history$
 	user: User | null = null;
 
@@ -28,9 +26,7 @@ export class ProfileComponent implements OnInit {
 		this.profileService.getProfile().subscribe(
 			(response: User) => {
 				this.user = response;
-			},
-			(error: HttpErrorResponse)=>{
-				alert(error.message);
+				console.log(this.user);
 			}
 		)
 	}

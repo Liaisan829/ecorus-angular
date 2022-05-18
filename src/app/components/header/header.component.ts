@@ -2,8 +2,8 @@ import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { DialogService } from '@services/dialog.service';
 import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
 import { ProfileService } from '@services/profile.service';
-import { HttpErrorResponse } from '@angular/common/http';
 import { User } from '@models/user';
+import { AuthService } from '@services/auth.service';
 
 @Component({
 	selector: 'app-header',
@@ -13,12 +13,13 @@ import { User } from '@models/user';
 })
 export class HeaderComponent implements OnInit {
 
-	userAuth = localStorage.getItem('token');
+	userAuth = this.authService.isAuthorized();
 	user: User | null = null;
 
 	constructor(
 		private dialog: DialogService,
-		private profileService: ProfileService
+		private profileService: ProfileService,
+		private authService: AuthService
 	) {
 	}
 
@@ -27,10 +28,6 @@ export class HeaderComponent implements OnInit {
 			this.profileService.getProfile().subscribe(
 				(response: User) => {
 					this.user = response;
-					console.log(this.user.username);
-				},
-				(error: HttpErrorResponse) => {
-					alert(error.message);
 				}
 			);
 		}
