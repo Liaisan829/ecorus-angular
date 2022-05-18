@@ -62,7 +62,7 @@
 	>
 		<img src='/assets/currency.svg'
 		     alt='location'>
-		<p>1000</p>
+		<p>{{user!.balance}}</p>
 	</app-button>
 	<app-button
 		type='button'
@@ -71,6 +71,6 @@
 	>
 		<img src='/assets/profile.svg'
 		     alt='location'>
-		<p>Алексей</p>
+		<p>{{user!.username}}</p>
 	</app-button>
 </ng-template>

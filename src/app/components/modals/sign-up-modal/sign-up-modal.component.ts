@@ -22,10 +22,11 @@ export class SignUpModalComponent {
 		private dialog: DialogService
 	) {
 		this.regForm = this.fb.group({
-			firstname: ['', [...NameValidators]],
+			username: ['', [...NameValidators]],
 			phone_number: ['', [...PhoneValidator]],
 			email: ['', [...EmailValidator]],
-			password: ['', [...PasswordValidators]]
+			password: ['', [...PasswordValidators]],
+			balance: 0
 		})
 		this.regForm.markAllAsTouched()
 	}
@@ -51,6 +52,7 @@ export class SignUpModalComponent {
 		this.authService.registration(this.regForm.value).subscribe(res => {
 			this.toast.success('Вы успешно зарегистрированы!');
 			window.location.reload();
+			this.authService.token = res.token;
 		}, err => {
 			console.log(err);
 			this.toast.success('Проблемы с сервером');
