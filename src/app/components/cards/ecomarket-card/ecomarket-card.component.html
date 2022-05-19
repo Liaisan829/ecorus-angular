@@ -1,4 +1,6 @@
-<app-promocode-card></app-promocode-card>
+<ng-container *ngIf='user'>
+	<app-promocode-card></app-promocode-card>
+</ng-container>
 <div class='section'
      *ngFor='let item of product$ | async'>
 	<div class='section__brand'>

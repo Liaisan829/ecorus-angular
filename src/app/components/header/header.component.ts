@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
 	userAuth = this.authService.isAuthorized();
 	user: User | null = null;
+	userBalance: number = 0;
 
 	constructor(
 		private dialog: DialogService,
@@ -31,6 +32,12 @@ export class HeaderComponent implements OnInit {
 				}
 			);
 		}
+
+		this.profileService.getUserBalance().subscribe(
+			(response: number)=>{
+				this.userBalance = response;
+			}
+		)
 	}
 
 	openLoginModal() {

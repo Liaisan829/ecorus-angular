@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { DialogService } from '@services/dialog.service';
 import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component';
 import { ProfileService } from '@services/profile.service';
@@ -14,7 +14,8 @@ export class PromocodeCardComponent implements OnInit {
 
 	constructor(
 		private dialog: DialogService,
-		private profileService: ProfileService
+		private profileService: ProfileService,
+		private cdr: ChangeDetectorRef
 	) {
 	}
 
@@ -26,7 +27,7 @@ export class PromocodeCardComponent implements OnInit {
 		this.profileService.getUserBalance().subscribe(
 			(response: number) => {
 				this.balance = response;
-				console.log(this.balance);
+				this.cdr.markForCheck();
 			}
 		)
 	}

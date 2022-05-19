@@ -1,5 +1,8 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
+import { ProfileService } from '@services/profile.service';
+import { User } from '@models/user';
+import { AuthService } from '@services/auth.service';
 
 @Component({
 	selector: 'app-ecomarket-card',
@@ -9,8 +12,12 @@ import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 })
 export class EcomarketCardComponent {
 	@Input() product$ = this.ecomarket.products$;
+	user = this.authService.isAuthorized();
 
-	constructor(private ecomarket: EcomarketComponent) {
+	constructor(
+		private ecomarket: EcomarketComponent,
+		private authService: AuthService
+	) {
 	}
 
 }

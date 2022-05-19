@@ -4,12 +4,12 @@ import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 import { MainComponent } from '@pages/main/main.component';
 import { MapPageComponent } from '@pages/map-page/map-page.component';
 import { ProfileComponent } from '@pages/profile/profile.component';
-import { PromoCardComponent } from '@components/cards/promo-card/promo-card.component';
 import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
 import { AuthenticationGuard } from '@guards/auth.guard';
+import { PromoCardsComponent } from '@containers/promo-cards/promo-cards.component';
 
 const profileRoutes: Routes = [
-	{ path: 'promocode', component: PromoCardComponent },
+	{ path: 'promocode', component: PromoCardsComponent },
 	{ path: 'history', component: HistoryCardComponent }
 ]
 
