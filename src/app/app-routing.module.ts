@@ -6,10 +6,10 @@ import { MapPageComponent } from '@pages/map-page/map-page.component';
 import { ProfileComponent } from '@pages/profile/profile.component';
 import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
 import { AuthenticationGuard } from '@guards/auth.guard';
-import { PromoCardsComponent } from '@containers/promo-cards/promo-cards.component';
+import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/profile-promo-cards.component';
 
 const profileRoutes: Routes = [
-	{ path: 'promocode', component: PromoCardsComponent },
+	{ path: 'promocode', component: ProfilePromoCardsComponent },
 	{ path: 'history', component: HistoryCardComponent }
 ]
 

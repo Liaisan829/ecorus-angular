@@ -1,7 +1,7 @@
 <header class='header'>
 	<div class='header__container'>
 		<div class='header__navigation'>
-			<img src='/assets/logo.svg'
+			<img src='/assets/mainPage/logo.svg'
 			     alt='logo'>
 			<nav>
 				<a routerLink='/'
@@ -24,21 +24,21 @@
 			</nav>
 		</div>
 		<div class='header__info'>
-			<ng-container *ngIf='!(userAuth); else other'>
+			<ng-container *ngIf='!authService.isAuthorized; else other'>
 				<app-button
 					type='button'
 					theme='DEFAULT'
 				>
-					<img src='/assets/location.svg'
+					<img src='/assets/mainPage/location.svg'
 					     alt='location'>
 					<p>Казань</p>
 				</app-button>
 				<app-button
 					type='button'
 					theme='DEFAULT'
-					(click)='openLoginModal()'
+					(submit)='openLoginModal()'
 				>
-					<img src='/assets/goIn.svg'
+					<img src='/assets/mainPage/goIn.svg'
 					     alt='login'>
 					<p>Войти</p>
 				</app-button>
@@ -52,7 +52,7 @@
 		type='button'
 		theme='DEFAULT'
 	>
-		<img src='/assets/location.svg'
+		<img src='/assets/mainPage/location.svg'
 		     alt='location'>
 		<p>Казань</p>
 	</app-button>
@@ -62,7 +62,7 @@
 	>
 		<img src='/assets/currency.svg'
 		     alt='location'>
-		<p>{{userBalance}}</p>
+		<p>{{(user$ | async)?.balance}}</p>
 	</app-button>
 	<app-button
 		type='button'
@@ -70,7 +70,7 @@
 		routerLink='/profile/history'
 	>
 		<img src='/assets/profile.svg'
-		     alt='location'>
-		<p>{{user!.username}}</p>
+		     alt='profile'>
+		<p>{{(user$ | async)?.username}}</p>
 	</app-button>
 </ng-template>

@@ -65,7 +65,7 @@
 
 	<app-button theme='GREEN'
 	            type='submit'
-	            (click)='signup()'
+	            (submit)='signup()'
 	            [appDialogClose]
 	>Зарегистрироваться
 	</app-button>
@@ -74,7 +74,7 @@
 		<app-button theme='DEFAULT'
 		            type='submit'
 		            color='#07C88E'
-		            (click)='openLoginModal()'
+		            (submit)='openLoginModal()'
 		>Я уже зарегистрировался(-ась)
 		</app-button>
 	</div>

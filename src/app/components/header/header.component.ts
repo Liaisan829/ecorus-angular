@@ -1,9 +1,11 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, OnDestroy } from '@angular/core';
 import { DialogService } from '@services/dialog.service';
 import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
 import { ProfileService } from '@services/profile.service';
 import { User } from '@models/user';
 import { AuthService } from '@services/auth.service';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
 	selector: 'app-header',
@@ -11,33 +13,32 @@ import { AuthService } from '@services/auth.service';
 	styleUrls: ['./header.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent implements OnInit {
-
-	userAuth = this.authService.isAuthorized();
-	user: User | null = null;
-	userBalance: number = 0;
+export class HeaderComponent implements OnInit, OnDestroy {
+	user$ = new BehaviorSubject<User | null>(null);
+	destroy$ = new Subject();
 
 	constructor(
 		private dialog: DialogService,
 		private profileService: ProfileService,
-		private authService: AuthService
+		public authService: AuthService
 	) {
 	}
 
 	ngOnInit() {
-		if (this.userAuth) {
-			this.profileService.getProfile().subscribe(
-				(response: User) => {
-					this.user = response;
-				}
-			);
+		if (this.authService.isAuthorized) {
+			this.profileService.getProfile()
+				.pipe(takeUntil(this.destroy$))
+				.subscribe(
+					(response: User) => {
+						this.user$.next(response);
+					}
+				);
 		}
+	}
 
-		this.profileService.getUserBalance().subscribe(
-			(response: number)=>{
-				this.userBalance = response;
-			}
-		)
+	ngOnDestroy() {
+		this.destroy$.next();
+		this.destroy$.complete();
 	}
 
 	openLoginModal() {

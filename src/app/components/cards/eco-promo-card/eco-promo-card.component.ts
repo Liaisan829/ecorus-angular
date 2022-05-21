@@ -5,11 +5,11 @@ import { ProfileService } from '@services/profile.service';
 
 @Component({
 	selector: 'app-promocode-card',
-	templateUrl: './promocode-card.component.html',
-	styleUrls: ['./promocode-card.component.scss'],
+	templateUrl: './eco-promo-card.component.html',
+	styleUrls: ['./eco-promo-card.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PromocodeCardComponent implements OnInit {
+export class EcoPromoCardComponent implements OnInit {
 	balance: number = 0;
 
 	constructor(

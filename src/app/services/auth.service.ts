@@ -32,7 +32,7 @@ export class AuthService {
 		return this.http.post('account', signUpParams);
 	}
 
-	isAuthorized(): boolean{
+	get isAuthorized(): boolean{
 		return this.token !== null;
 	}
 }

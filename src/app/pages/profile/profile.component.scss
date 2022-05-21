@@ -8,13 +8,14 @@
 	&__info {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		max-height: 330px;
+		//max-height: 400px; почему то прыгает блок при смене промокоды/история
+		//justify-content: space-between; если оставить так
 		align-items: center;
 		border: 1px solid $c-light-grey;
 		border-radius: 20px;
 		padding: 40px;
 		margin-right: 48px;
-		max-height: 400px;
 
 		&__avatar {
 			display: flex;
