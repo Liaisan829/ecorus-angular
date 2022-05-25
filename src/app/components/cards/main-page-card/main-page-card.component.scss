@@ -7,34 +7,47 @@
 	flex-direction: row;
 	padding-top: 40px;
 	padding-left: 40px;
-	margin-top: 48px;
 	width: 540px;
 
-	@include averageDesktop {
+	@include laptop1250 {
 		width: 450px;
 	}
-	@include smallDesktop {
+
+	@include laptop1050 {
 		width: 350px;
 		padding-left: 25px;
 		padding-top: 25px;
 	}
 
+	@include tablet850 {
+		width: 290px;
+	}
+
+	@include tablet720 {
+		max-width: 200px;
+	}
+
+	@include mobile420 {
+		max-width: 420px;
+		background: $c-white;
+	}
+
 	h1 {
 		@include infoBlockText;
-		@include averageDesktop {
+		@include laptop1250 {
 			font-size: 28px;
 		}
-		@include smallDesktop {
+		@include laptop1050 {
 			@include adaptiveText;
 		}
 	}
 
 	p {
 		@include secondary-text;
-		@include averageDesktop {
+		@include laptop1250 {
 			font-size: 14px;
 		}
-		@include smallDesktop {
+		@include laptop1050 {
 			font-size: 13px;
 		}
 		margin-top: 5px;
@@ -43,92 +56,68 @@
 	&__img {
 		width: 280px;
 		height: 250px;
-		@include averageDesktop {
+		@include laptop1250 {
 			width: 240px;
 			height: 240px;
 		}
-		@include smallDesktop {
+		@include laptop1050 {
 			width: 150px;
 			height: 150px;
 		}
-	}
 
-	&__info {
-
-		&__cardButton {
-			width: 48px;
-			height: 48px;
-			border: none;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-top: 40px;
-
-			@include smallDesktop {
-				margin-top: 15px;
-				padding: 5px 10px;
-			}
-
-			img {
-				width: 24px;
-				height: 24px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 850px) {
-	.informBlock {
-		width: 290px;
-
-		&__info {
-			margin-top: -10px;
-		}
-
-		&__img {
+		@include tablet850 {
 			width: 100px;
 			height: 100px;
 			margin-top: 90px;
 		}
-	}
-}
 
-@media screen and (max-width: 720px) {
-	.informBlock {
-		max-width: 200px;
-
-		&__info {
-			margin-top: -10px;
-		}
-
-		&__img {
+		@include tablet720 {
 			display: none;
 		}
-	}
-}
 
-@media screen and (max-width: 420px) {
-	.informBlock {
-		max-width: 420px;
-		background: $c-white;
-
-		&__info {
-			&__text {
-				margin-bottom: 50px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-			}
-
-			&__cardButton {
-				margin-bottom: 10px;
-			}
-		}
-
-		&__img {
+		@include mobile420 {
 			display: initial;
 			width: 250px;
 			height: 150px;
+		}
+
+		&__info {
+			@include tablet850 {
+				margin-top: -10px;
+			}
+
+			&__text {
+				@include mobile420 {
+					margin-bottom: 50px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+				}
+			}
+
+			&__cardButton {
+				width: 48px;
+				height: 48px;
+				border: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 40px;
+
+				@include laptop1050 {
+					margin-top: 15px;
+					padding: 5px 10px;
+				}
+
+				@include mobile420 {
+					margin-bottom: 10px;
+				}
+
+				img {
+					width: 24px;
+					height: 24px;
+				}
+			}
 		}
 	}
 }

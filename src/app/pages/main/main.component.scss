@@ -1,65 +1,50 @@
 @import "mixins.scss";
 
+:host {
+	@include laptop1250 {
+		margin: -40px auto 0;
+	}
+
+	@include tablet850{
+		margin: -60px auto 0;
+	}
+
+	@include tablet720{
+		max-width: 520px;
+	}
+
+	@include mobile420{
+		max-width: 420px;
+		margin: -40px auto 0 auto;
+		width: 100%;
+	}
+}
+
 .cardsFlex {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin-bottom: 68px;
-}
+	margin-top: 48px;
 
-@media screen and (max-width: 1250px) {
-	.container {
+	@include laptop1250 {
 		max-width: 1000px;
-		margin: -40px auto 0;
+		margin: 48px auto 0 auto;
 	}
 
-	.cardsFlex {
-		max-width: 1000px;
-		margin: 0 auto 70px auto;
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	.container {
+	@include laptop1050 {
 		max-width: 800px;
-		margin: -40px auto 0;
 	}
 
-	.cardsFlex {
-		max-width: 800px;
-		margin: 0 auto 70px auto;
-	}
-}
-
-@media screen and (max-width: 850px) {
-	.container {
-		max-width: 650px;
-		margin: -60px auto 0;
-	}
-
-	.cardsFlex {
+	@include tablet850{
 		max-width: 650px;
 	}
-}
 
-@media screen and (max-width: 720px) {
-	.container {
+	@include tablet720{
 		max-width: 520px;
 	}
 
-	.cardsFlex {
-		max-width: 520px;
-	}
-}
-
-@media screen and (max-width: 420px) {
-	.container {
-		max-width: 420px;
-		margin: -40px auto 0 auto;
-		width: 100%;
-	}
-
-	.cardsFlex {
+	@include mobile420{
 		display: flex;
 		flex-direction: column;
 		margin-top: -160px;

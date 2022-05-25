@@ -5,6 +5,11 @@
 	margin-top: -40px;
 	width: 100%;
 
+	@include mobile420{
+		max-width: 420px;
+		margin: 0 auto;
+	}
+
 	&__navigation {
 		display: flex;
 		justify-content: space-between;
@@ -13,6 +18,22 @@
 		top: 180px;
 		z-index: 2;
 		cursor: pointer;
+
+		@include laptop1250{
+			max-width: 1060px;
+		}
+
+		@include laptop1050{
+			max-width: 860px;
+		}
+
+		@include tablet850{
+			max-width: 660px;
+		}
+
+		@include mobile420{
+			display: none;
+		}
 	}
 }
 
@@ -47,48 +68,4 @@
 .swiper-button-prev-custom.swiper-button-disabled,
 .swiper-button-next-custom.swiper-button-disabled {
 	opacity: 1;
-}
-
-@media screen and (max-width: 1250px) {
-	.slider {
-		max-width: 1000px;
-		margin: 0 auto;
-
-		&__navigation {
-			max-width: 1060px;
-		}
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	.slider {
-		max-width: 800px;
-		margin: 0 auto;
-
-		&__navigation {
-			max-width: 860px;
-		}
-	}
-}
-
-@media screen and (max-width: 850px) {
-	.slider {
-		max-width: 650px;
-		margin: 60px auto 0 auto;
-
-		&__navigation {
-			display: none;
-		}
-	}
-}
-
-@media screen and (max-width: 420px) {
-	.slider {
-		max-width: 420px;
-		margin: 0 auto;
-
-		&__navigation {
-			display: none;
-		}
-	}
 }

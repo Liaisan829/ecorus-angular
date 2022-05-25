@@ -47,14 +47,38 @@
 	font-weight: 600;
 }
 
-@mixin averageDesktop {
+@mixin laptop1250 {
 	@media(max-width: 1250px) {
 		@content
 	}
 }
 
-@mixin smallDesktop {
+@mixin laptop1050 {
 	@media(max-width: 1050px) {
+		@content
+	}
+}
+
+@mixin tablet850{
+	@media(max-width: 850px){
+		@content
+	}
+}
+
+@mixin tablet720{
+	@media(max-width: 720px){
+		@content
+	}
+}
+
+@mixin tablet620{
+	@media (max-width: 620px) {
+		@content
+	}
+}
+
+@mixin mobile420{
+	@media(max-width: 420px){
 		@content
 	}
 }

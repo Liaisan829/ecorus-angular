@@ -10,6 +10,10 @@
 	border-bottom: 1px solid $c-light-grey;
 	cursor: pointer;
 
+	@include laptop1250{
+		flex-direction: column;
+	}
+
 	&__price {
 		display: flex;
 		justify-content: center;
@@ -20,6 +24,26 @@
 		background: linear-gradient(#00D4C7 0%, #FFEE57 100%);
 		margin-right: 30px;
 
+		@include laptop1250{
+			margin-bottom: 20px;
+		}
+		@include tablet850{
+			width: 150px;
+			height: 90px;
+		}
+
+		@include tablet620{
+			max-width: 400px;
+			max-height: 300px;
+			padding: 70px 100px;
+			margin-right: 0;
+		}
+
+		@include mobile420{
+			max-width: 320px;
+			max-height: 200px;
+		}
+
 		h2 {
 			@include infoBlockText;
 			color: $c-white;
@@ -27,6 +51,10 @@
 	}
 
 	&__info {
+		@include laptop1250{
+			margin-bottom: 20px;
+		}
+
 		&:not(:last-child) {
 			margin-bottom: 16px;
 		}
@@ -42,10 +70,23 @@
 		h5 {
 			@include secondary-text;
 			color: $c-text-88;
+
+			@include tablet850{
+				font-size: 13px;
+			}
+
+			@include mobile420{
+				@include primary-text;
+			}
 		}
 
 		.greenLink {
 			color: $c-green;
+
+			@include mobile420{
+				display: initial;
+				color: $c-text-64;
+			}
 		}
 	}
 }

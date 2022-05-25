@@ -11,6 +11,10 @@
 	cursor: pointer;
 	background: none;
 
+	&__wide{
+		width: 100%;
+	}
+
 	&__green {
 		@extend .btn;
 		background: $c-green;

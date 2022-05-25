@@ -66,6 +66,7 @@
 	<app-button theme='GREEN'
 	            type='submit'
 	            (submit)='signup()'
+	            [wide]='true'
 	            [appDialogClose]
 	>Зарегистрироваться
 	</app-button>
@@ -78,7 +79,10 @@
 		>Я уже зарегистрировался(-ась)
 		</app-button>
 	</div>
-	<app-button theme='GREY'
-	            type='submit'>Вход для партнеров
+	<app-button
+		theme='GREY'
+		type='submit'
+		[wide]=true
+	>Вход для партнеров
 	</app-button>
 </form>
