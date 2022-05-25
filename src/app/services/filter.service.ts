@@ -5,6 +5,10 @@ interface FilterModel {
 	checked: boolean;
 }
 
+const filterBtnsMock: Array<string> = [
+	'По популярности', 'По цене', 'По новизне'
+]
+
 const gendersMock: Array<FilterModel> = [
 	{ title: 'Мужской', checked: false },
 	{ title: 'Женский', checked: false }
@@ -27,7 +31,7 @@ const brandsMock: Array<FilterModel> = [
 	providedIn: 'root'
 })
 export class FilterService {
-
+	filterBtns$: Array<string> = filterBtnsMock;
 	genders$: Array<FilterModel> = gendersMock;
 	types$: Array<FilterModel> = typesMock;
 	brands$: Array<FilterModel> = brandsMock;

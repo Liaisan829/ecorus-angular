@@ -43,6 +43,8 @@ import { DialogCloseDirective } from '@directives/dialog-close.directive';
 import { ModalHeaderComponent } from '@components/modals/modal-header/modal-header.component';
 import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component';
 import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/profile-promo-cards.component';
+import { EcoFilterBottomSheetComponent } from './components/bottom-sheets/eco-filter-bottom-sheet/eco-filter-bottom-sheet.component';
+import { BottomSheetContainerComponent } from './components/bottom-sheets/bottom-sheet-container/bottom-sheet-container.component';
 
 @NgModule({
 	declarations: [
@@ -79,7 +81,9 @@ import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/prof
 		DialogCloseDirective,
 		ModalHeaderComponent,
 		QrModalComponent,
-		ProfilePromoCardsComponent
+		ProfilePromoCardsComponent,
+  EcoFilterBottomSheetComponent,
+  BottomSheetContainerComponent
 	],
 	imports: [
 		BrowserModule,

@@ -1,0 +1,29 @@
+<app-bottom-sheet-container>
+	<div class='bottom__sheet_header'>
+		<ng-container
+			*ngFor='let item of headersFilters'
+		>
+			<app-button
+				theme='GREY'
+			>{{item}}</app-button>
+		</ng-container>
+	</div>
+
+	<div class='bottom__sheet__content'>
+		тут будут чекбоксы
+	</div>
+
+	<div class='bottom__sheet__footer'>
+		<app-button
+			theme='GREY'
+			[wide]=true
+		>Применить
+		</app-button>
+		<app-button
+			theme='GREY'
+			[wide]=true
+		>Сбросить фильтры
+		</app-button>
+	</div>
+
+</app-bottom-sheet-container>

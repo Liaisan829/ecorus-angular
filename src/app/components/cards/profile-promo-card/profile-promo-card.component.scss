@@ -9,9 +9,22 @@
 	padding-bottom: 20px;
 	border-bottom: 1px solid $c-light-grey;
 	cursor: pointer;
+	width: 50vw;
 
 	@include laptop1250{
 		flex-direction: column;
+	}
+
+	@include laptop1050{
+		width: 37vw;
+	}
+
+	@include tablet850{
+		width: 30vw;
+	}
+
+	@include tablet620{
+		width: 65vw;
 	}
 
 	&__price {
@@ -27,21 +40,11 @@
 		@include laptop1250{
 			margin-bottom: 20px;
 		}
-		@include tablet850{
-			width: 150px;
-			height: 90px;
-		}
 
 		@include tablet620{
-			max-width: 400px;
-			max-height: 300px;
+			width: 25vw;
 			padding: 70px 100px;
 			margin-right: 0;
-		}
-
-		@include mobile420{
-			max-width: 320px;
-			max-height: 200px;
 		}
 
 		h2 {
