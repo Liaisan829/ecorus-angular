@@ -11,10 +11,29 @@
 	border-radius: 20px;
 	margin-bottom: 20px;
 
+	@include laptop1050{
+		width: 32vw;
+	}
+
+	@include tablet850{
+		width: 25vw;
+		flex-direction: column;
+		padding: 28px;
+	}
+
+	@include tablet620{
+		width: 60vw;
+		padding: 25px;
+	}
+
 	&__info {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+
+		@include tablet850{
+			margin-bottom: 20px;
+		}
 
 		&__item {
 			margin-bottom: 15px;

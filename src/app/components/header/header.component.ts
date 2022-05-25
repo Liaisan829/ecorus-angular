@@ -1,6 +1,11 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, OnDestroy } from '@angular/core';
 import { DialogService } from '@services/dialog.service';
 import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
+import { ProfileService } from '@services/profile.service';
+import { User } from '@models/user';
+import { AuthService } from '@services/auth.service';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
 	selector: 'app-header',
@@ -8,11 +13,32 @@ import { LoginModalComponent } from '@components/modals/login-modal/login-modal.
 	styleUrls: ['./header.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
+	user$ = new BehaviorSubject<User | null>(null);
+	destroy$ = new Subject();
 
-	userAuth = window.localStorage.getItem('token');
+	constructor(
+		private dialog: DialogService,
+		private profileService: ProfileService,
+		public authService: AuthService
+	) {
+	}
 
-	constructor(private dialog: DialogService) {
+	ngOnInit() {
+		if (this.authService.isAuthorized) {
+			this.profileService.getProfile()
+				.pipe(takeUntil(this.destroy$))
+				.subscribe(
+					(response: User) => {
+						this.user$.next(response);
+					}
+				);
+		}
+	}
+
+	ngOnDestroy() {
+		this.destroy$.next();
+		this.destroy$.complete();
 	}
 
 	openLoginModal() {

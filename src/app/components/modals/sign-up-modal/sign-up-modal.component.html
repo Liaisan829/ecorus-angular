@@ -6,18 +6,18 @@
 	<input
 		type='text'
 		placeholder='Имя'
-		formControlName='firstname'
+		formControlName='username'
 	>
-	<ng-container *ngIf='hasError("firstname", "required")'>
+	<ng-container *ngIf='hasError("username", "required")'>
 		<span class='form__error'>Это поле обязательно</span>
 	</ng-container>
-	<ng-container *ngIf='hasError("firstname", "minlength")'>
+	<ng-container *ngIf='hasError("username", "minlength")'>
 		<span class='form__error'>Имя слишком короткое</span>
 	</ng-container>
-	<ng-container *ngIf='hasError("firstname", "maxlength")'>
+	<ng-container *ngIf='hasError("username", "maxlength")'>
 		<span class='form__error'>Имя слишком длинное</span>
 	</ng-container>
-	<ng-container *ngIf='hasError("firstname", "pattern")'>
+	<ng-container *ngIf='hasError("username", "pattern")'>
 		<span class='form__error'>Имя может содержать только буквы</span>
 	</ng-container>
 
@@ -65,7 +65,8 @@
 
 	<app-button theme='GREEN'
 	            type='submit'
-	            (click)='signup()'
+	            (submit)='signup()'
+	            [wide]='true'
 	            [appDialogClose]
 	>Зарегистрироваться
 	</app-button>
@@ -74,11 +75,14 @@
 		<app-button theme='DEFAULT'
 		            type='submit'
 		            color='#07C88E'
-		            (click)='openLoginModal()'
+		            (submit)='openLoginModal()'
 		>Я уже зарегистрировался(-ась)
 		</app-button>
 	</div>
-	<app-button theme='GREY'
-	            type='submit'>Вход для партнеров
+	<app-button
+		theme='GREY'
+		type='submit'
+		[wide]=true
+	>Вход для партнеров
 	</app-button>
 </form>

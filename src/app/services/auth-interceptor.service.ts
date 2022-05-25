@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { AuthService } from '@services/auth.service';
 import { Router } from '@angular/router';
 import { ToastService } from '@services/toast.service';
 import { StartsWithHttp } from '@services/url-interceptor.service';
-import { catchError } from 'rxjs/operators';
 
 @Injectable({
 	providedIn: 'root'

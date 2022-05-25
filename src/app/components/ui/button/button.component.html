@@ -1,12 +1,14 @@
 <button
-	[type] = "type"
+	[type]='type'
 	[style.color]='color'
-	class="btn"
-	[class.btn__green] = "theme === 'GREEN'"
-	[class.btn__grey] = "theme === 'GREY'"
-	[class.btn__default] = "theme === 'DEFAULT'"
-	[class.btn__eco] = "theme === 'ECO'"
-	[class.btn__filter] = "theme === 'FILTER'"
+	class='btn'
+	[class.btn__wide]='wide===true'
+	[class.btn__green]="theme === 'GREEN'"
+	[class.btn__grey]="theme === 'GREY'"
+	[class.btn__default]="theme === 'DEFAULT'"
+	[class.btn__eco]="theme === 'ECO'"
+	[class.btn__filter]="theme === 'FILTER'"
+	(click)='submit.emit()'
 >
 	<ng-content></ng-content>
 </button>

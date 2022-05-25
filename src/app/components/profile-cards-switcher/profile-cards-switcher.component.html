@@ -1,18 +1,17 @@
 <div class='switcher'>
-	<div class='switcher__items'>
-		<a routerLink="/profile/promocode"
-		   class='switcher__link'
-		   routerLinkActive='switcher__link__active'
-		>
-			Промокоды
-		</a>
-		<a
-			routerLink="/profile/history"
-			class='switcher__link'
-			routerLinkActive='switcher__link__active'
-		>
-			История
-		</a>
-	</div>
-	<router-outlet></router-outlet>
+	<a routerLink='/profile/promocode'
+	   class='switcher__link'
+	   routerLinkActive='switcher__link__active'
+	>
+		Промокоды
+	</a>
+	<a
+		routerLink='/profile/history'
+		class='switcher__link'
+		routerLinkActive='switcher__link__active'
+	>
+		История
+	</a>
 </div>
+<router-outlet></router-outlet>
+

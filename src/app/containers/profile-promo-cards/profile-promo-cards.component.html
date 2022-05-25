@@ -1,0 +1,14 @@
+<div *ngFor='let item of promoCards'>
+	<app-profile-promo-card
+		[getting_date_time]='item.getting_date_time'
+		[price]='item.price'
+		[item_url]='item.item_url'
+	></app-profile-promo-card>
+</div>
+
+<ng-container *ngIf='promoCards.length === 0'>
+	<app-profile-promo-card
+		noPromosText='У вас нет промокодов'
+	></app-profile-promo-card>
+</ng-container>
+

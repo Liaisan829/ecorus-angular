@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ToastService } from '@services/toast.service';
 import { AuthService } from '@services/auth.service';
 import { DialogService } from '@services/dialog.service';
@@ -41,12 +41,8 @@ export class LoginModalComponent {
 
 		this.authService.authorize(this.form.value).subscribe(res => {
 			this.toast.success('Добро пожаловать!');
-			window.location.reload();
 			this.authService.token = res.token;
-		}, err => {
-			console.log(err);
 		})
-
 	}
 
 	openSignUpModal() {

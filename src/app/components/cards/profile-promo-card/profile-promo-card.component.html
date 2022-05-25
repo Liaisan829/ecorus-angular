@@ -1,22 +1,21 @@
-<div class='promoCard'
-     *ngFor='let item of promo$ | async'>
+<div class='promoCard'>
 	<div class='promoCard__price'>
-		<h2>{{item.price}}</h2>
+		<h2>{{price}}</h2>
 	</div>
 	<div class='promoCard__info'>
 		<div class='promoCard__info__item'>
 			<p>Дата создания</p>
-			<h5>{{item.date}}</h5>
+			<h5>{{getting_date_time | date}}</h5>
 		</div>
 		<div class='promoCard__info__item'>
-			<p class='greenText'>Ссылка на товар</p>
-			<h5 class='greenLink'>{{item.link}}</h5>
+			<p class='greenText'>Ссылка на&nbsp;товар</p>
+			<h5 class='greenLink'>{{item_url}}</h5>
 		</div>
 	</div>
 	<app-button
 		type='button'
 		theme='GREY'
-		(click)='openQrModal()'
+		(submit)='openQrModal()'
 	>
 		Показать qr-код
 	</app-button>

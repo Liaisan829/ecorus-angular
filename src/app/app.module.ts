@@ -14,9 +14,9 @@ import { ButtonComponent } from '@components/ui/button/button.component';
 import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 import { FooterComponent } from '@components/footer/footer.component';
 import { IconComponent } from '@components/ui/icon/icon.component';
-import { PromocodeCardComponent } from '@components/cards/promocode-card/promocode-card.component';
+import { EcoPromoCardComponent } from '@components/cards/eco-promo-card/eco-promo-card.component';
 import { SliderCardComponent } from '@components/cards/slider-card/slider-card.component';
-import { BottomCardComponent } from '@components/cards/bottom-card/bottom-card.component';
+import { MainPageCardComponent } from '@components/cards/main-page-card/main-page-card.component';
 import { SwiperComponent } from '@components/swiper/swiper.component';
 import { MainComponent } from '@pages/main/main.component';
 import { SortingButtonsComponent } from '@containers/sorting-buttons/sorting-buttons.component';
@@ -28,7 +28,7 @@ import { DropDownListComponent } from '@components/ui/drop-down-list/drop-down-l
 import { FullMapCardComponent } from '@components/cards/collectionPointsCards/full-map-card/full-map-card.component';
 import { ProfileComponent } from '@pages/profile/profile.component';
 import { ProfileCardsSwitcherComponent } from '@components/profile-cards-switcher/profile-cards-switcher.component';
-import { PromoCardComponent } from '@components/cards/promo-card/promo-card.component';
+import { ProfilePromoCardComponent } from '@components/cards/profile-promo-card/profile-promo-card.component';
 import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
 import { CheckboxGroupComponent } from '@containers/checkbox-group/checkbox-group.component';
 import { CheckboxItemComponent } from '@components/ui/checkbox-item/checkbox-item.component';
@@ -42,6 +42,9 @@ import { SignUpModalComponent } from '@components/modals/sign-up-modal/sign-up-m
 import { DialogCloseDirective } from '@directives/dialog-close.directive';
 import { ModalHeaderComponent } from '@components/modals/modal-header/modal-header.component';
 import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component';
+import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/profile-promo-cards.component';
+import { EcoFilterBottomSheetComponent } from './components/bottom-sheets/eco-filter-bottom-sheet/eco-filter-bottom-sheet.component';
+import { BottomSheetContainerComponent } from './components/bottom-sheets/bottom-sheet-container/bottom-sheet-container.component';
 
 @NgModule({
 	declarations: [
@@ -52,10 +55,10 @@ import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component
 		EcomarketComponent,
 		FooterComponent,
 		IconComponent,
-		PromocodeCardComponent,
+		EcoPromoCardComponent,
 		MainComponent,
 		SliderCardComponent,
-		BottomCardComponent,
+		MainPageCardComponent,
 		SwiperComponent,
 		MainComponent,
 		SortingButtonsComponent,
@@ -72,12 +75,15 @@ import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component
 		FullMapCardComponent,
 		ProfileComponent,
 		ProfileCardsSwitcherComponent,
-		PromoCardComponent,
+		ProfilePromoCardComponent,
 		HistoryCardComponent,
 		SignUpModalComponent,
 		DialogCloseDirective,
 		ModalHeaderComponent,
-		QrModalComponent
+		QrModalComponent,
+		ProfilePromoCardsComponent,
+  EcoFilterBottomSheetComponent,
+  BottomSheetContainerComponent
 	],
 	imports: [
 		BrowserModule,
@@ -88,7 +94,7 @@ import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component
 		BrowserAnimationsModule,
 		HttpClientModule,
 		ToastrModule.forRoot({
-			timeOut: 2500,
+			timeOut: 1500,
 			progressBar: true,
 			positionClass: 'toast-bottom-center'
 		}),

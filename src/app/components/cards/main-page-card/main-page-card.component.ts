@@ -1,12 +1,12 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-	selector: 'app-bottom-card',
-	templateUrl: './bottom-card.component.html',
-	styleUrls: ['./bottom-card.component.scss'],
+	selector: 'app-main-page-card',
+	templateUrl: './main-page-card.component.html',
+	styleUrls: ['./main-page-card.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BottomCardComponent {
+export class MainPageCardComponent {
 	@Input() cardHeadline: string;
 	@Input() cardText: string;
 	@Input() img: string;
@@ -16,5 +16,4 @@ export class BottomCardComponent {
 		this.cardText = '';
 		this.img = '';
 	}
-
 }

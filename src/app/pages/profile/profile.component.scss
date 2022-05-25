@@ -5,16 +5,39 @@
 	flex-direction: row;
 	margin-top: 40px;
 
+	@include tablet620{
+		flex-direction: column;
+	}
+
 	&__info {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		max-height: 330px;
 		align-items: center;
 		border: 1px solid $c-light-grey;
 		border-radius: 20px;
 		padding: 40px;
 		margin-right: 48px;
-		max-height: 400px;
+		position: sticky;
+		top: 5px;
+
+		@include laptop1250{
+			padding: 25px;
+		}
+
+		@include laptop1050{
+			padding: 15px;
+		}
+
+		@include tablet620{
+			margin-bottom: 30px;
+			margin-right: 0;
+			position: initial;
+		}
+
+		@include mobile420{
+			width: 90%;
+		}
 
 		&__avatar {
 			display: flex;
@@ -22,22 +45,42 @@
 			align-items: center;
 			min-width: 320px;
 
+			@include tablet850{
+				min-width: 250px;
+			}
+
+			@include tablet720{
+				min-width: 200px;
+			}
+
 			img {
 				width: 128px;
 				height: 128px;
 				margin-bottom: 24px;
 				border-radius: 50%;
+
+				@include laptop1250{
+					width: 120px;
+					height: 120px;
+				}
 			}
 		}
 
 		&__personalData {
 			margin-top: 24px;
 			margin-bottom: 24px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 
 		h2 {
 			@include infoBlockText;
 			font-size: 24px;
+
+			@include tablet720{
+				font-size: 20px;
+			}
 		}
 
 		p {
