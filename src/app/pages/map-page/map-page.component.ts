@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CollPointsService } from '@services/collPoints.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-map-page',
@@ -9,13 +10,19 @@ import { CollPointsService } from '@services/collPoints.service';
 })
 export class MapPageComponent {
 	collPoints$ = this.collPointsService.collPoints$
-	selected = 0;
+	openFull: boolean = false;
 
-	constructor(private collPointsService: CollPointsService) {
+	constructor(
+		private collPointsService: CollPointsService,
+		public activateRoute: ActivatedRoute
+	) {
 	}
 
-	onChange(n:number) {
-		this.selected = n;
+	check() {
+		if (this.activateRoute.snapshot.params['id']) {
+			this.openFull = true
+		} else {
+			this.openFull = false
+		}
 	}
-
 }

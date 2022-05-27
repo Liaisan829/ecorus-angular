@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperModule } from 'swiper/angular';
-import { LeafletModule } from "@asymmetrik/ngx-leaflet";
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '@components/header/header.component';
@@ -46,7 +46,6 @@ import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component
 import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/profile-promo-cards.component';
 import { EcoFilterBottomSheetComponent } from '@components/bottom-sheets/eco-filter-bottom-sheet/eco-filter-bottom-sheet.component';
 import { BottomSheetContainerComponent } from '@components/bottom-sheets/bottom-sheet-container/bottom-sheet-container.component';
-import { CollPointsFullComponent } from '@containers/coll-points-full/coll-points-full.component';
 
 @NgModule({
 	declarations: [
@@ -84,9 +83,8 @@ import { CollPointsFullComponent } from '@containers/coll-points-full/coll-point
 		ModalHeaderComponent,
 		QrModalComponent,
 		ProfilePromoCardsComponent,
-  EcoFilterBottomSheetComponent,
-  BottomSheetContainerComponent,
-  CollPointsFullComponent
+		EcoFilterBottomSheetComponent,
+		BottomSheetContainerComponent,
 	],
 	imports: [
 		BrowserModule,

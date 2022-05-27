@@ -44,8 +44,5 @@ const MockCollPoints: Array<CollPoint> = [
 })
 export class CollPointsService {
 	collPoints$: BehaviorSubject<Array<CollPoint>> = new BehaviorSubject<Array<CollPoint>>(MockCollPoints);
-
-	constructor() {
-	}
 }
 

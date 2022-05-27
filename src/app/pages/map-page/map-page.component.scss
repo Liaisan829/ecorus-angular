@@ -17,16 +17,23 @@
 		z-index: 1200;
 		position: absolute;
 		margin-top: 32px;
+
+		&__cards {
+			position: absolute;
+			z-index: 1200;
+			display: block;
+			max-width: 1200px;
+			width: 100%;
+			margin: 112px auto 0;
+		}
+
+		&__outlet{
+			z-index: 1200;
+			position: absolute;
+			margin-top: 112px;
+		}
 	}
 
-	&__cards {
-		position: absolute;
-		z-index: 1200;
-		display: block;
-		max-width: 1200px;
-		width: 100%;
-		margin: 112px auto 0;
-	}
 }
 
 

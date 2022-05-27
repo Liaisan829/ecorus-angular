@@ -1,25 +1,27 @@
 <div class='fullCard'
-     *ngFor='let item of collPoint$ | async; let i = index'>
+     *ngIf='collPoint'>
 
-	<div class='fullCard__back' (click)='handleChange(i)'>
-		<img src='/assets/mapPage/back.svg'
-		     alt='back'
-		>
-		<p>Вернуться назад</p>
+	<div>
+		<a class='fullCard__back' routerLink='/collpoints'>
+			<img src='/assets/mapPage/back.svg'
+			     alt='back'
+			>
+			<p>Вернуться назад</p>
+		</a>
 	</div>
 
 	<div class='fullCard__card'>
-		<img src='{{item.img}}'
+		<img src='{{collPoint.img}}'
 		     alt='card'>
 		<div class='fullCard__card__info'>
-			<h3>{{item.address}}</h3>
-			<p>{{item.phone}}</p>
+			<h3>{{collPoint.address}}</h3>
+			<p>{{collPoint.phone}}</p>
 			<div class='fullCard__card__info__time'>
-				<p>{{item.timetable}}</p>
+				<p>{{collPoint.timetable}}</p>
 			</div>
-			<h3>{{item.shop}}</h3>
+			<h3>{{collPoint.shop}}</h3>
 			<div class='fullCard__card__info__items'>
-				{{item.items}}
+				{{collPoint.items}}
 			</div>
 		</div>
 	</div>

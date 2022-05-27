@@ -7,7 +7,7 @@ import { ProfileComponent } from '@pages/profile/profile.component';
 import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
 import { AuthenticationGuard } from '@guards/auth.guard';
 import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/profile-promo-cards.component';
-import { CollPointsFullComponent } from '@containers/coll-points-full/coll-points-full.component';
+import { FullMapCardComponent } from '@components/cards/collectionPointsCards/full-map-card/full-map-card.component';
 
 const profileRoutes: Routes = [
 	{ path: 'promocode', component: ProfilePromoCardsComponent },
@@ -15,7 +15,7 @@ const profileRoutes: Routes = [
 ]
 
 const mapPageRoutes: Routes = [
-	{path: ':id', component: CollPointsFullComponent}
+	{ path: ':id', component: FullMapCardComponent, pathMatch: 'full' }
 ]
 
 const routes: Routes = [
