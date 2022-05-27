@@ -1,8 +1,9 @@
-<div class='commonCard'>
+<a [routerLink]='[collPoint?.id]'
+   class='commonCard'>
 	<img src='{{collPoint?.img}}'
 	     alt='pic'>
 	<div class='commonCard__info'>
-		<a [routerLink]="[collPoint?.id]"><h3>{{collPoint?.address}}</h3></a>
+		<h3>{{collPoint?.address}}</h3>
 		<p>{{collPoint?.description}}</p>
 	</div>
-</div>
+</a>
