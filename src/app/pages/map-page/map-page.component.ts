@@ -9,7 +9,6 @@ import { CollPointsService } from '@services/collPoints.service';
 })
 export class MapPageComponent {
 	collPoints$ = this.collPointsService.collPoints$
-
 	selected = 0;
 
 	constructor(private collPointsService: CollPointsService) {

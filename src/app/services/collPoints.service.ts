@@ -1,19 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { CollPoint } from '@models/coll-point';
 
-interface CollPointModel {
-	id: number,
-	img: any,
-	address: string,
-	fullAddress: string
-	phone: string,
-	description: string,
-	timetable: string[],
-	shop: string,
-	items: string[]
-}
-
-const MockCollPoints: Array<CollPointModel> = [
+const MockCollPoints: Array<CollPoint> = [
 	{
 		id: 1,
 		img: '/assets/mapPage/collectionImg.svg',
@@ -54,7 +43,7 @@ const MockCollPoints: Array<CollPointModel> = [
 	providedIn: 'root'
 })
 export class CollPointsService {
-	collPoints$: BehaviorSubject<Array<CollPointModel>> = new BehaviorSubject<Array<CollPointModel>>(MockCollPoints);
+	collPoints$: BehaviorSubject<Array<CollPoint>> = new BehaviorSubject<Array<CollPoint>>(MockCollPoints);
 
 	constructor() {
 	}

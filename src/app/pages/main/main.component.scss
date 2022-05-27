@@ -1,23 +1,25 @@
 @import "mixins.scss";
 
 :host {
-	@include laptop1250 {
-		margin: -40px auto 0;
-	}
+	@include main_content;
 
-	@include tablet850{
-		margin: -60px auto 0;
-	}
-
-	@include tablet720{
-		max-width: 520px;
-	}
-
-	@include mobile420{
-		max-width: 420px;
-		margin: -40px auto 0 auto;
-		width: 100%;
-	}
+	//@include laptop1250 {
+	//	margin: -40px auto 0;
+	//}
+	//
+	//@include tablet850{
+	//	margin: -60px auto 0;
+	//}
+	//
+	//@include tablet720{
+	//	max-width: 520px;
+	//}
+	//
+	//@include mobile420{
+	//	max-width: 420px;
+	//	margin: -40px auto 0 auto;
+	//	width: 100%;
+	//}
 }
 
 .cardsFlex {

@@ -1,3 +1,13 @@
+@import "mixins.scss";
+
+:host{
+	@include main_content;
+
+	@include tablet620{
+		margin: 40px auto;
+	}
+}
+
 .ecomarket {
 	display: flex;
 	flex-direction: row;
