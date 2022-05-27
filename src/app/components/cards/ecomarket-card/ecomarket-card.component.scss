@@ -1,4 +1,4 @@
-@import "mixins";
+@import "mixins.scss";
 
 :host {
 	display: flex;
@@ -6,6 +6,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-left: 70px;
+	min-width: 870px;
 }
 
 .section {
@@ -65,7 +66,7 @@
 	}
 }
 
-@include laptop1250 {
+@media screen and (max-width: 1250px) {
 	.section {
 		width: 240px;
 
@@ -75,7 +76,7 @@
 	}
 }
 
-@include laptop1050 {
+@media screen and (max-width: 1050px) {
 	.section {
 		width: 220px;
 
@@ -85,7 +86,7 @@
 	}
 }
 
-@include tablet850 {
+@media screen and (max-width: 850px) {
 	.section {
 		width: 300px;
 
@@ -95,18 +96,23 @@
 	}
 }
 
-@include tablet720 {
+@media screen and (max-width: 720px) {
 	.section {
-		width: 250px;
+		width: 200px;
 
 		&__img {
-			width: 250px;
+			width: 200px;
 		}
 	}
 }
 
-@include mobile420 {
+@media screen and (max-width: 420px) {
 	.section {
+		width: 350px;
 		margin: 0 auto 30px auto;
+
+		&__img {
+			width: 350px;
+		}
 	}
 }

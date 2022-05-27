@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input} from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 import { AuthService } from '@services/auth.service';
 
@@ -8,7 +8,7 @@ import { AuthService } from '@services/auth.service';
 	styleUrls: ['./ecomarket-card.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EcomarketCardComponent{
+export class EcomarketCardComponent {
 	@Input() product$ = this.ecomarket.products$;
 	user = this.authService.isAuthorized;
 

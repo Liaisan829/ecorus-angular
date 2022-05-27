@@ -59,26 +59,55 @@
 	}
 }
 
-@mixin tablet850{
-	@media(max-width: 850px){
+@mixin tablet850 {
+	@media(max-width: 850px) {
 		@content
 	}
 }
 
-@mixin tablet720{
-	@media(max-width: 720px){
+@mixin tablet720 {
+	@media(max-width: 720px) {
 		@content
 	}
 }
 
-@mixin tablet620{
+@mixin tablet620 {
 	@media (max-width: 620px) {
 		@content
 	}
 }
 
-@mixin mobile420{
-	@media(max-width: 420px){
+@mixin mobile420 {
+	@media(max-width: 420px) {
 		@content
+	}
+}
+
+@mixin main_content {
+	max-width: 1200px;
+	margin: 40px auto;
+
+	@include laptop1250 {
+		max-width: 1000px;
+		margin: 40px auto;
+	}
+
+	@include laptop1050 {
+		max-width: 800px;
+		margin: 40px auto;
+	}
+
+	@include tablet850 {
+		max-width: 650px;
+		margin: 40px auto;
+	}
+
+	@include tablet620 {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+
+	@include mobile420 {
+		margin: 0 auto;
 	}
 }

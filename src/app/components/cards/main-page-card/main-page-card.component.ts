@@ -7,14 +7,13 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainPageCardComponent {
-
-	@Input() title: string
-	@Input() text: string
-	@Input() bgImg: string
+	@Input() cardHeadline: string;
+	@Input() cardText: string;
+	@Input() img: string;
 
 	constructor() {
-		this.title = '';
-		this.text = '';
-		this.bgImg = '';
+		this.cardHeadline = '';
+		this.cardText = '';
+		this.img = '';
 	}
 }

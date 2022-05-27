@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperModule } from 'swiper/angular';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '@components/header/header.component';
@@ -45,8 +46,7 @@ import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component
 import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/profile-promo-cards.component';
 import { EcoFilterBottomSheetComponent } from '@components/bottom-sheets/eco-filter-bottom-sheet/eco-filter-bottom-sheet.component';
 import { BottomSheetContainerComponent } from '@components/bottom-sheets/bottom-sheet-container/bottom-sheet-container.component';
-import { LayoutContainerComponent } from '@containers/layout-container/layout-container.component';
-import { SidebarPanelComponent } from '@components/sidebar-panel/sidebar-panel.component';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -83,25 +83,24 @@ import { SidebarPanelComponent } from '@components/sidebar-panel/sidebar-panel.c
 		ModalHeaderComponent,
 		QrModalComponent,
 		ProfilePromoCardsComponent,
-  EcoFilterBottomSheetComponent,
-  BottomSheetContainerComponent,
-  LayoutContainerComponent,
-  SidebarPanelComponent,
+		EcoFilterBottomSheetComponent,
+		BottomSheetContainerComponent,
 	],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        SwiperModule,
-        ReactiveFormsModule,
-        DialogModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        ToastrModule.forRoot({
-            timeOut: 1500,
-            progressBar: true,
-            positionClass: 'toast-bottom-center',
-        }),
-    ],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		SwiperModule,
+		LeafletModule,
+		ReactiveFormsModule,
+		DialogModule,
+		BrowserAnimationsModule,
+		HttpClientModule,
+		ToastrModule.forRoot({
+			timeOut: 1500,
+			progressBar: true,
+			positionClass: 'toast-bottom-center'
+		}),
+	],
 	providers: [
 		{
 			provide: HTTP_INTERCEPTORS,
@@ -119,8 +118,7 @@ import { SidebarPanelComponent } from '@components/sidebar-panel/sidebar-panel.c
 			multi: true
 		}
 	],
-	bootstrap: [AppComponent],
-
+	bootstrap: [AppComponent]
 })
 export class AppModule {
 }

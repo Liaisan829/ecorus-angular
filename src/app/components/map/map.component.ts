@@ -1,34 +1,29 @@
-import { Component, AfterViewInit } from '@angular/core';
-import * as L from 'leaflet';
+import { Component } from '@angular/core';
+import { latLng, tileLayer, Map } from 'leaflet';
 
 @Component({
 	selector: 'app-map',
 	templateUrl: './map.component.html',
-	styleUrls: ['./map.component.scss']
+	styleUrls: ['./map.component.scss'],
 })
-export class MapComponent implements AfterViewInit {
+export class MapComponent {
 
-	map:any;
+	optionsSpec: any = {
+		layers: [{ url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: 'Open Street Map' }],
+		zoom: 13,
+		center: [55.792910, 49.122429],
+		scrollWheelZoom: false
+	};
 
-	private initMap(): void {
-		this.map = L.map('map', {
-			center: [ 39.8282, -98.5795 ],
-			zoom: 3
-		});
+	zoom = this.optionsSpec.zoom;
+	center = latLng(this.optionsSpec.center);
+	options = {
+		layers: [tileLayer(this.optionsSpec.layers[0].url, { attribution: this.optionsSpec.layers[0].attribution })],
+		zoom: this.optionsSpec.zoom,
+		center: latLng(this.optionsSpec.center)
+	};
 
-		const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			minZoom: 3,
-			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-		});
-
-		tiles.addTo(this.map);
-	}
-
-	constructor() { }
-
-	ngAfterViewInit(): void {
-		this.initMap();
+	onMapReady(map: Map) {
+		map.scrollWheelZoom = map.scrollWheelZoom.disable()
 	}
 }
-

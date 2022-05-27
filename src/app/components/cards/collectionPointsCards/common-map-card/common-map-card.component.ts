@@ -1,5 +1,5 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-import { MapPageComponent } from '@pages/map-page/map-page.component';
+import { Component, ChangeDetectionStrategy, Input} from '@angular/core';
+import { CollPoint } from '@models/coll-point';
 
 @Component({
 	selector: 'app-common-map-card',
@@ -8,18 +8,5 @@ import { MapPageComponent } from '@pages/map-page/map-page.component';
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CommonMapCardComponent {
-
-	constructor(private map: MapPageComponent) {
-	}
-
-	@Input() collPoint$ = this.map.collPoints$;
-	@Input() selected!: number;
-
-	@Output() onChanged = new EventEmitter<number>();
-
-	handleChange(n: number) {
-		this.selected = n;
-		this.onChanged.emit(n);
-	}
-
+	@Input() collPoint: CollPoint | null = null;
 }

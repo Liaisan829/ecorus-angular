@@ -1,4 +1,4 @@
-@import "mixins";
+@import "mixins.scss";
 
 .section {
 	display: flex;
@@ -8,14 +8,6 @@
 	padding-left: 64px;
 	border-radius: 20px;
 	background-color: $c-blue;
-
-	@include tablet620 {
-		padding-right: 15px;
-	}
-
-	@include mobile420 {
-		padding-right: 0;
-	}
 
 	&__yellow{
 		@extend .section;
@@ -45,12 +37,6 @@
 		width: 560px;
 		padding-left: 90px;
 		border-radius: 20px;
-		@include tablet620 {
-			display: none;
-		}
-		@include mobile420 {
-			display: initial;
-		}
 	}
 
 	&__info {
@@ -58,7 +44,7 @@
 	}
 }
 
-@include laptop1250 {
+@media screen and (max-width: 1250px) {
 	.section {
 		max-width: 1000px;
 		height: 300px;
@@ -77,7 +63,7 @@
 	}
 }
 
-@include laptop1050 {
+@media screen and (max-width: 1050px) {
 	.section {
 		max-width: 800px;
 		height: 280px;
@@ -102,7 +88,7 @@
 	}
 }
 
-@include tablet850 {
+@media screen and (max-width: 850px) {
 	.section {
 		max-width: 650px;
 		height: 280px;
@@ -125,7 +111,7 @@
 }
 
 
-@include mobile420 {
+@media screen and (max-width: 420px) {
 	.section {
 		max-width: 420px;
 		height: 400px;

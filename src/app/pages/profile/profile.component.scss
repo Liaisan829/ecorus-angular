@@ -1,4 +1,8 @@
-@import "mixins";
+@import "mixins.scss";
+
+:host{
+	@include main_content;
+}
 
 .profile {
 	display: flex;

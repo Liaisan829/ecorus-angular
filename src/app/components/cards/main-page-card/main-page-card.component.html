@@ -1,20 +1,18 @@
-<div class='mainPageCard__wrapper'>
-	<div class='mainPageCard'>
-		<div class='mainPageCard__content'>
-			<h1 class='mainPageCard__title'>{{title}}</h1>
-			<p class='mainPageCard__text'>{{text}}</p>
+<div class='informBlock'>
+	<div class='informBlock__info'>
+		<div class='informBlock__info__text'>
+			<h1>{{cardHeadline}}</h1>
+			<p>{{cardText}}</p>
+		</div>
+		<div class='informBlock__info__cardButton'>
 			<app-button
 				theme='GREY'
-				class='mainPageCard__btn'
 			>
 				<img src='/assets/mainPage/buttonArrow.svg'
 				     alt='arrow'>
 			</app-button>
 		</div>
-		<div class='mainPageCard__image'>
-			<img
-				[src]='bgImg'
-			/>
-		</div>
 	</div>
+	<img class='informBlock__img' src='{{img}}'
+	     alt='card-image'>
 </div>

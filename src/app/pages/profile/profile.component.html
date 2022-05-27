@@ -1,22 +1,20 @@
-<app-layout-container>
-	<h1>Личный кабинет</h1>
-	<div class='profile'>
-		<div class='profile__info'>
-			<div class='profile__info__avatar'>
-				<img src='/assets/profile.svg'
-				     alt='avatar'>
-				<h2>{{(user$ | async)?.username}}</h2>
-				<div class='profile__info__personalData'>
-					<p>{{(user$ | async)?.phone_number}}</p>
-					<p>{{(user$ | async)?.email}}</p>
-				</div>
+<h1>Личный кабинет</h1>
+<div class='profile'>
+	<div class='profile__info'>
+		<div class='profile__info__avatar'>
+			<img src='/assets/profile.svg'
+			     alt='avatar'>
+			<h2>{{(user$ | async)?.username}}</h2>
+			<div class='profile__info__personalData'>
+				<p>{{(user$ | async)?.phone_number}}</p>
+				<p>{{(user$ | async)?.email}}</p>
 			</div>
-			<app-button
-				theme='GREY'
-			>Редактировать
-			</app-button>
 		</div>
-		<app-profile-cards-switcher></app-profile-cards-switcher>
+		<app-button
+			theme='GREY'
+		>Редактировать
+		</app-button>
 	</div>
-</app-layout-container>
+	<app-profile-cards-switcher></app-profile-cards-switcher>
+</div>
 

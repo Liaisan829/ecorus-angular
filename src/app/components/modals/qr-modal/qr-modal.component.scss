@@ -1,15 +1,10 @@
-@import "mixins";
-
-:host {
-	max-width: 400px;
-	margin: 0 auto;
-	width: 100%;
-}
+@import "mixins.scss";
 
 .qr {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	max-width: 400px;
 
 	h2 {
 		@include modalText;

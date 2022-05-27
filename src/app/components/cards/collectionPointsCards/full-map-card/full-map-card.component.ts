@@ -1,5 +1,7 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-import { MapPageComponent } from '@pages/map-page/map-page.component';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { CollPoint } from '@models/coll-point';
+import { CollPointsService } from '@services/collPoints.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-full-map-card',
@@ -8,19 +10,22 @@ import { MapPageComponent } from '@pages/map-page/map-page.component';
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FullMapCardComponent {
+	collPoints$ = this.collPointsService.collPoints$;
+	collPoint: CollPoint | null = null
+	id: number = this.activateRoute.snapshot.params['id'];
 
-	constructor(private map: MapPageComponent) {
+	constructor(
+		private collPointsService: CollPointsService,
+		private activateRoute: ActivatedRoute,
+	) {
 	}
 
-	@Input() collPoint$ = this.map.collPoints$;
-
-	@Input() selected!: number;
-
-	@Output() onChanged = new EventEmitter<number>();
-
-	handleChange(n: number) {
-		this.selected = n;
-		this.onChanged.emit(n);
+	ngOnInit() {
+		this.collPoints$
+			.getValue()
+			.filter((collPoint: CollPoint) => (collPoint.id === +this.id))
+			.map((point: CollPoint) => {
+				this.collPoint = point
+			})
 	}
-
 }

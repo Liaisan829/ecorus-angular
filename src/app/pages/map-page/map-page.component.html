@@ -1,36 +1,28 @@
-<app-layout-container [hasFooter]='false'>
-	<div class='mapPage'>
-<!--		<app-map></app-map>-->
-		<section class='mapPage__info'>
-			<div class='mapPage__info__top'>
-				<app-search-input></app-search-input>
-				<app-drop-down-list
-					[items]="['H&M', 'Adidas', 'NIKE']"
-				>
-					Выбрано 3 магазина
-				</app-drop-down-list>
-				<app-drop-down-list
-					[items]="['Стекло', 'Пластик', 'Дерево']"
-				>
-					Материалы
-				</app-drop-down-list>
-			</div>
-		</section>
-
-		<ng-container *ngIf='selected === 0; else other'>
-			<div *ngIf='(collPoints$|async)!.length>=0'>
-				<app-common-map-card [selected]='selected'
-				                     (onChanged)='onChange($event)'
-				></app-common-map-card>
-			</div>
-		</ng-container>
+<section class='mapPage'>
+	<div class='mapPage__info'>
+		<app-search-input></app-search-input>
+		<app-drop-down-list
+			[items]="['H&M', 'Adidas', 'NIKE']"
+		>
+			Выбрано 3 магазина
+		</app-drop-down-list>
+		<app-drop-down-list
+			[items]="['Стекло', 'Пластик', 'Дерево']"
+		>
+			Материалы
+		</app-drop-down-list>
 	</div>
-</app-layout-container>
 
-<ng-template #other>
-	<app-full-map-card [selected]='selected'
-	                   (onChanged)='onChange($event)'
-	></app-full-map-card>
-</ng-template>
+	<div class='mapPage__info__cards'>
+		<div *ngFor='let item of collPoints$ | async'>
+			<app-common-map-card [collPoint]='item'
+			></app-common-map-card>
+		</div>
+	</div>
 
+	<div class='mapPage__info__outlet'>
+		<router-outlet></router-outlet>
+	</div>
+</section>
 
+<app-map></app-map>

@@ -1,9 +1,9 @@
-<div class='commonCard'
-     *ngFor='let item of collPoint$ | async; let i = index' (click)=handleChange(i)>
-		<img src='{{item.img}}'
-		     alt='pic'>
-		<div class='commonCard__info'>
-			<h3>{{item.address}}</h3>
-			<p>{{item.description}}</p>
-		</div>
-</div>
+<a [routerLink]='[collPoint?.id]'
+   class='commonCard'>
+	<img src='{{collPoint?.img}}'
+	     alt='pic'>
+	<div class='commonCard__info'>
+		<h3>{{collPoint?.address}}</h3>
+		<p>{{collPoint?.description}}</p>
+	</div>
+</a>
