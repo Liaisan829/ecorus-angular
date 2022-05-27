@@ -4,7 +4,7 @@
 
 export const environment = {
 	production: false,
-	apiUrl: 'https://ecoapp.cloud.technokratos.com/eco-rus/api/v1'
+	apiUrl: 'https://ecoapp.cloud.technokratos.com/eco-rus/api/v1',
 };
 
 /*

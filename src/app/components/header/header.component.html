@@ -3,7 +3,7 @@
 		<div class='header__navigation'>
 			<img src='/assets/mainPage/logo.svg'
 			     alt='logo'>
-			<nav>
+			<nav class='header__navigation__nav'>
 				<a routerLink='/'
 				   class='header__link'
 				   [routerLinkActiveOptions]='{exact:true}'
@@ -28,6 +28,7 @@
 				<app-button
 					type='button'
 					theme='DEFAULT'
+					class='header__info__place'
 				>
 					<img src='/assets/mainPage/location.svg'
 					     alt='location'>
@@ -42,6 +43,15 @@
 					     alt='login'>
 					<p>Войти</p>
 				</app-button>
+				<app-button
+					type='button'
+					theme='DEFAULT'
+					class='header__info__menu'
+					(click)='openSidebarPanel()'
+				>
+					<img src='/assets/mainPage/burger-menu.svg'
+					     alt='burgerMenu'>
+				</app-button>
 			</ng-container>
 		</div>
 	</div>
@@ -51,6 +61,7 @@
 	<app-button
 		type='button'
 		theme='DEFAULT'
+		class='header__info__place'
 	>
 		<img src='/assets/mainPage/location.svg'
 		     alt='location'>
@@ -72,5 +83,14 @@
 		<img src='/assets/profile.svg'
 		     alt='profile'>
 		<p>{{(user$ | async)?.username}}</p>
+	</app-button>
+	<app-button
+		type='button'
+		theme='DEFAULT'
+		class='header__info__menu'
+		(click)='openSidebarPanel()'
+	>
+		<img src='/assets/mainPage/burger-menu.svg'
+		     alt='burgerMenu'>
 	</app-button>
 </ng-template>

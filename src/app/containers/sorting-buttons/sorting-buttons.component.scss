@@ -1,4 +1,6 @@
-:host{
+@import 'mixins';
+
+:host {
 	display: flex;
 	flex-direction: row;
 	column-gap: 12px;

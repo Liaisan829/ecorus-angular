@@ -1,0 +1,62 @@
+<div class='content'>
+	<div class='btn__wrapper'>
+		<app-button
+			theme='DEFAULT'
+			class='btn__icon'
+			[appDialogClose]
+		>
+			<img src='/assets/close.svg'
+			     alt='close'>
+		</app-button>
+	</div>
+	<div class='sidebar'>
+		<div class='sidebar__content'>
+			<app-button
+				theme='DEFAULT'
+				class='sidebar__content__profile'
+				(click)='openProfile()'
+				[appDialogClose]
+			>
+				<img src='/assets/profile.svg'
+				     alt='avatar'
+				     class='sidebar__content__profile__img' />
+				<div class='sidebar__content__profile__userInfo'>
+					<p class='sidebar__content__profile__userInfo__name'>
+						{{(user$ | async)?.username}}
+					</p>
+					<div class='sidebar__content__profile__userInfo__balance'>
+						<img src='/assets/currency.svg'
+						     alt='currency' />
+						<p>1000</p>
+					</div>
+				</div>
+			</app-button>
+
+			<nav class='sidebar__content__nav'>
+				<a routerLink='/'
+				   class='header__link'
+				   [appDialogClose]
+				>Главная</a>
+				<a routerLink='/collpoints'
+				   class='header__link'
+				   [appDialogClose]
+				>Пункты сбора</a>
+				<a routerLink='/ecomarket'
+				   class='header__link'
+				   [appDialogClose]
+				>ЭкоМаркет</a>
+				<a routerLink='/aboutservice'
+				   class='header__link'
+				   [appDialogClose]
+				>О сервисе</a>
+			</nav>
+
+			<button class='sidebar__content__location'>
+				<img src='/assets/mainPage/location.svg'
+				     alt='location' />
+				<span>Казань</span>
+			</button>
+
+		</div>
+	</div>
+</div>

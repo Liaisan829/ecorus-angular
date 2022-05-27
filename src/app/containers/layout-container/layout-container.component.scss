@@ -1,0 +1,43 @@
+@import "mixins";
+
+:host {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.mainContainer {
+	max-width: 1200px;
+	margin: 40px auto;
+
+	@include laptop1250 {
+		max-width: 1000px;
+		margin: 40px auto;
+	}
+
+	@include laptop1050 {
+		max-width: 800px;
+		margin: 40px auto;
+	}
+
+	@include tablet850 {
+		max-width: 650px;
+		margin: 40px auto;
+	}
+
+	@include tablet720 {
+		max-width: 550px;
+	}
+
+	@include tablet620 {
+		max-width: 400px;
+		margin: 40px auto;
+	}
+
+	@include mobile420 {
+		max-width: 350px;
+		margin: 40px auto;
+	}
+}
+
+
