@@ -46,6 +46,7 @@ import { QrModalComponent } from '@components/modals/qr-modal/qr-modal.component
 import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/profile-promo-cards.component';
 import { EcoFilterBottomSheetComponent } from '@components/bottom-sheets/eco-filter-bottom-sheet/eco-filter-bottom-sheet.component';
 import { BottomSheetContainerComponent } from '@components/bottom-sheets/bottom-sheet-container/bottom-sheet-container.component';
+import { SidebarPanelComponent } from '@components/sidebar-panel/sidebar-panel.component';
 
 @NgModule({
 	declarations: [
@@ -85,6 +86,7 @@ import { BottomSheetContainerComponent } from '@components/bottom-sheets/bottom-
 		ProfilePromoCardsComponent,
 		EcoFilterBottomSheetComponent,
 		BottomSheetContainerComponent,
+		SidebarPanelComponent,
 	],
 	imports: [
 		BrowserModule,

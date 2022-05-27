@@ -1,4 +1,4 @@
-@import "mixins.scss";
+@import "mixins";
 
 :host{
 	@include main_content;
@@ -23,8 +23,16 @@
 	}
 }
 
-.sortingButtons {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+.filter {
+	&__btns {
+		@include tablet720 {
+			display: none;
+		}
+		&__mobile {
+			display: none;
+			@include tablet720 {
+				display: initial;
+			}
+		}
+	}
 }

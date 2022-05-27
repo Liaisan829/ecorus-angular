@@ -6,6 +6,7 @@ import { User } from '@models/user';
 import { AuthService } from '@services/auth.service';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { SidebarPanelComponent } from '@components/sidebar-panel/sidebar-panel.component';
 
 @Component({
 	selector: 'app-header',
@@ -45,6 +46,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
 		this.dialog.openDialog(LoginModalComponent, {
 			data: {
 				title: 'Вход'
+			}
+		});
+	}
+
+	openSidebarPanel() {
+		this.dialog.openDialog(SidebarPanelComponent, {
+			data: {
+				title: 'Меню'
 			}
 		});
 	}

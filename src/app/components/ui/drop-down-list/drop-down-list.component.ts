@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-drop-down-list',
@@ -6,13 +6,6 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 	styleUrls: ['./drop-down-list.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DropDownListComponent implements OnInit {
-
-	constructor() {
-	}
-
-	ngOnInit(): void {
-	}
-
+export class DropDownListComponent {
 	@Input() items!: string[];
 }

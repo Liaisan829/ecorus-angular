@@ -10,7 +10,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MapPageComponent {
 	collPoints$ = this.collPointsService.collPoints$
-	openFull: boolean = false;
 
 	constructor(
 		private collPointsService: CollPointsService,
@@ -18,11 +17,7 @@ export class MapPageComponent {
 	) {
 	}
 
-	check() {
-		if (this.activateRoute.snapshot.params['id']) {
-			this.openFull = true
-		} else {
-			this.openFull = false
-		}
+	openMapFilterBottomSheet(){
+		console.log("map page filter")
 	}
 }

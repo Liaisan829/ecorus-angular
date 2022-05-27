@@ -1,4 +1,4 @@
-@import "mixins.scss";
+@import "mixins";
 
 .commonCard {
 	display: flex;
@@ -12,6 +12,23 @@
 	border: 1px solid $c-light-grey;
 	cursor: pointer;
 
+	@include laptop1050 {
+		max-width: 300px;
+	}
+
+	@include tablet850 {
+		max-width: 280px;
+	}
+
+	@include tablet620 {
+		max-width: 350px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	}
+
+	@include mobile420 {
+		max-width: 327px;
+	}
+
 	&__info {
 		display: flex;
 		flex-direction: column;
@@ -24,6 +41,17 @@
 
 		p {
 			@include primary-text;
+		}
+	}
+}
+
+@media screen and (max-width: 355px) {
+	.commonCard {
+		max-width: 220px;
+
+		img {
+			width: 70px;
+			height: 100px;
 		}
 	}
 }

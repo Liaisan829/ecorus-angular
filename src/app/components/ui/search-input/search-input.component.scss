@@ -1,4 +1,4 @@
-@import "../../../styles/mixins";
+@import "mixins";
 
 .searchInput {
 	display: flex;
@@ -14,8 +14,65 @@
 	input {
 		border: none;
 		border-radius: 8px;
-		width: 500px;
+		width: 450px;
 		background: $c-white;
 		padding: 14px 20px 14px 38px;
+	}
+}
+
+@media screen and (max-width: 1320px) {
+	.searchInput {
+		input {
+			width: 400px;
+		}
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.searchInput {
+		input {
+			width: 300px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 920px) {
+	.searchInput {
+		input {
+			width: 215px;
+		}
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.searchInput {
+		input {
+			width: 150px;
+		}
+	}
+}
+
+@include tablet620 {
+	.searchInput {
+		input {
+			width: 230px;
+		}
+	}
+}
+
+@include mobile420 {
+	.searchInput {
+		input {
+			width: 160px;
+		}
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.searchInput {
+		input {
+			width: 190px;
+		}
 	}
 }
