@@ -1,4 +1,4 @@
-@import "mixins.scss";
+@import "mixins";
 
 :host {
 	@include laptop1250 {
@@ -13,10 +13,13 @@
 		max-width: 520px;
 	}
 
+	@include tablet620 {
+		max-width: 370px;
+	}
+
 	@include mobile420{
 		max-width: 420px;
 		margin: -40px auto 0 auto;
-		width: 100%;
 	}
 }
 
@@ -44,12 +47,16 @@
 		max-width: 520px;
 	}
 
-	@include mobile420{
+	@include tablet620 {
 		display: flex;
 		flex-direction: column;
-		margin-top: -160px;
+		margin-top: -30px;
 		padding: 0 16px;
 		z-index: 5;
 		position: absolute;
+	}
+
+	@include mobile420{
+		margin-top: -100px;
 	}
 }

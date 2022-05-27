@@ -1,4 +1,4 @@
-@import "mixins.scss";
+@import "mixins";
 
 .zeroBalance {
 	height: 375px;
@@ -16,10 +16,31 @@
 	box-shadow: 0 0 10px rgba(black, 0.1);
 	margin-bottom: 30px;
 
+	@include laptop1250 {
+		width: 240px;
+	}
+
+	@include laptop1050 {
+		width: 205px;
+	}
+
+	@include tablet850 {
+		width: 300px;
+	}
+
+	@include tablet720 {
+		width: 250px;
+	}
+
+
 	&__info {
 		display: flex;
 		flex-direction: column;
 		padding: 140px 24px 24px;
+
+		@include laptop1050 {
+			padding: 110px 15px 15px;
+		}
 
 		&__button {
 			margin: 0 auto;
@@ -32,6 +53,14 @@
 		p {
 			@include secondary-text;
 			text-align: center;
+
+			@include laptop1050 {
+				@include primary-text;
+			}
+
+			@include tablet850 {
+				@include secondary-text;
+			}
 		}
 
 		&__coins {
@@ -64,6 +93,15 @@
 				@include secondary-text;
 				color: $c-text-100;
 				margin-right: 12px;
+
+				@include laptop1050 {
+					font-size: 11px;
+				}
+
+				@include tablet850 {
+					@include secondary-text;
+					color: $c-text-100;
+				}
 			}
 		}
 	}

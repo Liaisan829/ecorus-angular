@@ -7,6 +7,7 @@ import * as L from 'leaflet';
 	styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements AfterViewInit {
+
 	map:any;
 
 	private initMap(): void {

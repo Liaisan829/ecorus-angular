@@ -1,13 +1,18 @@
-@import "mixins.scss";
+@import "mixins";
 
 .slider {
 	position: relative;
 	margin-top: -40px;
 	width: 100%;
 
+	@include tablet620 {
+		max-width: 720px;
+		margin: -40px auto;
+	}
+
 	@include mobile420{
 		max-width: 420px;
-		margin: 0 auto;
+		margin: -40 auto;
 	}
 
 	&__navigation {
@@ -31,7 +36,7 @@
 			max-width: 660px;
 		}
 
-		@include mobile420{
+		@include tablet620{
 			display: none;
 		}
 	}

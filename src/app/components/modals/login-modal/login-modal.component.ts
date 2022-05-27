@@ -41,6 +41,7 @@ export class LoginModalComponent {
 
 		this.authService.authorize(this.form.value).subscribe(res => {
 			this.toast.success('Добро пожаловать!');
+			window.location.reload();
 			this.authService.token = res.token;
 		})
 	}

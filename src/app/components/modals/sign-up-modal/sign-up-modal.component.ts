@@ -51,6 +51,7 @@ export class SignUpModalComponent {
 
 		this.authService.registration(this.regForm.value).subscribe(res => {
 			this.toast.success('Вы успешно зарегистрированы!');
+			window.location.reload();
 			this.authService.token = res.token;
 		}, err => {
 			console.log(err);

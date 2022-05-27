@@ -12,7 +12,10 @@ interface DialogData {
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ModalHeaderComponent {
+
 	constructor(
 		@Optional() @Inject(DIALOG_DATA) public data: DialogData,
-	) {}
+	) {
+	}
+
 }

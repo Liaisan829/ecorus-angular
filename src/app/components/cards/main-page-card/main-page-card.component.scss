@@ -1,123 +1,103 @@
-@import "mixins.scss";
+@import "mixins";
 
-.informBlock {
-	border: 2px solid $c-light-grey;
-	border-radius: 16px;
+.mainPageCard {
+	min-height: 300px;
+	height: 100%;
+	box-sizing: content-box;
+	overflow: hidden;
 	display: flex;
-	flex-direction: row;
-	padding-top: 40px;
-	padding-left: 40px;
-	width: 540px;
+	justify-content: space-between;
+	text-align: left;
+	border: 1px solid rgba($c-text-12, 0.12);
+	border-radius: 16px;
+	background: $c-white;
 
-	@include laptop1250 {
-		width: 450px;
-	}
+	&__wrapper {
+		width: 100%;
+		max-width: 588px;
 
-	@include laptop1050 {
-		width: 350px;
-		padding-left: 25px;
-		padding-top: 25px;
-	}
-
-	@include tablet850 {
-		width: 290px;
-	}
-
-	@include tablet720 {
-		max-width: 200px;
-	}
-
-	@include mobile420 {
-		max-width: 420px;
-		background: $c-white;
-	}
-
-	h1 {
-		@include infoBlockText;
 		@include laptop1250 {
-			font-size: 28px;
+			max-width: 490px;
 		}
+
+		@include laptop1050 {
+			max-width: 390px;
+		}
+
+		@include tablet850 {
+			max-width: 300px;
+		}
+
+		@include tablet720 {
+			max-width: 240px;
+		}
+
+		@include tablet620 {
+			max-width: 370px;
+		}
+
+		@include mobile420 {
+			max-width: 320px;
+		}
+
+		&:not(:last-child) {
+			margin-right: 24px
+		}
+
+		@include tablet620 {
+			&:last-child {
+				margin-top: 24px;
+			}
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 14px;
+		line-height: inherit;
+
 		@include laptop1050 {
 			@include adaptiveText;
 		}
 	}
 
-	p {
-		@include secondary-text;
-		@include laptop1250 {
-			font-size: 14px;
-		}
-		@include laptop1050 {
-			font-size: 13px;
-		}
-		margin-top: 5px;
+	&__text {
+		margin-bottom: 46px;
+		color: rgba($c-text-88, 0.56);
+		line-height: 24px;
 	}
 
-	&__img {
-		width: 280px;
-		height: 250px;
-		@include laptop1250 {
-			width: 240px;
-			height: 240px;
-		}
-		@include laptop1050 {
-			width: 150px;
-			height: 150px;
-		}
+	&__btn {
+		display: flex;
+		align-items: center;
+		width: 48px;
+		border: 0;
+		border-radius: 8px;
+		padding: 12px;
 
 		@include tablet850 {
-			width: 100px;
-			height: 100px;
-			margin-top: 90px;
+			padding: 8px;
 		}
+	}
 
-		@include tablet720 {
-			display: none;
+	&__content {
+		padding: 40px 0 0 40px;
+		@include tablet850 {
+			padding: 40px 0 0 20px;
 		}
+	}
 
-		@include mobile420 {
-			display: initial;
-			width: 250px;
-			height: 150px;
-		}
+	&__image {
+		display: flex;
+		align-items: flex-end;
+		justify-content: end;
+		padding-bottom: 6.5px;
+		width: 100%;
 
-		&__info {
-			@include tablet850 {
-				margin-top: -10px;
-			}
-
-			&__text {
-				@include mobile420 {
-					margin-bottom: 50px;
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
-				}
-			}
-
-			&__cardButton {
-				width: 48px;
-				height: 48px;
-				border: none;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				margin-top: 40px;
-
-				@include laptop1050 {
-					margin-top: 15px;
-					padding: 5px 10px;
-				}
-
-				@include mobile420 {
-					margin-bottom: 10px;
-				}
-
-				img {
-					width: 24px;
-					height: 24px;
-				}
-			}
+		img {
+			height: auto;
+			width: 100%;
+			object-fit: cover;
 		}
 	}
 }
