@@ -8,14 +8,8 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 })
 export class CheckboxItemComponent {
 
-	@Input() title: string;
-	@Input() isClicked: boolean;
-	@Input() clickHandler: any;
+	@Input() title: string = '';
+	@Input() isChecked: boolean = false;
+	@Input() checkHandler: any;
 	@Input() index?: number;
-
-	constructor() {
-		this.title = '';
-		this.isClicked = false;
-		this.clickHandler = '';
-	}
 }

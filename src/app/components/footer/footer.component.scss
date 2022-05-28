@@ -1,4 +1,4 @@
-@import "mixins.scss";
+@import "mixins";
 
 .footer {
 	border-top: 1px solid $c-light-grey;
@@ -12,58 +12,43 @@
 		flex-direction: row;
 		align-items: center;
 		margin: 0 auto;
+
+		@include laptop1250 {
+			max-width: 1000px;
+		}
+
+		@include laptop1050 {
+			max-width: 800px;
+
+		}
+
+		@include tablet850 {
+			max-width: 650px;
+		}
+
+		@include tablet720 {
+			max-width: 550px;
+		}
+
+		@include tablet620 {
+			max-width: 400px;
+		}
+
+		@include mobile420 {
+			max-width: 350px;
+		}
+
+		a {
+			@include regular-text;
+		}
 	}
 
 	&__contact {
 		display: flex;
 		align-items: center;
-
-		a {
-			text-decoration: none;
-			@include secondary-text
-		}
 	}
 
 	&__contact:last-child {
 		margin-left: 31px;
-	}
-}
-
-@media screen and (max-width: 1250px) {
-	.footer {
-		margin-top: auto;
-
-		&__container {
-			max-width: 1000px;
-			margin: 0 auto;
-		}
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	.footer {
-
-		&__container {
-			max-width: 800px;
-			margin: 0 auto;
-		}
-
-		&__contact {
-			a {
-				font-size: 14px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 375px) {
-	.footer {
-		&__container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			max-width: 375px;
-			flex-direction: column;
-		}
 	}
 }

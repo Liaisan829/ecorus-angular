@@ -1,0 +1,12 @@
+@import "mixins";
+
+.bottom-sheet {
+
+	&__header{
+		display: flex;
+		flex-direction: row;
+		overflow-x: scroll;
+		column-gap: 20px;
+	}
+}
+

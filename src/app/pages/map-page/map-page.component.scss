@@ -5,34 +5,154 @@
 }
 
 .mapPage {
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
 
 	&__info {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin: 32px auto;
-		z-index: 1200;
-		position: absolute;
+		margin: 0 auto;
+		max-width: 1200px;
+		width: 100%;
+
+		&__filterBtn {
+			display: none;
+		}
+
+		&__top {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			z-index: 1000;
+			position: absolute;
+			margin-top: 32px;
+			max-width: 1200px;
+			width: 100%;
+		}
 
 		&__cards {
 			position: absolute;
-			z-index: 1200;
+			z-index: 1000;
 			display: block;
 			max-width: 1200px;
 			width: 100%;
 			margin: 112px auto 0;
 		}
 
-		&__outlet{
+		&__outlet {
 			z-index: 1200;
 			position: absolute;
 			margin-top: 112px;
 		}
 	}
-
 }
 
+@media screen and (max-width: 1320px) {
+	.mapPage {
+		&__info {
+			max-width: 1000px;
 
+			&__top {
+				max-width: 1000px;
+			}
+
+			&__cards {
+				max-width: 1000px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.mapPage {
+		&__info {
+			max-width: 800px;
+
+			&__top {
+				max-width: 800px;
+			}
+
+			&__cards {
+				max-width: 800px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.mapPage {
+		&__info {
+			max-width: 650px;
+
+			&__top {
+				max-width: 650px;
+			}
+
+			&__cards {
+				max-width: 650px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.mapPage {
+		&__info {
+			max-width: 500px;
+
+			&__top {
+				max-width: 500px;
+			}
+
+			&__cards {
+				max-width: 500px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.mapPage {
+		&__info {
+			max-width: 350px;
+
+			&__top {
+				max-width: 350px;
+			}
+
+			&__filterBtn {
+				display: initial;
+			}
+
+			&__cards {
+				display: none;
+			}
+
+			&__outlet {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.mapPage {
+		&__info {
+			max-width: 280px;
+
+			&__top {
+				max-width: 280px;
+				margin: 30px auto 0 auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.mapPage {
+		&__info {
+			max-width: 280px;
+
+			&__top {
+				max-width: 280px;
+				margin: 30px auto 0 auto;
+			}
+		}
+	}
+}

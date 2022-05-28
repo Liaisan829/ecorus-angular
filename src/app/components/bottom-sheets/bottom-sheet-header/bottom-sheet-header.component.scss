@@ -1,0 +1,17 @@
+@import "mixins";
+
+button {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 0;
+	background: transparent;
+	border: none;
+}
+
+.close {
+	background-color: $c-grey-blue;
+	border-radius: 4px;
+	width: 32px;
+	height: 3px;
+}

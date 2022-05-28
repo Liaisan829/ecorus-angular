@@ -1,0 +1,20 @@
+@import "mixins";
+
+:host {
+	display: block;
+	position: absolute;
+	background-color: white;
+	padding: 12px 24px 24px 24px;
+	bottom: 0;
+	left: 0;
+	margin-top: 58px;
+	border-radius: 20px 20px 0 0;
+	width: 100%;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+	overflow-y: scroll;
+}

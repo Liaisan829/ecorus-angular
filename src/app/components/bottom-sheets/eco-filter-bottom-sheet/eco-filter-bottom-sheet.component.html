@@ -1,5 +1,5 @@
-<app-bottom-sheet-container>
-	<div class='bottom__sheet_header'>
+<app-bottom-sheet-wrapper>
+	<div class='bottom-sheet__header'>
 		<ng-container
 			*ngFor='let item of headersFilters'
 		>
@@ -9,13 +9,13 @@
 		</ng-container>
 	</div>
 
-	<div class='bottom__sheet__content'>
-		тут будут чекбоксы
+	<div class='bottom-sheet__content'>
+		<app-checkbox-group></app-checkbox-group>
 	</div>
 
-	<div class='bottom__sheet__footer'>
+	<div class='bottom-sheet__footer'>
 		<app-button
-			theme='GREY'
+			theme='GREEN'
 			[wide]=true
 		>Применить
 		</app-button>
@@ -25,5 +25,4 @@
 		>Сбросить фильтры
 		</app-button>
 	</div>
-
-</app-bottom-sheet-container>
+</app-bottom-sheet-wrapper>

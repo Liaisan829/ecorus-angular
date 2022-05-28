@@ -1,7 +1,6 @@
-@import "../../../styles/mixins";
+@import "mixins";
 
 .dropDownList {
-	border: none;
 	border-radius: 8px;
 	width: 260px;
 	background: $c-white;
@@ -14,5 +13,31 @@
 		color: rgba(0, 11, 38, 0.72);
 		padding: 10px 20px;
 		border: none;
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.dropDownList {
+		width: 200px;
+		padding: 14px 30px 14px 20px;
+	}
+}
+
+@media screen and (max-width: 920px) {
+	.dropDownList {
+		width: 160px;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.dropDownList {
+		width: 120px;
+		padding-right: 20px;
+	}
+}
+
+@include tablet620 {
+	.dropDownList {
+		display: none;
 	}
 }
