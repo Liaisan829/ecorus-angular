@@ -1,10 +1,11 @@
-<label class='checkbox'>
-	<input
-		type='checkbox'
-		[id]='index'
-		[checked]='isClicked'
-		(click)='clickHandler()'
-	>
-	<span class='isChecked ? styles.checkbox__activeSpan : styles.checkbox__span'></span>
-	<p class='isChecked ? styles.checkbox__activeText : styles.checkbox__text'>{{title}}</p>
-</label>
+<div class="checkbox-wrapper">
+	<label class="custom-checkbox">
+		<input
+			type="checkbox"
+			[style.id]='index'
+			[style.checked]='isChecked'
+			[style.onChange]='checkHandler'
+		>
+		<span>{{title}}</span>
+	</label>
+</div>

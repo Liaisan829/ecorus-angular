@@ -20,6 +20,11 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: flex-start;
+
+		:first-child{
+			position: sticky;
+			top: 5px;
+		}
 	}
 }
 

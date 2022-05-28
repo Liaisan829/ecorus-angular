@@ -47,6 +47,10 @@ import { ProfilePromoCardsComponent } from '@containers/profile-promo-cards/prof
 import { EcoFilterBottomSheetComponent } from '@components/bottom-sheets/eco-filter-bottom-sheet/eco-filter-bottom-sheet.component';
 import { BottomSheetContainerComponent } from '@components/bottom-sheets/bottom-sheet-container/bottom-sheet-container.component';
 import { SidebarPanelComponent } from '@components/sidebar-panel/sidebar-panel.component';
+import { BottomSheetHeaderComponent } from '@components/bottom-sheets/bottom-sheet-header/bottom-sheet-header.component';
+import { MapCardsBottomSheetComponent } from '@components/bottom-sheets/map-cards-bottom-sheet/map-cards-bottom-sheet.component';
+import { MapFilterBottomSheetComponent } from '@components/bottom-sheets/map-filter-bottom-sheet/map-filter-bottom-sheet.component';
+import { BottomSheetWrapperComponent } from '@components/bottom-sheets/bottom-sheet-wrapper/bottom-sheet-wrapper.component';
 
 @NgModule({
 	declarations: [
@@ -87,6 +91,10 @@ import { SidebarPanelComponent } from '@components/sidebar-panel/sidebar-panel.c
 		EcoFilterBottomSheetComponent,
 		BottomSheetContainerComponent,
 		SidebarPanelComponent,
+		BottomSheetHeaderComponent,
+		MapCardsBottomSheetComponent,
+		MapFilterBottomSheetComponent,
+  BottomSheetWrapperComponent
 	],
 	imports: [
 		BrowserModule,
@@ -122,5 +130,6 @@ import { SidebarPanelComponent } from '@components/sidebar-panel/sidebar-panel.c
 	],
 	bootstrap: [AppComponent]
 })
+
 export class AppModule {
 }

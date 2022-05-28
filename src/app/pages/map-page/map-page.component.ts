@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CollPointsService } from '@services/collPoints.service';
-import { ActivatedRoute } from '@angular/router';
+import { BottomSheetService } from '@services/bottom-sheet.service';
+import { MapFilterBottomSheetComponent } from '@components/bottom-sheets/map-filter-bottom-sheet/map-filter-bottom-sheet.component';
 
 @Component({
 	selector: 'app-map-page',
@@ -13,11 +14,11 @@ export class MapPageComponent {
 
 	constructor(
 		private collPointsService: CollPointsService,
-		public activateRoute: ActivatedRoute
+		private bottomSheet: BottomSheetService
 	) {
 	}
 
-	openMapFilterBottomSheet(){
-		console.log("map page filter")
+	openMapFilterBottomSheet() {
+		this.bottomSheet.openDialog(MapFilterBottomSheetComponent)
 	}
 }

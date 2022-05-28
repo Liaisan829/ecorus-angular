@@ -8,14 +8,6 @@
 	border: 1px solid $c-light-grey;
 	border-radius: 17px;
 
-	@include tablet720 {
-		width: 200px;
-	}
-
-	@include tablet620 {
-		display: none;
-	}
-
 	&__btn {
 		display: flex;
 		align-items: center;

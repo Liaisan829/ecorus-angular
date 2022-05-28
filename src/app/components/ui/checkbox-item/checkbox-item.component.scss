@@ -1,50 +1,49 @@
 @import "mixins";
 
-.checkbox {
-	display: flex;
-	flex-direction: row;
+.checkbox-wrapper {
+	margin-bottom: 12px
+}
+
+.custom-checkbox > input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.custom-checkbox > span {
+	display: inline-flex;
 	align-items: center;
+	user-select: none;
+	font-size: 14px;
+	font-weight: 400;
+	color: $c-text-72;
+}
 
-	&__input {
-		clip: rect(0 0 0 0);
-		clip-path: inset(50%);
-		height: 1px;
-		overflow: hidden;
-		position: absolute;
-		white-space: nowrap;
-		width: 1px;
-	}
+.custom-checkbox > span::before {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border: 1.5px solid $c-text-40;
+	border-radius: 4px;
+	margin-right: 9px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50% 50%;
+	color: black;
+}
 
-	&__span {
-		content: '';
-		display: inline-block;
-		width: 18px;
-		height: 18px;
-		border: 1px solid $c-text-64;
-		border-radius: 4px;
-		margin-right: 9px;
-		background: $c-white;
-	}
-
-	&__activeSpan {
-		width: 18px;
-		height: 18px;
-		border-radius: 4px;
-		margin-right: 9px;
-		border: 1px solid $c-green;
-		background-color: $c-green;
-		background-image: url(../../../../assets/checkbox.svg);
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
-
-	&__text {
-		@include primary-text;
-		font-weight: 400;
-	}
-
-	&__activeText {
-		@include primary-text;
-		font-weight: 500;
-	}
+.custom-checkbox > input:not(:disabled):active + span::before {
+	background-color: $c-green;
+	border-color: $c-green;
+	font-weight: 600;
+	color: black;
+}
+.custom-checkbox > input:checked + span::before {
+	background-color: $c-green;
+	border-color: $c-green;
+	background-image: url(../../../../assets/checkbox.png);
+	color: black;
 }

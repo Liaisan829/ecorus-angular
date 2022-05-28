@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ProductsService } from '@services/products.service';
-import { DialogService } from '@services/dialog.service';
 import { EcoFilterBottomSheetComponent } from '@components/bottom-sheets/eco-filter-bottom-sheet/eco-filter-bottom-sheet.component';
+import { BottomSheetService } from '@services/bottom-sheet.service';
 
 @Component({
 	selector: 'app-ecomarket',
@@ -13,10 +13,13 @@ export class EcomarketComponent {
 
 	products$ = this.productsService.products$
 
-	constructor(private productsService: ProductsService, private dialog: DialogService) {
+	constructor(
+		private productsService: ProductsService,
+		private bottomSheet: BottomSheetService
+	) {
 	}
 
-	openEcoFilterBottomSheet(){
-		this.dialog.openDialog(EcoFilterBottomSheetComponent);
+	openEcoFilterBottomSheet() {
+		this.bottomSheet.openDialog(EcoFilterBottomSheetComponent);
 	}
 }
