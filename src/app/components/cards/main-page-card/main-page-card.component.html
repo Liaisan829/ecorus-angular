@@ -1,18 +1,25 @@
-<div class='mainPageCard__wrapper'>
-	<div class='mainPageCard'>
-		<div class='mainPageCard__content'>
-			<h1 class='mainPageCard__title'>{{title}}</h1>
-			<p class='mainPageCard__text'>{{text}}</p>
+<div class='nav_card__wrapper'>
+	<div class='nav_card'>
+		<div class='nav_card__content'>
+			<h1 class='nav_card__title'>{{title}}</h1>
+			<p class='nav_card__text'>{{text}}</p>
+
 			<app-button
 				theme='GREY'
-				class='mainPageCard__btn'
+				class='nav_card__btn'
 			>
 				<img src='/assets/mainPage/buttonArrow.svg'
-				     alt='arrow'>
+				     alt='стрелка'>
 			</app-button>
 		</div>
-		<div class='mainPageCard__image'>
-			<img [src]='bgImg' alt='image'>
+		<div class='nav_card__img_wrapper'>
+			<img
+				class='nav_card__img'
+				[src]='bgImg'
+				alt='left arrow'
+			>
 		</div>
 	</div>
 </div>
+
+

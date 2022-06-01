@@ -1,6 +1,6 @@
 @import "mixins";
 
-.mainPageCard {
+.nav_card {
 	min-height: 300px;
 	height: 100%;
 	box-sizing: content-box;
@@ -8,46 +8,24 @@
 	display: flex;
 	justify-content: space-between;
 	text-align: left;
-	border: 1px solid rgba($c-text-12, 0.12);
+	border: 1px solid rgba(18, 34, 88, 0.12);
 	border-radius: 16px;
-	background: $c-white;
+
+	@include tablet850;
+	margin-top: 0;
+	position: relative;
+	background: #FFFFFF;
 
 	&__wrapper {
 		width: 100%;
 		max-width: 588px;
 
-		@include laptop1250 {
-			max-width: 490px;
-		}
-
-		@include laptop1050 {
-			max-width: 390px;
-		}
-
-		@include tablet850 {
-			max-width: 300px;
-		}
-
-		@include tablet720 {
-			max-width: 240px;
-		}
-
-		@include tablet620 {
-			max-width: 370px;
-		}
-
-		@include mobile420 {
-			max-width: 320px;
-		}
-
 		&:not(:last-child) {
 			margin-right: 24px
 		}
 
-		@include tablet620 {
-			&:last-child {
-				margin-top: 24px;
-			}
+		@include tablet720 {
+			margin-top: 16px
 		}
 	}
 
@@ -56,16 +34,22 @@
 		margin-bottom: 14px;
 		line-height: inherit;
 
-		@include laptop1050 {
-			@include adaptiveText;
+		@include tablet850 {
+			font-size: 24px;
+			line-height: inherit;
 		}
 	}
 
 	&__text {
 		margin-bottom: 46px;
-		color: rgba($c-text-88, 0.56);
+		color: rgba(black, 0.56);
 		line-height: 24px;
+
+		@include tablet850 {
+			font-size: 16px
+		}
 	}
+
 
 	&__btn {
 		display: flex;
@@ -75,29 +59,53 @@
 		border-radius: 8px;
 		padding: 12px;
 
-		@include tablet850 {
-			padding: 8px;
+		&:hover {
+			cursor: pointer;
+			background: rgba(20, 20, 24, 0.2);
 		}
 	}
+
 
 	&__content {
-		padding: 40px 0 0 40px;
-		@include tablet850 {
-			padding: 40px 0 0 20px;
-		}
+		padding: 40px 0 0 40px
 	}
 
-	&__image {
+	&__img_wrapper {
 		display: flex;
 		align-items: flex-end;
 		justify-content: end;
 		padding-bottom: 6.5px;
 		width: 100%;
 
-		img {
-			height: auto;
-			width: 100%;
-			object-fit: cover;
+		@include tablet850 {
+			position: absolute;
+			width: 50%;
+			padding: 0;
+			right: 0;
+
+			&:not(:last-child) {
+				margin-bottom: 24px
+			}
+		}
+	}
+
+	&__img {
+		height: auto;
+		width: 100%;
+		object-fit: cover;
+
+		@include tablet850 {
+			max-height: 150px;
+			width: auto
 		}
 	}
 }
+
+@media screen and (min-width: 0px) {
+	.nav_card__img_wrapper {
+		bottom: -5px
+	}
+}
+
+
+
