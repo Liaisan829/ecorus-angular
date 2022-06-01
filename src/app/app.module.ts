@@ -51,6 +51,9 @@ import { BottomSheetHeaderComponent } from '@components/bottom-sheets/bottom-she
 import { MapCardsBottomSheetComponent } from '@components/bottom-sheets/map-cards-bottom-sheet/map-cards-bottom-sheet.component';
 import { MapFilterBottomSheetComponent } from '@components/bottom-sheets/map-filter-bottom-sheet/map-filter-bottom-sheet.component';
 import { BottomSheetWrapperComponent } from '@components/bottom-sheets/bottom-sheet-wrapper/bottom-sheet-wrapper.component';
+import { EcomarketSkeletonComponent } from '@components/animation/skeletons/ecomarket-skeleton/ecomarket-skeleton.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { ProfileSkeletonComponent } from './components/animation/skeletons/profile-skeleton/profile-skeleton.component';
 
 @NgModule({
 	declarations: [
@@ -94,7 +97,9 @@ import { BottomSheetWrapperComponent } from '@components/bottom-sheets/bottom-sh
 		BottomSheetHeaderComponent,
 		MapCardsBottomSheetComponent,
 		MapFilterBottomSheetComponent,
-  BottomSheetWrapperComponent
+  BottomSheetWrapperComponent,
+  EcomarketSkeletonComponent,
+  ProfileSkeletonComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -110,6 +115,7 @@ import { BottomSheetWrapperComponent } from '@components/bottom-sheets/bottom-sh
 			progressBar: true,
 			positionClass: 'toast-bottom-center'
 		}),
+		NgxSkeletonLoaderModule,
 	],
 	providers: [
 		{

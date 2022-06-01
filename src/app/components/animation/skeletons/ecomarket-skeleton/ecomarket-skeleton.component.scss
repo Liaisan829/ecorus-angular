@@ -1,0 +1,14 @@
+.ecomarket-skeleton {
+	max-width: 1200px;
+	margin: 0 auto;
+
+	&__cardsBlock {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 870px;
+		width: 100%;
+		margin-left: 50px;
+	}
+}

@@ -23,6 +23,7 @@
 		"@angular/router": "~13.0.0",
 		"@asymmetrik/ngx-leaflet": "^13.0.2",
 		"leaflet": "^1.8.0",
+		"ngx-skeleton-loader": "^5.0.0",
 		"ngx-toastr": "^14.3.0",
 		"rxjs": "~6.6.0",
 		"svgstore": "^3.0.1",
