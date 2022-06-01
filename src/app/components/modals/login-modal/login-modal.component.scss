@@ -1,9 +1,17 @@
 @import "mixins";
 
-:host{
+:host {
 	max-width: 384px;
 	margin: 0 auto;
 	width: 100%;
+
+	@include tablet620 {
+		max-width: 300px;
+	}
+
+	@include mobile420 {
+		max-width: 220px;
+	}
 }
 
 .form {
@@ -18,6 +26,14 @@
 		margin-bottom: 24px;
 		padding-left: 16px;
 		width: 360px;
+
+		@include tablet620 {
+			max-width: 280px;
+		}
+
+		@include mobile420 {
+			max-width: 200px;
+		}
 	}
 
 	input:first-child {

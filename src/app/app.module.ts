@@ -94,7 +94,7 @@ import { BottomSheetWrapperComponent } from '@components/bottom-sheets/bottom-sh
 		BottomSheetHeaderComponent,
 		MapCardsBottomSheetComponent,
 		MapFilterBottomSheetComponent,
-  BottomSheetWrapperComponent
+		BottomSheetWrapperComponent
 	],
 	imports: [
 		BrowserModule,

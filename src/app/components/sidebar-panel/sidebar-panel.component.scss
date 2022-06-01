@@ -4,7 +4,7 @@
 	display: block;
 	position: absolute;
 	background-color: white;
-	padding: 12px 24px 24px 24px;
+	padding-top: 12px;
 	bottom: 0;
 	top: 0;
 	left: 0;
@@ -28,8 +28,12 @@
 	margin-top: 10px;
 
 	&__content {
-		width: 340px;
+		width: 350px;
 		margin: 0 auto;
+
+		@include mobile420{
+			width: 310px;
+		}
 
 		&__profile {
 			display: flex;
