@@ -1,5 +1,6 @@
+@import "mixins";
+
 .ecomarket-skeleton {
-	max-width: 1200px;
 	margin: 0 auto;
 
 	&__cardsBlock {
@@ -10,5 +11,13 @@
 		max-width: 870px;
 		width: 100%;
 		margin-left: 50px;
+
+		@include laptop1250 {
+			max-width: 600px;
+		}
+
+		@include laptop1050 {
+
+		}
 	}
 }

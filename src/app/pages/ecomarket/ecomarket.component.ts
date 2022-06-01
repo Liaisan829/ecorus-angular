@@ -26,7 +26,7 @@ export class EcomarketComponent implements OnInit {
 		setTimeout(() => {
 			this.loading = false;
 			this.cdr.markForCheck();
-		}, 3500);
+		}, 2000);
 	}
 
 	openEcoFilterBottomSheet() {
