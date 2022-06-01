@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnInit, OnDestroy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { HistoryService } from '@services/history.service';
 import { ProfileService } from '@services/profile.service';
 import { User } from '@models/user';
@@ -17,9 +17,12 @@ export class ProfileComponent implements OnInit, OnDestroy {
 	user$ = new BehaviorSubject<User | null>(null);
 	destroy$ = new Subject();
 
+	loading: boolean = true;
+
 	constructor(
 		private historyService: HistoryService,
 		private profileService: ProfileService,
+		private cdr: ChangeDetectorRef
 	) {
 	}
 
@@ -31,7 +34,13 @@ export class ProfileComponent implements OnInit, OnDestroy {
 					this.user$.next(response);
 				}
 			)
+
+		setTimeout(() => {
+			this.loading = false;
+			this.cdr.markForCheck();
+		}, 2000);
 	}
+
 
 	ngOnDestroy() {
 		this.destroy$.next();

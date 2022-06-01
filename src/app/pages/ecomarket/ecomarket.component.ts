@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, OnInit } from '@angular/core';
 import { ProductsService } from '@services/products.service';
 import { EcoFilterBottomSheetComponent } from '@components/bottom-sheets/eco-filter-bottom-sheet/eco-filter-bottom-sheet.component';
 import { BottomSheetService } from '@services/bottom-sheet.service';
@@ -9,14 +9,24 @@ import { BottomSheetService } from '@services/bottom-sheet.service';
 	styleUrls: ['./ecomarket.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EcomarketComponent {
+export class EcomarketComponent implements OnInit {
 
-	products$ = this.productsService.products$
+	products$ = this.productsService.products$;
+
+	loading: boolean = true;
 
 	constructor(
 		private productsService: ProductsService,
-		private bottomSheet: BottomSheetService
+		private bottomSheet: BottomSheetService,
+		private cdr: ChangeDetectorRef
 	) {
+	}
+
+	ngOnInit(){
+		setTimeout(() => {
+			this.loading = false;
+			this.cdr.markForCheck();
+		}, 2000);
 	}
 
 	openEcoFilterBottomSheet() {

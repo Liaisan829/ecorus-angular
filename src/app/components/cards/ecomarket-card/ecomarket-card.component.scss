@@ -14,28 +14,23 @@
 	border-radius: 24px;
 	margin-bottom: 30px;
 
-	@include laptop1250{
-		width: 240px;
-	}
-
-	@include laptop1050{
-		width: 220px;
-	}
-
-	@include tablet850{
-		width: 300px;
-	}
-
-	@include tablet720{
-		width: 250px;
-	}
-
-	@include mobile420{
-		margin: 0 auto 30px auto;
-	}
-
 	&__img{
+		@include laptop1250{
+			width: 240px;
+		}
+		@include laptop1050{
+			width: 210px;
+		}
+		@include tablet850{
+			width: 300px;
+		}
 		@include tablet720{
+			width: 250px;
+		}
+		@include tablet620{
+			width: 300px;
+		}
+		@include mobile420 {
 			width: 250px;
 		}
 	}
@@ -87,57 +82,6 @@
 			width: 24px;
 			height: 24px;
 			margin-right: 8px;
-		}
-	}
-}
-
-@media screen and (max-width: 1250px) {
-	.section {
-		width: 240px;
-
-		&__img {
-			width: 240px;
-		}
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	.section {
-		width: 220px;
-
-		&__img {
-			width: 220px;
-		}
-	}
-}
-
-@media screen and (max-width: 850px) {
-	.section {
-		width: 300px;
-
-		&__img {
-			width: 300px;
-		}
-	}
-}
-
-@media screen and (max-width: 720px) {
-	.section {
-		width: 200px;
-
-		&__img {
-			width: 200px;
-		}
-	}
-}
-
-@media screen and (max-width: 420px) {
-	.section {
-		width: 350px;
-		margin: 0 auto 30px auto;
-
-		&__img {
-			width: 350px;
 		}
 	}
 }

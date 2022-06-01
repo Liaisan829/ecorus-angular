@@ -1,15 +1,17 @@
 <h1>Личный кабинет</h1>
 <div class='profile'>
 	<div class='profile__info'>
-		<div class='profile__info__avatar'>
-			<img src='/assets/profile.svg'
-			     alt='avatar'>
-			<h2>{{(user$ | async)?.username}}</h2>
-			<div class='profile__info__personalData'>
-				<p>{{(user$ | async)?.phone_number}}</p>
-				<p>{{(user$ | async)?.email}}</p>
+		<ng-container *ngIf='!loading; else other'>
+			<div class='profile__info__avatar'>
+				<img src='/assets/profile.svg'
+				     alt='avatar'>
+				<h2>{{(user$ | async)?.username}}</h2>
+				<div class='profile__info__personalData'>
+					<p>{{(user$ | async)?.phone_number}}</p>
+					<p>{{(user$ | async)?.email}}</p>
+				</div>
 			</div>
-		</div>
+		</ng-container>
 		<app-button
 			theme='GREY'
 		>Редактировать
@@ -17,4 +19,8 @@
 	</div>
 	<app-profile-cards-switcher></app-profile-cards-switcher>
 </div>
+
+<ng-template #other>
+	<app-profile-skeleton></app-profile-skeleton>
+</ng-template>
 
