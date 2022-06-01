@@ -3,8 +3,20 @@
 :host{
 	@include main_content;
 
+	@include tablet720 {
+		max-width: 550px;
+	}
+
+	@include tablet620 {
+		max-width: 400px;
+	}
+
 	@include tablet620{
 		margin: 40px auto;
+	}
+
+	@include mobile420 {
+		max-width: 350px;
 	}
 }
 

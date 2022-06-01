@@ -16,7 +16,16 @@
 <div class='ecomarket__content'>
 	<app-checkbox-group></app-checkbox-group>
 
-	<div *ngIf='(products$|async)!.length>0'>
-		<app-ecomarket-card></app-ecomarket-card>
-	</div>
+	<ng-container *ngIf='!loading; else other'>
+		<div *ngIf='(products$|async)!.length>0'>
+			<app-ecomarket-card></app-ecomarket-card>
+		</div>
+	</ng-container>
 </div>
+
+<ng-template #other>
+	<app-ecomarket-skeleton></app-ecomarket-skeleton>
+</ng-template>
+
+
+

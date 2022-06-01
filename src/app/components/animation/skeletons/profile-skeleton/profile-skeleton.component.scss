@@ -1,0 +1,21 @@
+.profile-skeleton {
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 320px;
+
+		&__img {
+			margin: 0 auto;
+		}
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			margin: 16px 0;
+			text-align: center;
+		}
+
+	}
+}
