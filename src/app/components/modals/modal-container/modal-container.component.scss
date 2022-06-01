@@ -1,3 +1,5 @@
+@import "mixins";
+
 :host {
 	padding: 48px;
 	background: white;
@@ -7,22 +9,18 @@
 	border-radius: 26px;
 	max-width: 480px;
 
+	@include tablet620{
+		max-width: 300px;
+	}
+
+	@include mobile420{
+		max-width: 220px;
+		max-height: 70vh;
+	}
+
 	::ng-deep {
 		& > * {
 			display: block;
 		}
-	}
-}
-
-.modal_header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 384px;
-	width: 100%;
-	margin: 0 auto;
-
-	h2 {
-		margin: 0;
 	}
 }

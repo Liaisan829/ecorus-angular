@@ -46,5 +46,4 @@ export class SidebarPanelComponent implements OnInit {
 		this.destroy$.next();
 		this.destroy$.complete();
 	}
-
 }

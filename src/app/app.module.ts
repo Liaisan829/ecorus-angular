@@ -100,6 +100,7 @@ import { ProfileSkeletonComponent } from './components/animation/skeletons/profi
   BottomSheetWrapperComponent,
   EcomarketSkeletonComponent,
   ProfileSkeletonComponent,
+		BottomSheetWrapperComponent
 	],
 	imports: [
 		BrowserModule,
