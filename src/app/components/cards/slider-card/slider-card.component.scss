@@ -9,19 +9,20 @@
 	border-radius: 20px;
 	background-color: $c-blue;
 
-	@include laptop1250{
+	@include laptop1250 {
 		max-width: 1000px;
 		height: 300px;
 	}
 
-	@include laptop1050{
+	@include laptop1050 {
 		max-width: 800px;
 		height: 280px;
 	}
 
-	@include tablet850{
+	@include tablet850 {
 		max-width: 650px;
 		height: 280px;
+		padding-left: 40px;
 	}
 
 	@include tablet620 {
@@ -29,17 +30,22 @@
 	}
 
 	@include mobile420 {
-		padding-right: 0;
-		max-width: 420px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
 		height: 400px;
+		border-radius: 0;
+		padding: 0 16px;
+		position: relative;
 	}
 
-	&__yellow{
+	&__yellow {
 		@extend .section;
 		background-color: $c-yellow;
 	}
 
-	&__light-green{
+	&__light-green {
 		@extend .section;
 		background-color: $c-light-green;
 	}
@@ -51,11 +57,33 @@
 		line-height: 56px;
 		color: $c-text-100;
 		margin-bottom: 16px;
+
+		@include laptop1250 {
+			font-size: 40px;
+		}
+
+		@include laptop1050 {
+			font-size: 33px;
+			line-height: 40px;
+		}
+
+		@include tablet850 {
+			font-size: 21px;
+		}
+
+		@include mobile420 {
+			@include adaptiveText;
+		}
 	}
 
 	p {
 		@include secondary-text;
 		margin-bottom: 40px;
+
+		@include laptop1050 {
+			margin-bottom: 20px;
+			font-size: 14px;
+		}
 	}
 
 	img {
@@ -63,113 +91,49 @@
 		padding-left: 90px;
 		border-radius: 20px;
 
+		@include laptop1250 {
+			width: 450px;
+		}
+		@include laptop1050 {
+			width: 350px;
+		}
+		@include tablet850 {
+			width: 320px;
+		}
 		@include tablet620 {
 			display: none;
 		}
 		@include mobile420 {
 			display: initial;
+			padding: 0;
 		}
 	}
 
 	&__info {
 		margin-top: 56px;
-	}
-}
 
-@media screen and (max-width: 1250px) {
-	.section {
-		max-width: 1000px;
-		height: 300px;
-
-		&__info {
+		@include laptop1250 {
 			margin-top: 30px;
 		}
 
-		h1 {
-			font-size: 40px;
-		}
-
-		img {
-			width: 450px;
-		}
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	.section {
-		max-width: 800px;
-		height: 280px;
-
-		&__info {
+		@include laptop1050 {
 			margin-top: 25px;
 		}
 
-		h1 {
-			font-size: 33px;
-			line-height: 40px;
-		}
-
-		img {
-			width: 350px;
-		}
-
-		p {
-			margin-bottom: 20px;
-			font-size: 14px;
-		}
-	}
-}
-
-@media screen and (max-width: 850px) {
-	.section {
-		max-width: 650px;
-		height: 280px;
-		padding-left: 40px;
-
-		&__info {
+		@include tablet850 {
 			max-width: 450px;
 			min-width: 200px;
 		}
 
-		img {
-			width: 320px;
+		@include tablet620 {
+			width: 100%;
+			justify-content: space-between;
 		}
 
-		h1 {
-			font-size: 21px;
-		}
-
-	}
-}
-
-
-@media screen and (max-width: 420px) {
-	.section {
-		max-width: 420px;
-		height: 400px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border-radius: 0;
-		padding: 0 16px;
-		position: relative;
-
-		img {
-			padding: 0;
-		}
-
-		&__info {
+		@include mobile420 {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-
-			h1 {
-				@include adaptiveText;
-			}
-
-			p {
-				letter-spacing: 1px;
-			}
 		}
 	}
 }

@@ -2,24 +2,6 @@
 
 :host {
 	@include main_content;
-
-	//@include laptop1250 {
-	//	margin: -40px auto 0;
-	//}
-	//
-	//@include tablet850{
-	//	margin: -60px auto 0;
-	//}
-	//
-	//@include tablet720{
-	//	max-width: 520px;
-	//}
-	//
-	//@include mobile420{
-	//	max-width: 420px;
-	//	margin: -40px auto 0 auto;
-	//	width: 100%;
-	//}
 }
 
 .cardsFlex {
@@ -43,7 +25,7 @@
 	}
 
 	@include tablet720 {
-		max-width: 520px;
+		max-width: 550px;
 	}
 
 	@include tablet620 {

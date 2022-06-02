@@ -5,13 +5,18 @@
 	margin-top: -40px;
 	width: 100%;
 
+	@include tablet720 {
+		max-width: 550px;
+		margin: 0;
+	}
+
 	@include tablet620 {
-		max-width: 720px;
-		margin: -40px auto;
+		max-width: 400px;
+		margin-top: -40px;
 	}
 
 	@include mobile420 {
-		max-width: 420px;
+		width: 100vw;
 		margin: -40px auto;
 	}
 
@@ -23,6 +28,7 @@
 		top: 180px;
 		z-index: 2;
 		cursor: pointer;
+
 		@include laptop1250 {
 			max-width: 1060px;
 		}
@@ -32,8 +38,7 @@
 		@include tablet850 {
 			max-width: 660px;
 		}
-
-		@include tablet620 {
+		@include tablet720 {
 			display: none;
 		}
 	}

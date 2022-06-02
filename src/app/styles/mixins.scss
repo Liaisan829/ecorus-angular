@@ -83,6 +83,12 @@
 	}
 }
 
+@mixin mobile360 {
+	@media(max-width: 360px) {
+		@content
+	}
+}
+
 @mixin main_content {
 	max-width: 1200px;
 	margin: 40px auto;
