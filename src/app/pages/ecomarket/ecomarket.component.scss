@@ -39,14 +39,14 @@
 		}
 
 		&__filter {
-			@include tablet620 {
+			@include tablet720 {
 				display: none;
 			}
 		}
 	}
 }
 
-.filter {
+.sort {
 	&__btns {
 		@include tablet720 {
 			display: none;

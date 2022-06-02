@@ -1,10 +1,10 @@
 <div class='ecomarket'>
 	<h1>ЭкоМаркет</h1>
-	<div class='filter__btns'>
+	<div class='sort__btns'>
 		<app-sorting-buttons></app-sorting-buttons>
 	</div>
 
-	<div class='filter__btns__mobile'>
+	<div class='sort__btns__mobile'>
 		<app-button
 			theme='GREY'
 			(submit)='openEcoFilterBottomSheet()'
@@ -18,9 +18,9 @@
 	<app-checkbox-group class='ecomarket__content__filter'></app-checkbox-group>
 
 	<ng-container *ngIf='!loading; else other'>
-		<div *ngIf='(products$|async)!.length>0'>
+		<ng-container *ngIf='(products$|async)!.length>0'>
 			<app-ecomarket-card></app-ecomarket-card>
-		</div>
+		</ng-container>
 	</ng-container>
 </div>
 
