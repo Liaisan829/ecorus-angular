@@ -84,6 +84,12 @@
 			}
 		}
 
+		&__item {
+			img {
+				margin-right: 5px;
+			}
+		}
+
 		&__menu {
 			display: none;
 			@include tablet850 {

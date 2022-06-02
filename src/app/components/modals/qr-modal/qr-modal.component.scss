@@ -24,6 +24,12 @@
 		color: $c-text-64;
 	}
 
+	h3 {
+		@include modalText;
+		color: $c-text-64;
+		text-align: center;
+	}
+
 	p {
 		@include primary-text;
 		color: $c-text-100;
@@ -36,6 +42,7 @@
 		flex-direction: column;
 		align-items: center;
 		width: 350px;
+		margin: 0 auto;
 
 		@include tablet620{
 			width: 300px;
