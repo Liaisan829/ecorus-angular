@@ -15,8 +15,8 @@
 </div>
 
 <div class='ecomarket__content'>
-	<app-checkbox-group class='ecomarket__content__filter'></app-checkbox-group>
-
+	<!--	<app-checkbox-group class='ecomarket__content__filter'></app-checkbox-group>-->
+	<app-filter></app-filter>
 	<ng-container *ngIf='!loading; else other'>
 		<ng-container *ngIf='(products$|async)!.length>0'>
 			<app-ecomarket-card></app-ecomarket-card>

@@ -1,11 +1,14 @@
-<div class="checkbox-wrapper">
-	<label class="custom-checkbox">
-		<input
-			type="checkbox"
-			[style.id]='index'
-			[style.checked]='isChecked'
-			[style.onChange]='checkHandler'
-		>
-		<span>{{title}}</span>
+<div class='checkboxWithName'>
+	<label class='checkbox_wrapper'>
+		<input type='checkbox'
+		       (change)='changeState()'>
+		<span class='checkbox {{(isChecked|async)?"checkbox-active":""}}'>
+			<img [height]='10'
+			     src='/assets/ecoMarket/checkbox.svg'
+			     [width]='12'
+			     alt='checkbox'
+			>
+		</span>
 	</label>
+	<p class='default_name disabledName'>{{title}}</p>
 </div>
