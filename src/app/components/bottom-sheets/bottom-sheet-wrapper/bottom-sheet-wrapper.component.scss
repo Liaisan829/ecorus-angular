@@ -8,13 +8,17 @@
 	bottom: 0;
 	left: 0;
 	margin-top: 58px;
-	border-radius: 20px 20px 0 0;
-	width: 100%;
+	width: 100vw;
+	max-height: 65vh;
+	overflow-y: scroll;
 }
 
-.wrapper{
+.wrapper {
 	display: flex;
 	flex-direction: column;
 	row-gap: 24px;
-	overflow-y: scroll;
+
+	&__content {
+		width: 94vw;
+	}
 }

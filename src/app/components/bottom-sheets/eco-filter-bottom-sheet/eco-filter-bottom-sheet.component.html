@@ -1,12 +1,6 @@
 <app-bottom-sheet-wrapper>
 	<div class='bottom-sheet__header'>
-		<ng-container
-			*ngFor='let item of headersFilters'
-		>
-			<app-button
-				theme='GREY'
-			>{{item}}</app-button>
-		</ng-container>
+		<app-sorting-buttons></app-sorting-buttons>
 	</div>
 
 	<div class='bottom-sheet__content'>
