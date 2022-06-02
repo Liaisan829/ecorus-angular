@@ -1,0 +1,83 @@
+<div class='filters'>
+	<div class='form'>
+		<form
+			[formGroup]='formGroup'
+		>
+			<h3>Пол</h3>
+			<form
+				class='form__inner'
+				formGroupName='genderGroup'
+			>
+				<app-checkbox-item
+					formControlName='man'
+					title='Мужской'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='woman'
+					title='Женский'></app-checkbox-item>
+
+			</form>
+
+			<h3>Тип товара</h3>
+			<form
+				class='form__inner'
+				formGroupName='typeGroup'
+			>
+				<app-checkbox-item
+					formControlName='selectAll'
+					title='Выбрать все'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='shoes'
+					title='Обувь'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='clothing'
+					title='Одежда'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='accessories'
+					title='Аксессуары'></app-checkbox-item>
+			</form>
+
+			<h3>Брэнд</h3>
+			<form
+				class='form__inner'
+				formGroupName='brandGroup'
+			>
+
+				<app-checkbox-item
+					formControlName='selectAll'
+					title='Выбрать все'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='nike'
+					title='Nike'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='adidas'
+					title='Adidas'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='hm'
+					title='H&M'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='rebook'
+					title='Rebook'></app-checkbox-item>
+
+				<app-checkbox-item
+					formControlName='puma'
+					title='Puma'></app-checkbox-item>
+			</form>
+		</form>
+	</div>
+
+	<app-button
+		type='submit'
+		theme='GREY'
+		[wide]=true
+	>Сбросить фильтры
+	</app-button>
+</div>
+

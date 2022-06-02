@@ -54,6 +54,7 @@ import { BottomSheetWrapperComponent } from '@components/bottom-sheets/bottom-sh
 import { EcomarketSkeletonComponent } from '@components/animation/skeletons/ecomarket-skeleton/ecomarket-skeleton.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { ProfileSkeletonComponent } from '@components/animation/skeletons/profile-skeleton/profile-skeleton.component';
+import { FilterComponent } from './containers/filter/filter.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -99,7 +100,8 @@ import { ProfileSkeletonComponent } from '@components/animation/skeletons/profil
   BottomSheetWrapperComponent,
   EcomarketSkeletonComponent,
   ProfileSkeletonComponent,
-		BottomSheetWrapperComponent
+		BottomSheetWrapperComponent,
+  FilterComponent
 	],
     imports: [
         BrowserModule,
