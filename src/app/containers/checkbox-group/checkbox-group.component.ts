@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FilterService } from '@services/filter.service';
 
 @Component({
 	selector: 'app-checkbox-group',

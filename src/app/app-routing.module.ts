@@ -15,7 +15,7 @@ const profileRoutes: Routes = [
 ]
 
 const mapPageRoutes: Routes = [
-	{ path: ':id', component: FullMapCardComponent, pathMatch: 'full' }
+	{ path: ':id', component: FullMapCardComponent }
 ]
 
 const routes: Routes = [

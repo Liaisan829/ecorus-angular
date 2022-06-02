@@ -86,6 +86,11 @@
 				width: 24px;
 				height: 24px;
 				margin-right: 8px;
+
+				@include laptop1250{
+					width: 18px;
+					height: 18px;
+				}
 			}
 		}
 
@@ -102,7 +107,7 @@
 				margin-right: 12px;
 
 				@include laptop1250 {
-					font-size: 11px;
+					font-size: 13px;
 				}
 
 				@include tablet850 {

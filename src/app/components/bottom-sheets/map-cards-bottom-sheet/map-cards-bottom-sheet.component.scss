@@ -1,19 +1,6 @@
 @import "mixins";
 
 .bottom-sheet {
-	width: 92vw;
-	position: absolute;
-	bottom: 0;
-
-	&__header {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		p {
-			color: $c-text-64;
-		}
-	}
-
 	&__content {
 		display: flex;
 		flex-direction: column;

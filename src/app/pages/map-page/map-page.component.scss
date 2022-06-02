@@ -47,6 +47,7 @@
 
 .btn {
 	display: none;
+
 	@include tablet620 {
 		display: flex;
 		justify-content: space-between;
@@ -57,6 +58,7 @@
 		bottom: 0;
 		left: 0;
 		z-index: 1000;
+		border-radius: 15px 15px 0 0;
 	}
 }
 
