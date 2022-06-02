@@ -10,11 +10,12 @@
 			(submit)='openEcoFilterBottomSheet()'
 		>Фильтры
 		</app-button>
+
 	</div>
 </div>
 
 <div class='ecomarket__content'>
-	<app-checkbox-group></app-checkbox-group>
+	<app-checkbox-group class='ecomarket__content__filter'></app-checkbox-group>
 
 	<ng-container *ngIf='!loading; else other'>
 		<div *ngIf='(products$|async)!.length>0'>

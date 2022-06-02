@@ -53,8 +53,7 @@ import { MapFilterBottomSheetComponent } from '@components/bottom-sheets/map-fil
 import { BottomSheetWrapperComponent } from '@components/bottom-sheets/bottom-sheet-wrapper/bottom-sheet-wrapper.component';
 import { EcomarketSkeletonComponent } from '@components/animation/skeletons/ecomarket-skeleton/ecomarket-skeleton.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-import { ProfileSkeletonComponent } from './components/animation/skeletons/profile-skeleton/profile-skeleton.component';
-
+import { ProfileSkeletonComponent } from '@components/animation/skeletons/profile-skeleton/profile-skeleton.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -102,22 +101,22 @@ import { ProfileSkeletonComponent } from './components/animation/skeletons/profi
   ProfileSkeletonComponent,
 		BottomSheetWrapperComponent
 	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		SwiperModule,
-		LeafletModule,
-		ReactiveFormsModule,
-		DialogModule,
-		BrowserAnimationsModule,
-		HttpClientModule,
-		ToastrModule.forRoot({
-			timeOut: 1500,
-			progressBar: true,
-			positionClass: 'toast-bottom-center'
-		}),
-		NgxSkeletonLoaderModule,
-	],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        SwiperModule,
+        LeafletModule,
+        ReactiveFormsModule,
+        DialogModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        ToastrModule.forRoot({
+            timeOut: 1500,
+            progressBar: true,
+            positionClass: 'toast-bottom-center',
+        }),
+        NgxSkeletonLoaderModule,
+    ],
 	providers: [
 		{
 			provide: HTTP_INTERCEPTORS,

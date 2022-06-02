@@ -1,1 +1,8 @@
-<p>map-cards-bottom-sheet works!</p>
+<app-bottom-sheet-wrapper class='bottom-sheet'>
+	<div class='bottom-sheet__content'>
+		<div *ngFor='let item of collPoints$ | async'>
+			<app-common-map-card [collPoint]='item'
+			></app-common-map-card>
+		</div>
+	</div>
+</app-bottom-sheet-wrapper>

@@ -9,7 +9,7 @@ import { latLng, tileLayer, Map } from 'leaflet';
 export class MapComponent {
 
 	optionsSpec: any = {
-		layers: [{ url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: 'Open Street Map' }],
+		layers: [{ url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'}],
 		zoom: 13,
 		center: [55.792910, 49.122429],
 		scrollWheelZoom: false
