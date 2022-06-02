@@ -16,9 +16,9 @@
 		width: 240px;
 	}
 
-	@include tablet620 {
-		display: none;
-	}
+	//@include tablet620 {
+	//	display: none;
+	//}
 
 	&__btn {
 		display: flex;

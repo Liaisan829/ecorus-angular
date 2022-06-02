@@ -5,6 +5,7 @@
 }
 
 .mapPage {
+	overflow: hidden;
 
 	&__info {
 		margin: 0 auto;
@@ -40,6 +41,22 @@
 			position: absolute;
 			margin-top: 112px;
 		}
+	}
+
+}
+
+.btn {
+	display: none;
+	@include tablet620 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: $c-white;
+		width: 100vw;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
 	}
 }
 

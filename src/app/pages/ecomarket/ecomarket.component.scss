@@ -37,6 +37,12 @@
 			position: sticky;
 			top: 5px;
 		}
+
+		&__filter {
+			@include tablet620 {
+				display: none;
+			}
+		}
 	}
 }
 
