@@ -8,13 +8,13 @@
 	display: flex;
 	justify-content: space-between;
 	text-align: left;
-	border: 1px solid rgba(18, 34, 88, 0.12);
+	border: 1px solid $c-text-12;
 	border-radius: 16px;
 
 	@include tablet850;
 	margin-top: 0;
 	position: relative;
-	background: #FFFFFF;
+	background: $c-white;
 
 	&__wrapper {
 		width: 100%;
@@ -24,8 +24,25 @@
 			margin-right: 24px
 		}
 
+		@include laptop1250 {
+			max-width: 490px;
+		}
+
+		@include laptop1050 {
+			max-width: 380px;
+		}
+
+		@include tablet850 {
+			max-width: 300px;
+		}
+
 		@include tablet720 {
-			margin-top: 16px
+			max-width: 270px;
+		}
+
+		@include tablet620 {
+			max-width: 370px;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -46,10 +63,10 @@
 		line-height: 24px;
 
 		@include tablet850 {
-			font-size: 16px
+			@include primary-text;
+			padding-right: 20px;
 		}
 	}
-
 
 	&__btn {
 		display: flex;
@@ -59,6 +76,10 @@
 		border-radius: 8px;
 		padding: 12px;
 
+		@include tablet850 {
+			padding: 0;
+		}
+
 		&:hover {
 			cursor: pointer;
 			background: rgba(20, 20, 24, 0.2);
@@ -67,14 +88,23 @@
 
 
 	&__content {
-		padding: 40px 0 0 40px
+		padding: 40px 0 0 40px;
+
+		h1 {
+			@include laptop1050 {
+				@include adaptiveText;
+			}
+			@include tablet850 {
+				font-size: 20px;
+			}
+		}
 	}
 
 	&__img_wrapper {
 		display: flex;
 		align-items: flex-end;
 		justify-content: end;
-		padding-bottom: 6.5px;
+		padding-bottom: 6px;
 		width: 100%;
 
 		@include tablet850 {
@@ -98,6 +128,14 @@
 			max-height: 150px;
 			width: auto
 		}
+
+		@include tablet720 {
+			width: 200px;
+		}
+
+		@include tablet620 {
+			width: auto;
+		}
 	}
 }
 
@@ -106,6 +144,3 @@
 		bottom: -5px
 	}
 }
-
-
-

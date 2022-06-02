@@ -36,6 +36,10 @@
 		@include mobile420 {
 			max-width: 350px;
 		}
+
+		@include mobile360 {
+			max-width: 300px;
+		}
 	}
 
 	&__navigation {

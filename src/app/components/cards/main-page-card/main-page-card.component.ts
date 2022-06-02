@@ -10,4 +10,5 @@ export class MainPageCardComponent {
 	@Input() title: string = '';
 	@Input() text: string = '';
 	@Input() bgImg: string = '';
+
 }
