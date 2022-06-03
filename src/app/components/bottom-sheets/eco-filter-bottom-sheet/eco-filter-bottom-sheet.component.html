@@ -4,18 +4,20 @@
 	</div>
 
 	<div class='bottom-sheet__content'>
-		<app-checkbox-group></app-checkbox-group>
+		<app-filter></app-filter>
 	</div>
 
 	<div class='bottom-sheet__footer'>
 		<app-button
 			theme='GREEN'
 			[wide]=true
+			(submit)='closeBottomSheet()'
 		>Применить
 		</app-button>
 		<app-button
 			theme='GREY'
 			[wide]=true
+			(submit)='closeBottomSheet()'
 		>Сбросить фильтры
 		</app-button>
 	</div>

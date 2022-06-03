@@ -1,0 +1,56 @@
+<form
+	class='form'
+	[formGroup]='formGroup'>
+	<h3>Материал</h3>
+	<form
+		class='form__inner'
+		formGroupName='material'>
+		<app-checkbox-item
+			formControlName='selectAll'
+			title='Выбрать все'
+		></app-checkbox-item>
+		<app-checkbox-item
+			formControlName='plastic'
+			title='Пластик'
+		></app-checkbox-item>
+		<app-checkbox-item
+			formControlName='shoes'
+			title='Обувь'
+		></app-checkbox-item>
+		<app-checkbox-item
+			formControlName='clothes'
+			title='Старая одежда'
+		></app-checkbox-item>
+		<app-checkbox-item
+			formControlName='glass'
+			title='Стекло'
+		></app-checkbox-item>
+	</form>
+
+	<h3>Брэнд</h3>
+	<form
+		class='form__inner'
+		formGroupName='brand'
+	>
+		<app-checkbox-item
+			formControlName='nike'
+			title='Nike'
+		></app-checkbox-item>
+		<app-checkbox-item
+			formControlName='adidas'
+			title='Adidas'
+		></app-checkbox-item>
+		<app-checkbox-item
+			formControlName='rebook'
+			title='Rebook'
+		></app-checkbox-item>
+		<app-checkbox-item
+			formControlName='puma'
+			title='Puma'
+		></app-checkbox-item>
+		<app-checkbox-item
+			formControlName='hm'
+			title='H&M'
+		></app-checkbox-item>
+	</form>
+</form>

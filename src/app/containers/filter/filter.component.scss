@@ -2,6 +2,12 @@
 
 .filters {
 	width: 290px;
+
+	&__btn {
+		@include tablet720{
+			display: none;
+		}
+	}
 }
 
 .form {
@@ -12,6 +18,10 @@
 	border: 1px solid $c-light-grey;
 	border-radius: 17px;
 	margin-bottom: 10px;
+
+	@include tablet720{
+		border: none;
+	}
 
 	h3 {
 		@include secondary-text;

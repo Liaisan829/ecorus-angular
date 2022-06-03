@@ -1,0 +1,14 @@
+@import "mixins";
+
+.form {
+	h3 {
+		@include secondary-text;
+		color: $c-text-88;
+		margin-top: 15px;
+		font-weight: 500;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

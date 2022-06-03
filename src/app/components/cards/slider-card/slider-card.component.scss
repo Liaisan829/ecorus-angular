@@ -40,6 +40,21 @@
 		position: relative;
 	}
 
+	&__btn {
+		border-radius: 8px;
+		border: none;
+		@include secondary-text;
+		padding: 12px 22px;
+		cursor: pointer;
+		background: none;
+		background: $c-green;
+		color: $c-white;
+
+		@include mobile420 {
+			width: 90%;
+		}
+	}
+
 	&__yellow {
 		@extend .section;
 		background-color: $c-yellow;

@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { FilterService } from '@services/filter.service';
+import { BottomSheetService } from '@services/bottom-sheet.service';
 
 @Component({
-  selector: 'app-eco-filter-bottom-sheet',
-  templateUrl: './eco-filter-bottom-sheet.component.html',
-  styleUrls: ['./eco-filter-bottom-sheet.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+	selector: 'app-eco-filter-bottom-sheet',
+	templateUrl: './eco-filter-bottom-sheet.component.html',
+	styleUrls: ['./eco-filter-bottom-sheet.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EcoFilterBottomSheetComponent {
 	headersFilters: Array<string> = ['По популярности', 'По цене', 'По новизне']
@@ -13,7 +13,10 @@ export class EcoFilterBottomSheetComponent {
 	categoryFilters: Array<string> = ['Одежда', 'Обувь', 'Аксессуары']
 	brandFilters: Array<string> = ['H&M', 'P&B', 'Adidas', 'Nike', 'Rebook', 'H&M', 'P&B', 'Adidas', 'Nike', 'Rebook', 'H&M', 'P&B', 'Adidas', 'Nike', 'Rebook']
 
-	constructor(private filterService: FilterService) {
+	constructor(private bottomSheet: BottomSheetService) {
+	}
 
+	closeBottomSheet() {
+		this.bottomSheet.closeDialog();
 	}
 }
