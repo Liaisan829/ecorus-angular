@@ -1,8 +1,5 @@
 <app-bottom-sheet-wrapper>
 	<div class='bottom-sheet__content'>
-		<ng-container *ngFor='let item of collPoints$ | async'>
-			<app-common-map-card [collPoint]='item'
-			></app-common-map-card>
-		</ng-container>
+		<app-common-cards-list></app-common-cards-list>
 	</div>
 </app-bottom-sheet-wrapper>

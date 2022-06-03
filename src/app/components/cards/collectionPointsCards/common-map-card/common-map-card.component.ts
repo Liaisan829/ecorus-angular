@@ -9,5 +9,4 @@ import { CollPoint } from '@models/coll-point';
 })
 export class CommonMapCardComponent {
 	@Input() collPoint: CollPoint | null = null;
-
 }

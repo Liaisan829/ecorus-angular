@@ -1,7 +1,5 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CollPoint } from '@models/coll-point';
-import { CollPointsService } from '@services/collPoints.service';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-full-map-card',
@@ -10,22 +8,28 @@ import { ActivatedRoute } from '@angular/router';
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FullMapCardComponent {
-	collPoints$ = this.collPointsService.collPoints$;
-	collPoint: CollPoint | null = null
-	id: number = this.activateRoute.snapshot.params['id'];
+	@Input() collPoint: CollPoint | null = null
 
-	constructor(
-		private collPointsService: CollPointsService,
-		private activateRoute: ActivatedRoute,
-	) {
-	}
-
-	ngOnInit() {
-		this.collPoints$
-			.getValue()
-			.filter((collPoint: CollPoint) => (collPoint.id === +this.id))
-			.map((point: CollPoint) => {
-				this.collPoint = point
-			})
-	}
+	// collPoints$ = this.collPointsService.collPoints$;
+	// collPoint: CollPoint | null = null;
+	// id!: string | null;
+	//
+	// constructor(
+	// 	private collPointsService: CollPointsService,
+	// 	private activateRoute: ActivatedRoute,
+	// ) {
+	// }
+	//
+	// ngOnInit() {
+	// 	this.activateRoute.queryParamMap.subscribe(value => {
+	// 		this.id = value.get('cardId');
+	// 	});
+	//
+	// 	this.collPoints$
+	// 		.getValue()
+	// 		.filter((collPoint: CollPoint) => (collPoint.id === +this.id!))
+	// 		.map((point: CollPoint) => {
+	// 			this.collPoint = point
+	// 		});
+	// }
 }

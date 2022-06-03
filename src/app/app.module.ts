@@ -54,6 +54,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { ProfileSkeletonComponent } from '@components/animation/skeletons/profile-skeleton/profile-skeleton.component';
 import { FilterComponent } from '@containers/filter/filter.component';
 import { MapFilterComponent } from '@containers/map-filter/map-filter.component';
+import { CommonCardsListComponent } from '@containers/common-cards-list/common-cards-list.component';
 
 @NgModule({
 	declarations: [
@@ -100,7 +101,8 @@ import { MapFilterComponent } from '@containers/map-filter/map-filter.component'
 		ProfileSkeletonComponent,
 		BottomSheetWrapperComponent,
 		FilterComponent,
-		MapFilterComponent
+		MapFilterComponent,
+		CommonCardsListComponent
 	],
 	imports: [
 		BrowserModule,
