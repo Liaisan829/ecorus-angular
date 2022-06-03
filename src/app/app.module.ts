@@ -14,7 +14,6 @@ import { EcomarketCardComponent } from '@components/cards/ecomarket-card/ecomark
 import { ButtonComponent } from '@components/ui/button/button.component';
 import { EcomarketComponent } from '@pages/ecomarket/ecomarket.component';
 import { FooterComponent } from '@components/footer/footer.component';
-import { IconComponent } from '@components/ui/icon/icon.component';
 import { EcoPromoCardComponent } from '@components/cards/eco-promo-card/eco-promo-card.component';
 import { SliderCardComponent } from '@components/cards/slider-card/slider-card.component';
 import { MainPageCardComponent } from '@components/cards/main-page-card/main-page-card.component';
@@ -64,7 +63,6 @@ import { MapFilterComponent } from '@containers/map-filter/map-filter.component'
 		ButtonComponent,
 		EcomarketComponent,
 		FooterComponent,
-		IconComponent,
 		EcoPromoCardComponent,
 		MainComponent,
 		SliderCardComponent,
