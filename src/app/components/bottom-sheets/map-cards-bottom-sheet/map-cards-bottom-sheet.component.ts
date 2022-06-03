@@ -1,5 +1,4 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { BottomSheetService } from '@services/bottom-sheet.service';
 import { CollPointsService } from '@services/collPoints.service';
 
 @Component({
@@ -11,8 +10,7 @@ import { CollPointsService } from '@services/collPoints.service';
 export class MapCardsBottomSheetComponent {
 	collPoints$ = this.collPointsService.collPoints$
 
-	constructor(private collPointsService: CollPointsService,
-				private bottomSheet: BottomSheetService) {
+	constructor(private collPointsService: CollPointsService) {
 	}
 
 }
