@@ -17,11 +17,11 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class CheckboxItemComponent {
 
+	@Input() title: string = '';
 	isChecked: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 	onChange = (isChecked: boolean) => {
 	};
 
-	@Input() title: string = '';
 	onTouched = () => {
 	};
 
@@ -39,7 +39,6 @@ export class CheckboxItemComponent {
 	}
 
 	writeValue(isChecked: boolean): void {
-		console.log(isChecked, this.title)
 		this.isChecked.next(isChecked);
 	}
 }

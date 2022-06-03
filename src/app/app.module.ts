@@ -30,7 +30,6 @@ import { ProfileComponent } from '@pages/profile/profile.component';
 import { ProfileCardsSwitcherComponent } from '@components/profile-cards-switcher/profile-cards-switcher.component';
 import { ProfilePromoCardComponent } from '@components/cards/profile-promo-card/profile-promo-card.component';
 import { HistoryCardComponent } from '@components/cards/history-card/history-card.component';
-import { CheckboxGroupComponent } from '@containers/checkbox-group/checkbox-group.component';
 import { CheckboxItemComponent } from '@components/ui/checkbox-item/checkbox-item.component';
 import { ModalContainerComponent } from '@components/modals/modal-container/modal-container.component';
 import { LoginModalComponent } from '@components/modals/login-modal/login-modal.component';
@@ -54,6 +53,8 @@ import { EcomarketSkeletonComponent } from '@components/animation/skeletons/ecom
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { ProfileSkeletonComponent } from '@components/animation/skeletons/profile-skeleton/profile-skeleton.component';
 import { FilterComponent } from '@containers/filter/filter.component';
+import { MapFilterComponent } from '@containers/map-filter/map-filter.component';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -70,7 +71,6 @@ import { FilterComponent } from '@containers/filter/filter.component';
 		MainComponent,
 		SortingButtonsComponent,
 		MapPageComponent,
-		CheckboxGroupComponent,
 		CheckboxItemComponent,
 		ModalContainerComponent,
 		LoginModalComponent,
@@ -95,28 +95,29 @@ import { FilterComponent } from '@containers/filter/filter.component';
 		BottomSheetHeaderComponent,
 		MapCardsBottomSheetComponent,
 		MapFilterBottomSheetComponent,
-  BottomSheetWrapperComponent,
-  EcomarketSkeletonComponent,
-  ProfileSkeletonComponent,
 		BottomSheetWrapperComponent,
-  FilterComponent
+		EcomarketSkeletonComponent,
+		ProfileSkeletonComponent,
+		BottomSheetWrapperComponent,
+		FilterComponent,
+		MapFilterComponent
 	],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        SwiperModule,
-        LeafletModule,
-        ReactiveFormsModule,
-        DialogModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        ToastrModule.forRoot({
-            timeOut: 1500,
-            progressBar: true,
-            positionClass: 'toast-bottom-center',
-        }),
-        NgxSkeletonLoaderModule,
-    ],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		SwiperModule,
+		LeafletModule,
+		ReactiveFormsModule,
+		DialogModule,
+		BrowserAnimationsModule,
+		HttpClientModule,
+		ToastrModule.forRoot({
+			timeOut: 1500,
+			progressBar: true,
+			positionClass: 'toast-bottom-center',
+		}),
+		NgxSkeletonLoaderModule,
+	],
 	providers: [
 		{
 			provide: HTTP_INTERCEPTORS,

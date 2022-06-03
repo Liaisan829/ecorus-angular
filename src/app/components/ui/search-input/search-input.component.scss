@@ -17,6 +17,14 @@
 		width: 450px;
 		background: $c-white;
 		padding: 14px 20px 14px 38px;
+
+		@include mobile420 {
+			width: 230px;
+		}
+
+		@include mobile420 {
+			width: 160px;
+		}
 	}
 }
 
@@ -49,22 +57,6 @@
 	.searchInput {
 		input {
 			width: 150px;
-		}
-	}
-}
-
-@include tablet620 {
-	.searchInput {
-		input {
-			width: 230px;
-		}
-	}
-}
-
-@include mobile420 {
-	.searchInput {
-		input {
-			width: 160px;
 		}
 	}
 }
