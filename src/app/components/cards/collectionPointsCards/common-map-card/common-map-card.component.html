@@ -1,4 +1,5 @@
-<a [routerLink]='[collPoint?.id]'
+<a [routerLink]="['/collpoints']"
+   [queryParams]='{cardId: collPoint?.id}'
    class='commonCard'>
 	<img src='{{collPoint?.img}}'
 	     alt='pic'>

@@ -1,0 +1,5 @@
+<ng-container *ngFor='let item of collPoints$ | async'>
+	<app-common-map-card
+		[collPoint]='item'
+	></app-common-map-card>
+</ng-container>
